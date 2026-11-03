@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Viết Tiếp Hành Trình Di Sản</title>
+<meta name="description" content="Cổng thông tin Team Building Đại sứ Văn hóa MSB 2026 · Fire Team, 14–15.11.2026 tại Thung Nham, Ninh Bình: lịch trình, nhiệm vụ, đội thi và thông báo.">
+<meta name="theme-color" content="#140B08">
+<meta property="og:title" content="Viết tiếp Hành trình Di sản">
+<meta property="og:description" content="Team Building Đại sứ Văn hóa MSB 2026 · 14–15.11.2026 · Thung Nham, Ninh Bình">
+<meta property="og:image" content="img/hero.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23140B08'/%3E%3Cpath d='M20 7.5l2 9.2 9.4-1.3-8.2 4.9 4.4 8.5-7.6-5.9-7.6 5.9 4.4-8.5-8.2-4.9 9.4 1.3z' fill='%23F28A32'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: night header + bottom tab bar on phones; one 1200px container; Program page has a sticky day bar; image-led cards, borders only where they separate. */
+:root{
+  --bg:#FAF7F4; --surface:#FFFFFF; --sunken:#F3EDE8; --ink:#1E1512; --ink-2:#5C4B45; --ink-3:#86726B; --line:#E8DFD9;
+  --brand:#E24A1D; --brand-strong:#B8340E; --brand-soft:#FCE9E1; --gold:#A87618; --gold-soft:#F6ECD9;
+  --night:#140B08; --night-2:#24140F; --on-night:#FFF4EC; --on-night-2:#D8BEB1;
+  --font:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r-lg:16px; --r:12px; --r-sm:8px; --hdr:64px; --max:1200px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#110A08; --surface:#1A110E; --sunken:#231713; --ink:#F5ECE7; --ink-2:#BFAAA1; --ink-3:#8F7C74; --line:#33241E;
+  --brand:#FF6B3F; --brand-strong:#FF8A62; --brand-soft:#2E1711; --gold:#E2B55C; --gold-soft:#2A2114; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#110A08; --surface:#1A110E; --sunken:#231713; --ink:#F5ECE7; --ink-2:#BFAAA1; --ink-3:#8F7C74; --line:#33241E;
+  --brand:#FF6B3F; --brand-strong:#FF8A62; --brand-soft:#2E1711; --gold:#E2B55C; --gold-soft:#2A2114; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:70;background:var(--night)}
+a{color:inherit}
+h1,h2,h3,h4,h5{margin:0;text-wrap:balance}
+p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+img{display:block;max-width:100%}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.num{font-variant-numeric:tabular-nums}
+
+/* Type scale */
+.label{font-size:12px;line-height:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.label.brand{color:var(--brand)}
+.h1{font-size:clamp(38px,5.6vw,68px);line-height:1.04;font-weight:800;letter-spacing:-.03em}
+.h2{font-size:clamp(26px,3vw,36px);line-height:1.15;font-weight:700;letter-spacing:-.02em}
+.h3{font-size:22px;line-height:1.25;font-weight:700;letter-spacing:-.01em}
+.h4{font-size:17px;line-height:1.35;font-weight:600}
+.lead{font-size:18px;line-height:1.6;color:var(--ink-2)}
+.body-2{font-size:15px;line-height:1.6;color:var(--ink-2)}
+.small{font-size:14px;line-height:1.5;color:var(--ink-3)}
+
+/* Buttons + links */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;border:0;cursor:pointer;transition:background .15s,transform .15s}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-strong)}
+.btn-light{background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(6px)}
+.btn-light:hover{background:rgba(255,255,255,.2)}
+.more{display:inline-flex;align-items:center;gap:6px;font-size:15px;font-weight:600;color:var(--brand);text-decoration:none;padding:6px 0}
+.more::after{content:"→";transition:transform .15s}
+.more:hover::after{transform:translateX(3px)}
+
+/* Badges (one system) */
+.badge{display:inline-flex;align-items:center;font-size:12px;line-height:1;font-weight:600;padding:6px 10px;border-radius:999px;white-space:nowrap;background:var(--sunken);color:var(--ink-2)}
+.badge.team{background:var(--brand);color:#fff}
+.badge.key{background:var(--gold-soft);color:var(--gold)}
+.badge.new{background:var(--brand-soft);color:var(--brand-strong)}
+
+/* Media */
+.media{position:relative;overflow:hidden;border-radius:var(--r);background:linear-gradient(135deg,var(--sunken),var(--brand-soft));max-width:100%}
+.media img{width:100%;height:100%;object-fit:cover}
+.media.noimg::after{content:"Ảnh đang cập nhật";position:absolute;inset:auto 12px 10px;font-size:12px;font-weight:600;color:var(--ink-3)}
+.media.cutout{background:#fff}
+.media.cutout img{object-fit:contain}
+.r-16x9{aspect-ratio:16/9}.r-4x3{aspect-ratio:4/3}.r-3x2{aspect-ratio:3/2}.r-1{aspect-ratio:1/1}.r-4x5{aspect-ratio:4/5}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:var(--night);color:var(--on-night)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:var(--hdr)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:30px;height:30px;flex:none}
+.brand b{font-size:15px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.brand small{display:block;font-size:11px;font-weight:500;color:var(--on-night-2);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;color:var(--on-night-2);transition:color .15s,background .15s}
+.nav a:hover{color:var(--on-night)}
+.nav a[aria-current="page"]{color:var(--on-night);background:var(--night-2);box-shadow:inset 0 -2px 0 #F28A32}
+.tabbar{display:none}
+
+main{min-height:60vh}
+[data-view]{animation:fade .2s ease}
+@keyframes fade{from{opacity:.5}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){[data-view]{animation:none}html{scroll-behavior:auto}.btn,.more::after{transition:none}}
+
+.sec{padding-block:80px}
+.sec.tight{padding-block:56px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:32px}
+.sec-head > div{display:grid;gap:8px;max-width:640px}
+.alt{background:var(--surface)}
+
+/* ========== OVERVIEW ========== */
+.hero{position:relative;background:var(--night);color:var(--on-night);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2}
+@media (min-width:901px){.hero .bg{left:34%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 28%);mask-image:linear-gradient(90deg,transparent,#000 28%)}.hero .bg img{object-position:40% 50%}}
+.media.pos-l img{object-position:22% 50%}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.hero .bg.noimg{background:radial-gradient(90% 120% at 80% 70%,#F28A32,#B3241A 45%,#140B08 85%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,11,8,.92) 0%,rgba(20,11,8,.7) 40%,rgba(20,11,8,.1) 75%),linear-gradient(0deg,rgba(20,11,8,.6),transparent 40%)}
+.hero .wrap{padding-block:96px 72px;display:grid;gap:24px;justify-items:start}
+.hero .label{color:#F7B57A}
+.hero .h1{max-width:12ch}
+.hero .lead{color:#F3DCCF;max-width:44ch}
+.facts{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:8px}
+.facts div{display:grid;gap:2px}
+.facts dt{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#D9AE93}
+.facts dd{font-size:16px;font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:8px}
+.countdown{font-size:14px;color:#E9CBBB;margin-left:8px}
+.countdown b{color:#fff;font-size:16px}
+
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.intro > *{min-width:0}
+.intro-text{display:grid;gap:20px;max-width:540px}
+.quote{font-size:22px;line-height:1.4;font-weight:600;letter-spacing:-.01em;color:var(--brand-strong)}
+.values{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:64px;padding-top:32px;border-top:1px solid var(--line)}
+.values li{display:grid;gap:6px;align-content:start}
+.values b{font-size:16px;font-weight:700}
+.values span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+.values p{font-size:14px;line-height:1.5;color:var(--ink-2)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 24px}
+.card{display:grid;gap:14px;align-content:start;text-decoration:none}
+.card .media{transition:transform .25s}
+.card:hover .media img{transform:scale(1.03)}
+.card .media img{transition:transform .4s}
+.card .h4{font-size:18px}
+
+.days{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.day-tile{position:relative;border-radius:var(--r-lg);overflow:hidden;color:#fff;text-decoration:none;min-height:420px;display:flex;align-items:flex-end;isolation:isolate;background:var(--night)}
+.day-tile .media{position:absolute;inset:0;border-radius:0;z-index:-2}
+.day-tile::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(20,11,8,.94) 10%,rgba(20,11,8,.35) 60%,rgba(20,11,8,.05))}
+.day-tile .in{padding:28px;display:grid;gap:12px;width:100%}
+.day-tile .label{color:#F7B57A}
+.day-tile ul{display:grid;gap:6px;font-size:15px;color:#F0DDD3}
+.day-tile li{display:grid;grid-template-columns:110px 1fr;gap:12px}
+.day-tile time{font-weight:600;color:#fff}
+.day-tile .go{font-weight:600;font-size:15px;color:#F7B57A}
+.day-tile:hover .media img{transform:scale(1.03)}
+.day-tile .media img{transition:transform .5s}
+
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.split > *{min-width:0}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 32px;margin-block:28px}
+.stats b{display:block;font-size:44px;line-height:1;font-weight:800;letter-spacing:-.03em}
+.stats span{font-size:14px;color:var(--ink-3)}
+
+.updates{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.update{display:grid;gap:10px;align-content:start;padding-top:20px;border-top:2px solid var(--ink)}
+
+/* ========== PAGE HEAD (shared) ========== */
+.page-head{background:var(--night);color:var(--on-night);position:relative;overflow:hidden;isolation:isolate}
+.page-head .media{position:absolute;inset:0;border-radius:0;z-index:-2;opacity:.55}
+.page-head::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,11,8,.95),rgba(20,11,8,.55) 70%,rgba(20,11,8,.3))}
+.page-head .wrap{padding-block:56px 48px;display:grid;gap:12px}
+.page-head .label{color:#F7B57A}
+.page-head p{color:var(--on-night-2);max-width:60ch}
+
+/* ========== PROGRAM ========== */
+.daybar{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--hdr));z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.daybar .wrap{display:flex;align-items:center;gap:24px;min-height:68px}
+.seg{display:inline-flex;gap:4px;padding:4px;background:var(--sunken);border-radius:14px;flex:none}
+.seg button{border:0;background:transparent;color:var(--ink-2);cursor:pointer;border-radius:10px;padding:8px 16px;min-height:48px;text-align:left;line-height:1.2;display:grid;gap:2px}
+.seg button b{font-size:15px;font-weight:700}
+.seg button small{font-size:12px;color:var(--ink-3)}
+.seg button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(30,21,18,.08),0 0 0 1px var(--line)}
+.seg button[aria-selected="true"] small{color:var(--brand)}
+.jump{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;text-decoration:none;font-size:14px;font-weight:500;color:var(--ink-2);padding:10px 12px;border-radius:999px}
+.jump a:hover{color:var(--ink);background:var(--sunken)}
+.jump a.on{color:var(--brand-strong);background:var(--brand-soft)}
+/* --daybar is measured in JS: the bar wraps to two rows on narrow screens. */
+.anchor{scroll-margin-top:calc(var(--hdr) + var(--daybar,80px) + 12px)}
+
+.day-ov{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:start}
+.day-ov > *{min-width:0}
+.day-ov .info{display:grid;gap:16px}
+.qa{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border-radius:var(--r);overflow:hidden;margin-top:8px}
+.qa div{background:var(--surface);padding:16px 18px;display:grid;gap:4px;align-content:start}
+.qa p{font-size:15px;line-height:1.5}
+
+.legend,.sec-head > .legend{display:flex;gap:8px;flex-wrap:wrap}
+.tl{position:relative;display:grid}
+.tl::before{content:"";position:absolute;left:126px;top:12px;bottom:12px;width:2px;background:var(--line)}
+.tl > li{position:relative;display:grid;grid-template-columns:104px 1fr;gap:44px;padding-block:14px}
+.tl > li::before{content:"";position:absolute;left:121px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--ink-3)}
+.tl > li.is-key::before{background:var(--brand);border-color:var(--brand);width:14px;height:14px;left:120px;top:21px;box-shadow:0 0 0 5px var(--brand-soft)}
+.tl > li.now::before{box-shadow:0 0 0 6px var(--gold-soft);border-color:var(--gold)}
+.tl time{text-align:right;line-height:1.3;padding-top:2px}
+.tl time b{display:block;font-size:17px;font-weight:700}
+.tl time span{font-size:13px;color:var(--ink-3)}
+.row{display:grid;gap:4px;min-width:0}
+.row .meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:14px;color:var(--ink-3)}
+.pin{display:inline-flex;align-items:center;gap:5px}
+.pin::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink-3)}
+.keycard{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-columns:1fr 240px;box-shadow:0 0 0 1px var(--line)}
+.keycard .kc-body{padding:20px 22px;display:grid;gap:10px;align-content:start;min-width:0}
+.keycard .media{border-radius:0;height:100%;min-height:180px}
+.keycard .kc-top{display:flex;flex-wrap:wrap;gap:6px}
+.gala{grid-column:1/-1;border-top:1px solid var(--line)}
+.gala summary{cursor:pointer;list-style:none;padding:14px 22px;font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.gala summary::-webkit-details-marker{display:none}
+.gala summary::after{content:"";width:9px;height:9px;border-right:2px solid var(--brand);border-bottom:2px solid var(--brand);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.gala[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.agenda{display:grid;padding:0 22px 16px}
+.agenda li{display:grid;grid-template-columns:112px 1fr;gap:16px;padding-block:10px;border-top:1px solid var(--line);font-size:14.5px}
+.agenda time{font-weight:600;color:var(--ink)}
+.agenda b{display:block;font-weight:600}
+.agenda span{color:var(--ink-3)}
+
+.m-index{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.m-index a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px 8px 8px;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--line);color:var(--ink-2)}
+.m-index a:hover{color:var(--ink);box-shadow:0 0 0 1px var(--ink-3)}
+.m-index i{font-style:normal;font-size:12px;font-weight:700;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--sunken);color:var(--ink)}
+.missions{display:grid;gap:20px}
+.mission{background:var(--surface);border-radius:var(--r-lg);box-shadow:0 0 0 1px var(--line);display:grid;grid-template-columns:1fr 340px;overflow:hidden}
+.mission > *{min-width:0}
+.m-main{padding:28px;display:grid;gap:18px;align-content:start}
+.m-head{display:flex;align-items:flex-start;gap:16px}
+.m-no{flex:none;width:48px;height:48px;border-radius:12px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:18px;font-weight:800;letter-spacing:-.02em}
+.mission.evening .m-no{background:var(--brand);color:#fff}
+.m-head > div{display:grid;gap:6px;min-width:0}
+.m-head .badges{display:flex;flex-wrap:wrap;gap:6px}
+.m-side{display:grid;grid-template-rows:auto 1fr;background:var(--sunken)}
+.m-side .media{border-radius:0}
+.m-side dl{padding:20px 22px;display:grid;gap:14px;align-content:start}
+.m-side dt{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
+.m-side dd{font-size:15px;line-height:1.5}
+.pending{color:var(--ink-3);font-style:italic}
+.blocks{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+.blocks h5{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.ticks{display:grid;gap:6px;font-size:15px;line-height:1.5}
+.ticks li{position:relative;padding-left:20px}
+.ticks li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:2px;background:var(--brand);opacity:.85}
+.ticks.muted li::before{background:var(--ink-3);border-radius:50%;width:6px;height:6px;top:10px}
+.stations{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.station{display:grid;grid-template-columns:88px 1fr;gap:14px;background:var(--bg);border-radius:var(--r);padding:12px;align-items:start}
+.station .media{border-radius:var(--r-sm)}
+.station div{display:grid;gap:4px;min-width:0}
+.station .who{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.station p{font-size:14px;line-height:1.5;color:var(--ink-2)}
+.station .done{color:var(--ink);font-weight:600}
+
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.note{background:var(--surface);border-radius:var(--r-lg);padding:24px;display:grid;gap:12px;align-content:start;box-shadow:0 0 0 1px var(--line)}
+.note .h4{display:flex;align-items:center;gap:10px}
+.note .h4 i{font-style:normal;width:28px;height:28px;border-radius:8px;background:var(--brand-soft);color:var(--brand-strong);display:grid;place-items:center;font-size:14px}
+.empty{padding:32px;border-radius:var(--r-lg);background:var(--sunken);color:var(--ink-2);text-align:center}
+
+/* ========== TEAMS ========== */
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-bottom:28px}
+.field{display:grid;gap:6px}
+.field span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.toolbar input,.toolbar select{font:inherit;font-size:15px;height:46px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:0}
+.toolbar input{width:280px;max-width:100%}
+.toolbar input:focus,.toolbar select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.count{margin-left:auto;font-size:14px;color:var(--ink-3);padding-bottom:12px}
+.teams{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.team{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 0 0 1px var(--line);display:grid;grid-template-rows:auto 1fr}
+.crest{aspect-ratio:4/3;background:var(--night);color:var(--on-night);display:grid;align-content:space-between;padding:18px;position:relative;overflow:hidden;isolation:isolate}
+.crest::after{content:"";position:absolute;right:-30%;bottom:-40%;width:90%;aspect-ratio:1;border-radius:50%;z-index:-1;background:repeating-radial-gradient(circle,transparent 0 10px,rgba(242,138,50,.18) 10px 11px)}
+.crest span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#D9AE93}
+.crest b{font-size:72px;font-weight:800;letter-spacing:-.04em;line-height:.9}
+.t-body{padding:18px 18px 16px;display:grid;gap:14px;align-content:start}
+.t-body .h4{font-size:18px}
+.t-body .slogan{font-size:14px;color:var(--ink-3)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:14px;padding-top:12px;border-top:1px solid var(--line)}
+.kv dt{color:var(--ink-3)}
+.kv dd{font-weight:500;text-align:right}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px;border:1.5px dashed var(--ink-3)}
+.team details summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--brand);list-style:none}
+.team details summary::-webkit-details-marker{display:none}
+.team details p{font-size:14px;color:var(--ink-2);margin-top:8px}
+.score{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sc{background:var(--surface);border-radius:var(--r-lg);padding:24px;display:grid;gap:12px;align-content:start;box-shadow:0 0 0 1px var(--line)}
+.sc-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.sc .pct{font-size:40px;line-height:1;font-weight:800;letter-spacing:-.03em}
+.bar{height:6px;border-radius:999px;background:var(--sunken);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--brand)}
+
+/* ========== ANNOUNCEMENTS ========== */
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);margin-bottom:8px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;border:0;background:none;cursor:pointer;font-size:14px;font-weight:500;color:var(--ink-3);padding:12px 12px 14px;min-height:46px;box-shadow:inset 0 -2px 0 transparent}
+.tabs button span{margin-left:6px;font-size:12px;color:var(--ink-3)}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-pressed="true"]{color:var(--ink);font-weight:600;box-shadow:inset 0 -2px 0 var(--brand)}
+.feed{display:grid}
+.post{display:grid;grid-template-columns:180px 1fr 160px;gap:32px;padding-block:28px;border-bottom:1px solid var(--line)}
+.post > *{min-width:0}
+.post aside{display:grid;gap:8px;align-content:start;justify-items:start}
+.post .cat{font-size:13px;font-weight:600;color:var(--ink-2)}
+.post .when{font-size:13px;color:var(--ink-3)}
+.post .pb{display:grid;gap:8px;align-content:start;max-width:640px}
+.post .h3{font-size:20px}
+.post details summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--brand);list-style:none;width:max-content}
+.post details summary::-webkit-details-marker{display:none}
+.post details .ticks{margin-top:10px}
+.post .thumbs{display:grid;grid-auto-flow:column;gap:6px;align-content:start}
+.post.is-old .h3{color:var(--ink-2)}
+
+/* Footer */
+footer{background:var(--night);color:var(--on-night-2);font-size:14px}
+footer .wrap{padding-block:48px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h4{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--on-night);margin-bottom:12px}
+footer .fb{font-size:18px;font-weight:700;color:var(--on-night);margin-bottom:8px}
+footer ul{display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--on-night)}
+.fine{border-top:1px solid #2c1a14}
+.fine .wrap{display:block;padding-block:16px;font-size:12.5px}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width:1100px){
+  .teams{grid-template-columns:repeat(2,1fr)}
+  .values{grid-template-columns:repeat(3,1fr)}
+  .mission{grid-template-columns:1fr 280px}
+  .post{grid-template-columns:150px 1fr}
+  .post .thumbs{grid-column:2;grid-auto-flow:column;justify-content:start}
+  .post .thumbs .media{width:96px}
+}
+@media (max-width:900px){
+  .intro,.split,.day-ov{grid-template-columns:1fr;gap:32px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .updates{grid-template-columns:1fr;gap:0}
+  .update{padding-block:20px;border-top:1px solid var(--line)}
+  .update:first-child{border-top:2px solid var(--ink)}
+  .mission{grid-template-columns:1fr}
+  .m-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .m-side .media{height:100%;aspect-ratio:auto;min-height:200px}
+  .keycard{grid-template-columns:1fr}
+  .keycard .media{height:auto;aspect-ratio:16/9;min-height:0;order:-1}
+  .score{grid-template-columns:1fr}
+  .daybar .wrap{flex-wrap:wrap;gap:8px;padding-block:10px;min-height:0}
+  .jump{margin-left:0;width:100%}
+}
+@media (max-width:760px){
+  :root{--hdr:56px}
+  .nav{display:none}
+  .tabbar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--night);border-top:1px solid #2c1a14;padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+  .tabbar a{display:grid;justify-items:center;align-content:center;gap:3px;text-decoration:none;color:var(--on-night-2);font-size:11px;font-weight:600;min-height:52px;border-radius:10px;text-align:center;line-height:1.2}
+  .tabbar svg{width:22px;height:22px}
+  .tabbar a[aria-current="page"]{color:#F7B57A}
+  main{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+  footer{padding-bottom:calc(70px + env(safe-area-inset-bottom,0px))}
+  .sec{padding-block:56px}
+  .sec.tight{padding-block:40px}
+  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .hero .wrap{padding-block:64px 48px}
+  .hero::before{background:linear-gradient(0deg,rgba(20,11,8,.95) 15%,rgba(20,11,8,.55) 60%,rgba(20,11,8,.3))}
+  .facts{gap:12px 28px}
+  .countdown{margin-left:0;width:100%}
+  .values{grid-template-columns:1fr 1fr;gap:20px}
+  .cards{grid-template-columns:1fr;gap:28px}
+  .days{grid-template-columns:1fr}
+  .day-tile{min-height:360px}
+  .day-tile .in{padding:22px}
+  .day-tile li{grid-template-columns:96px 1fr}
+  .seg{width:100%}
+  .seg button{flex:1}
+  .qa{grid-template-columns:1fr}
+  .tl::before{left:7px}
+  .tl > li{grid-template-columns:1fr;gap:6px;padding-left:30px}
+  .tl > li::before{left:2px;top:18px}
+  .tl > li.is-key::before{left:1px;top:17px}
+  .tl time{text-align:left;display:flex;gap:8px;align-items:baseline}
+  .tl time b{display:inline;font-size:16px}
+  .m-main{padding:20px}
+  .m-no{width:40px;height:40px;font-size:16px;border-radius:10px}
+  .blocks{grid-template-columns:1fr}
+  .stations{grid-template-columns:1fr}
+  .m-side{grid-template-columns:1fr}
+  .m-side .media{aspect-ratio:16/9;min-height:0}
+  .notes{grid-template-columns:1fr}
+  .agenda{padding:0 18px 14px}
+  .agenda li{grid-template-columns:1fr;gap:2px}
+  .gala summary{padding:14px 18px}
+  .keycard .kc-body{padding:18px}
+  .teams{grid-template-columns:1fr 1fr;gap:12px}
+  .crest b{font-size:52px}
+  .crest{padding:14px}
+  .t-body{padding:14px}
+  .kv{grid-template-columns:1fr;gap:2px}
+  .kv dd{text-align:left;margin-bottom:6px}
+  .toolbar .field{flex:1 1 140px}
+  .toolbar .field:first-child{flex-basis:100%}
+  .toolbar input{width:100%}
+  .count{margin-left:0;padding-bottom:0;width:100%}
+  .post{grid-template-columns:1fr;gap:10px;padding-block:22px}
+  .post aside{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+  .post .thumbs{grid-column:auto}
+  footer .wrap{grid-template-columns:1fr;gap:28px}
+  .brand small{display:none}
+}
+@media (max-width:400px){
+  .teams{grid-template-columns:1fr}
+  .stats b{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#overview" aria-label="Viết tiếp Hành trình Di sản, về trang Tổng quan">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="#F28A32" stroke-width="1.5"/><circle cx="20" cy="20" r="12" fill="none" stroke="#F28A32" stroke-width="1" opacity=".55"/><path d="M20 7.5l2 9.2 9.4-1.3-8.2 4.9 4.4 8.5-7.6-5.9-7.6 5.9 4.4-8.5-8.2-4.9 9.4 1.3z" fill="#F28A32"/></svg>
+      <span><b>Viết tiếp Di sản</b><small>Fire Team · MSB 2026</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#overview" data-nav="overview">Tổng quan</a>
+      <a href="#program" data-nav="program">Lịch trình &amp; Nhiệm vụ</a>
+      <a href="#teams" data-nav="teams">Đội thi</a>
+      <a href="#announcements" data-nav="announcements">Thông báo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section data-view="overview" id="v-overview"></section>
+  <section data-view="program" id="v-program" hidden></section>
+  <section data-view="teams" id="v-teams" hidden></section>
+  <section data-view="announcements" id="v-announcements" hidden></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="fb">Viết tiếp Hành trình Di sản</p>
+      <p>Team Building Đại sứ Văn hóa MSB 2026 · Fire Team<br>14–15.11.2026 · Thung Nham, Ninh Bình</p>
+    </div>
+    <div>
+      <h4>Tổ chức</h4>
+      <ul><li>Đơn vị đề xuất &amp; triển khai: VietAnt</li><li>Liên hệ BTC: <span class="pending">đang cập nhật</span></li></ul>
+    </div>
+    <div>
+      <h4>Trang</h4>
+      <ul><li><a href="#overview">Tổng quan</a></li><li><a href="#program">Lịch trình &amp; Nhiệm vụ</a></li><li><a href="#teams">Đội thi</a></li><li><a href="#announcements">Thông báo</a></li></ul>
+    </div>
+  </div>
+  <div class="fine"><div class="wrap">Nội dung và hình ảnh tổng hợp từ proposal “Viết tiếp Hành trình Di sản” của VietAnt. Mục ghi “đang cập nhật” là thông tin chưa có trong tài liệu.</div></div>
+</footer>
+
+<nav class="tabbar" aria-label="Điều hướng chính">
+  <a href="#overview" data-nav="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Tổng quan</a>
+  <a href="#program" data-nav="program"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Lịch trình</a>
+  <a href="#teams" data-nav="teams"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>Đội thi</a>
+  <a href="#announcements" data-nav="announcements"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l6 4V6L7 10H4zM17 9a4 4 0 0 1 0 6"/></svg>Thông báo</a>
+</nav>
+
+<script>
+/* ===================== DATA – sửa nội dung tại đây ===================== */
+const PENDING = "Đang cập nhật";
+const DATA = {
+  program:{
+    edition:"Team Building Đại sứ Văn hóa MSB 2026 · Fire Team",
+    dates:"14–15.11.2026", start:"2026-11-14T06:00:00+07:00", end:"2026-11-15T12:30:00+07:00",
+    venue:"Thung Nham, Ninh Bình", audience:"150 Đại sứ Văn hóa",
+    keyline:"Di sản không dừng lại ở những gì đã được tạo nên. Di sản chỉ thực sự sống khi có người tiếp tục viết."
+  },
+  values:[
+    { name:"Nhân văn", stage:"Tụ nghĩa · Luyện binh", text:"Kết nối con người, tôn trọng khác biệt, cùng xây dựng sức mạnh chung." },
+    { name:"Sáng tạo", stage:"Giải mật lệnh", text:"Chủ động tìm cách mới, linh hoạt thích ứng." },
+    { name:"Trách nhiệm", stage:"Dựng thành", text:"Nhận việc, làm đúng, làm đủ, làm đến cùng." },
+    { name:"Trọng khách", stage:"Vượt thủy", text:"Lắng nghe, thấu hiểu, đồng hành." },
+    { name:"Hiệu quả", stage:"Công phá thành trì", text:"Rõ mục tiêu, tối ưu nguồn lực, tạo kết quả." }
+  ],
+  highlights:[
+    { img:"drum-stage", tag:"Sân Cosmo", title:"Trống lệnh xuất chinh", text:"Ban Lãnh đạo đánh ba hồi trống phát lệnh xuất quân." },
+    { img:"vovinam", tag:"Sân Cosmo", title:"Luyện binh Vovinam", text:"150 người đồng diễn bài võ biên đạo riêng." },
+    { img:"st2", tag:"4 trạm", title:"Giải mật lệnh Thẻ Tre", text:"Đi đủ bốn trạm, ghép bốn mảnh thẻ tre, giải mã mật lệnh." },
+    { img:"build", tag:"Sân 12 Con Giáp", title:"Dựng thành", text:"Cả đội dựng tường thành bằng tre làm căn cứ." },
+    { img:"boat", tag:"Thủy tuyến", title:"Vượt thủy", text:"Bốn lượt chèo giành bốn vật phẩm cho trận cuối." },
+    { img:"siege", tag:"Sân 12 Con Giáp", title:"Công phá tường thành", text:"Hạ bia, hạ cờ đối phương bằng máy bắn đạn dừa." }
+  ],
+  days:[
+    {
+      id:"day1", label:"Ngày 1", short:"T7 · 14.11", date:"Thứ Bảy, 14.11.2026", iso:"2026-11-14", img:"stage-night",
+      title:"Teambuilding – Gala Dinner", theme:"Từ Tụ nghĩa đến Khải hoàn",
+      goal:"Từ những cá nhân riêng lẻ trở thành một tập thể cùng chung mục tiêu. Buổi tối toàn quân hội tụ tại Lễ Khao Quân để báo công và vinh danh.",
+      qa:{ what:"Teambuilding nhập vai buổi sáng, Gala Lễ Khao Quân buổi tối", when:"06:00 tập trung · 09:30–12:30 teambuilding · 17:30–21:00 Gala", where:"Đón tại 54 Nguyễn Chí Thanh · chương trình tại Thung Nham", done:"7 chặng nhiệm vụ ban ngày và 1 tiết mục văn nghệ tại Gala" },
+      schedule:[
+        { t:"06:00", title:"Đón khách", place:"54 Nguyễn Chí Thanh" },
+        { t:"08:30", title:"Đến Thung Nham", place:"Thung Nham, Ninh Bình" },
+        { t:"09:30", e:"12:30", title:"Chương trình Teambuilding", key:true, team:true, img:"field",
+          text:"Hành trình nhập vai 7 chặng: Tụ nghĩa → Luyện binh → Giải mật lệnh → Dựng thành → Vượt thủy → Công phá tường thành → Khải hoàn.", place:"Sân Cosmo, Sân 12 Con Giáp", owner:"VietAnt", jump:"missions" },
+        { t:"13:00", e:"13:45", title:"Ăn trưa", text:"Trả điện thoại cho CBNV.", place:"Nhà hàng trên đồi" },
+        { t:"13:45", e:"14:00", title:"Check-in nhà sàn và villa", place:"Thung Nham Resort" },
+        { t:"15:00", e:"16:30", title:"Tự do nghỉ ngơi" },
+        { t:"16:30", e:"17:30", title:"Ngắm chim tại Thung Nham", place:"Thung Nham" },
+        { t:"17:30", e:"21:00", title:"Gala – Lễ Khao Quân", key:true, team:true, img:"stage-day", agenda:true,
+          text:"Hội quân → Khai hội → Nhìn lại hành trình → Luận công vinh danh → Truyền lệnh → Khai yến → Liên quân trổ tài → Khải hoàn.", place:"Sân khấu Gala ngoài trời" }
+      ],
+      gala:[
+        ["18:00","18:08","Mở màn / Trống hội","Trống trận khai hội · Trống hội tụ quân"],
+        ["18:08","18:18","Khai mạc","Tuyên chiếu – Khai mở đại yến · MC chào mừng, giới thiệu đại biểu"],
+        ["18:18","18:28","Nhìn lại hành trình M35","Sử ký M35 – Dấu ấn một hành trình · Video tổng kết M35"],
+        ["18:28","18:38","Phát biểu Ban Lãnh đạo","Lời hiệu triệu – Ban chiếu từ Minh chủ"],
+        ["18:38","19:08","Chương trình vinh danh","Luận công – Vinh danh anh hùng · Đại sứ Văn hóa ưu tú, tiêu biểu, tiên phong"],
+        ["18:38","18:48","Ra mắt đội thủ lĩnh 2027","Truyền lệnh – Ra mắt Thủ lĩnh Đại sứ 2027"],
+        ["18:48","18:58","Key moment khai tiệc","Khai yến – Nâng chén khải hoàn"],
+        ["18:58","19:28","Dùng tiệc","Yến tiệc Khao Quân"],
+        ["19:28","19:43","Thi văn nghệ","Liên quân trổ tài – Quân đoàn 1 · Team 1 (hoặc bốc thăm)"],
+        ["19:43","19:58","Thi văn nghệ","Liên quân trổ tài – Quân đoàn 2"],
+        ["19:58","20:13","Thi văn nghệ","Liên quân trổ tài – Quân đoàn 3"],
+        ["20:13","20:28","Thi văn nghệ","Liên quân trổ tài – Quân đoàn 4"],
+        ["20:28","20:40","Trao giải, tổng kết, chụp ảnh","Bảng vàng khải hoàn – Bế mạc"],
+        ["20:40","21:00","Tự do giao lưu","Hậu yến"]
+      ],
+      missions:[
+        { name:"Tụ nghĩa – Nhận quân lệnh", place:"Sân Cosmo", img:"gather",
+          desc:"150 thành viên chia thành 04 Hiệu quân, mỗi Hiệu khoảng 37 người. Mở màn bằng nghi thức Ban Lãnh đạo đánh ba hồi trống lệnh xuất chinh.",
+          req:["Nhận khăn đội, quân lệnh, trang phục","Tập hợp quân, chỉnh đốn đội hình","Trình diễn biểu tượng và khẩu hiệu đội"],
+          out:"Đội hình hoàn chỉnh dưới hiệu cờ Hiệu quân.", deadline:null, notes:["Giá trị MSB: Nhân văn"] },
+        { name:"Luyện binh – Rèn khí phách", place:"Sân Cosmo", img:"vovinam2",
+          desc:"Luyện bài võ Vovinam biên đạo riêng (tấn pháp, bộ pháp, quyền pháp, cước pháp) theo nhịp 8 count có trống dẫn nhịp.",
+          req:["3–5 phút: võ sư biểu diễn mở màn","10 phút: học quyền pháp, cước pháp","5 phút: các đội tự luyện tập","30 phút: các đội lần lượt biểu diễn, võ sư chấm điểm"],
+          out:"Màn đồng diễn đồng đều, mạnh mẽ, có khí thế.", deadline:"Khoảng 48–50 phút theo cấu trúc triển khai",
+          notes:["Mỗi Hiệu quân có 02 võ sư: 01 làm mẫu, 01 chỉnh động tác","VietAnt gửi trước: video bài võ, video breakdown, cue nhạc/trống"] },
+        { name:"Giải mật lệnh – Thẻ Tre Di Sản", place:"4 trạm tại Thung Nham", img:"cave",
+          desc:"04 Hiệu quân xuất phát đồng thời ở 04 trạm và xoay vòng theo lộ trình BTC. Mỗi trạm có một nhân vật giao nhiệm vụ; hoàn thành để nhận 01 mảnh Thẻ Tre.",
+          stations:[
+            { n:"Trạm 1 · Mộ Trâu", who:"Lão nông", img:"st1", task:"Đi cà kheo: 05 bộ cà kheo, 05 người xuất phát cùng lúc, về đích thì chuyển cho người tiếp theo.", done:"Cả 37 người vượt tuyến → mảnh số 1" },
+            { n:"Trạm 2 · Động Tiên Cá", who:"Nàng Tiên Cá", img:"st2", task:"Đi xuyên hang, tìm đúng lá cờ mang tên Hiệu quân và mang ra cửa động.", done:"Đưa đúng Hiệu kỳ ra khỏi động → mảnh số 2" },
+            { n:"Trạm 3 · Bến Thuyền", who:"Người Lái Đò", img:"st3", task:"Từng người phi Cờ Lau vào ống tre cách 3–4m. Trượt thì về cuối hàng chờ lượt bổ sung.", done:"Cả đội tham gia, tối thiểu 25 Cờ Lau trong ống → mảnh số 3" },
+            { n:"Trạm 4 · Linh Thần Miếu", who:"Thủ từ", img:"st4", task:"13 người đứng tấn đội 3 bát nước, nhóm còn lại chống đẩy 25 cái. Rơi bát: chống đẩy 10–15 lần.", done:"Giữ thế đủ thời gian và đủ chống đẩy → mảnh số 4" }
+          ],
+          req:["Đi đủ 04 trạm, thu đủ 04 mảnh thẻ tre","Về khu vực tập kết trung tâm","Ghép đúng thứ tự, hoàn thiện Bộ Thẻ Tre, giải mã Mật Lệnh"],
+          out:"Mật Lệnh được giải đúng. Đội nhanh nhất giành chiến thắng.", deadline:null,
+          notes:["Trong Động Tiên Cá: không chạy, không tách tuyến, không tác động cảnh quan","Giá trị MSB: Sáng tạo"] },
+        { name:"Dựng thành – Kiến tạo phòng tuyến", place:"Sân 12 Con Giáp", img:"build2",
+          desc:"Mỗi đội được cấp tre, dây buộc và chi tiết kết nối để dựng một đoạn tường thành mang dấu ấn Hiệu quân.",
+          req:["Phân vai: vận chuyển vật tư, dựng khung, liên kết – gia cố, hoàn thiện khu vực cờ hiệu","Kết cấu đúng bố cục, chắc chắn, rõ nhận diện"],
+          out:"Tuyến thành làm căn cứ cho các thử thách sau. Chấm theo thời gian, độ vững chắc, kỹ thuật, bố cục, tinh thần phối hợp.", deadline:null, notes:["Giá trị MSB: Trách nhiệm"] },
+        { name:"Vượt thủy – Đoạt lệnh", place:"Thủy tuyến", img:"boat",
+          desc:"Mỗi Hiệu quân chia thành 04 lượt chèo theo tải trọng thuyền. Mỗi lượt mang về một vật phẩm cho trận cuối.",
+          req:["Lượt 1: Chìa khóa rương đạn dược","Lượt 2: Mật thư chỉ địch","Lượt 3: Quân lệnh tác chiến","Lượt 4: Cờ xuất chiến"],
+          out:"Đủ 04 vật phẩm thì được vào trận Công phá tường thành.", deadline:null,
+          notes:["Bắt buộc áo phao suốt hoạt động; tối đa 08 người/thuyền; mỗi lượt 04 thuyền","Có người lái chuyên nghiệp, 04 thuyền cứu hộ, y tế trực tại bờ","Giá trị MSB: Trọng khách"] },
+        { name:"Công phá tường thành", place:"Sân 12 Con Giáp", img:"fortress",
+          desc:"04 Hiệu quân bốc thăm thành 02 cặp đối chiến, tấn công lẫn nhau bằng máy bắn và đạn dừa.",
+          req:["Hạ bia theo thứ tự: tầng thấp → giữa → cao","Hạ hết bia thì bắn trúng lá cờ trên đỉnh thành","Hạ cờ đối thủ thì đánh trống báo hoàn thành"],
+          out:"Đội hạ cờ đối phương nhanh nhất giành chiến thắng.", deadline:null,
+          notes:["Đạn là bóng foam/EVA hình quả dừa, nhẹ, mềm, an toàn","Giá trị MSB: Hiệu quả"] },
+        { name:"Khải hoàn toàn quân", place:"Khu vực sân khấu", img:"victory",
+          desc:"Đội xong trận cử một người đánh trống báo công; đội trưởng cắm Hiệu kỳ vào 01 trong 04 vị trí trên sân khấu.",
+          req:["01 đội hoàn thành – 01 tiếng trống – 01 Hiệu kỳ được dựng lên"],
+          out:"Khi lá cờ thứ tư được cắm: trống đại, pháo màu, toàn quân khải hoàn.", deadline:null, notes:["Khoảnh khắc 05 giá trị cốt lõi cùng hội tụ"] },
+        { name:"Liên quân trổ tài – Dòng chảy tiếp nối", place:"Sân khấu Gala", img:"show-fire", evening:true,
+          desc:"Mỗi đội biểu diễn 01 tiết mục kể về sự tiếp nối giữa giá trị đã có, con người hôm nay và hành trình phía trước.",
+          req:["Hình thức tự chọn: hát, múa, mashup, kịch ngắn, nhạc cụ, dance performance…","Thể hiện một trong ba lớp: Gìn giữ giá trị – Kết nối hiện tại – Mở ra tương lai","Không bắt buộc chất liệu lịch sử hay dân gian"],
+          out:"01 tiết mục. Chấm 4 tiêu chí × 50 điểm: nghệ thuật đồng đều, số lượng người tham gia, trang phục, sáng tạo.",
+          deadline:"Biểu diễn 19:28–20:28 theo agenda Gala, 15 phút mỗi đội", notes:["Thứ tự: theo team hoặc bốc thăm"] }
+      ],
+      notes:[
+        { icon:"✓", title:"Cần chuẩn bị", items:["Trang phục teambuilding theo quy chuẩn, thêm băng đeo cổ tay – chân","Dresscode Gala: tone đỏ – vàng – đen, ưu tiên cổ phục, áo dài cách tân","Xem trước video bài võ khi VietAnt gửi"] },
+        { icon:"!", title:"Quy định", items:["Mỗi lần có thành viên sai giờ hoặc sai trang phục: đội bị trừ 10 điểm","Bắt buộc mặc áo phao suốt hoạt động vượt thủy","Trong Động Tiên Cá: không chạy, không tách tuyến, không tác động cảnh quan"] },
+        { icon:"◷", title:"Mốc giờ cần nhớ", items:["06:00 có mặt tại 54 Nguyễn Chí Thanh","13:00–13:45 trả điện thoại cho CBNV (giờ ăn trưa)","19:28–20:28 các đội biểu diễn văn nghệ"] },
+        { icon:"▤", title:"Tài liệu", items:["Video bài võ hoàn chỉnh – " + PENDING,"Video breakdown từng tổ hợp động tác – " + PENDING,"Cue nhạc/trống – " + PENDING] }
+      ]
+    },
+    {
+      id:"day2", label:"Ngày 2", short:"CN · 15.11", date:"Chủ Nhật, 15.11.2026", iso:"2026-11-15", img:"aerial",
+      title:"Tham quan", theme:"Tam Cốc, Ninh Bình",
+      goal:"Tham quan Tam Cốc và khởi hành về Hà Nội/sân bay.",
+      qa:{ what:"Ăn sáng, tham quan Tam Cốc, ăn trưa, về Hà Nội", when:"06:00 ăn sáng · 07:00–10:30 tham quan · 12:30 khởi hành", where:"Thung Nham Resort → Tam Cốc", done:"Không có nhiệm vụ đội" },
+      schedule:[
+        { t:"06:00", e:"07:00", title:"Ăn sáng" },
+        { t:"07:00", e:"10:30", title:"Tham quan Tam Cốc", place:"Tam Cốc" },
+        { t:"11:00", e:"12:00", title:"Ăn trưa" },
+        { t:"12:30", title:"Khởi hành về Hà Nội/sân bay" }
+      ],
+      gala:null, missions:[], notes:[]
+    }
+  ],
+  teams:[1,2,3,4].map(i=>({ id:i, code:"0"+i, name:null, color:null, slogan:null, captain:null, members:"Khoảng 37", list:null })),
+  scoring:[
+    { name:"Kỷ luật – Đúng giờ", pct:10, pts:100, lines:["Sai giờ hoặc trang phục: trừ 10 điểm mỗi lần"] },
+    { name:"Teambuilding", pct:70, pts:700, lines:["Mỗi game: thắng 150 · nhì 120 · ba 100 · cuối 80"] },
+    { name:"Trình diễn Gala", pct:20, pts:200, lines:["01 tiết mục; 4 tiêu chí × 50 điểm"] }
+  ],
+  categories:["Thông báo chung","Cập nhật lịch trình","Điều chỉnh nhiệm vụ","Hướng dẫn tham gia","Tài liệu và biểu mẫu","Các lưu ý quan trọng"],
+  announcements:[
+    { id:"a1", cat:"Thông báo chung", date:null, priority:1, title:"Điểm đón ngày 14.11", sum:"Xe đón lúc 06:00 tại 54 Nguyễn Chí Thanh, dự kiến đến Thung Nham lúc 08:30.", detail:["Ngày 15.11 khởi hành về Hà Nội/sân bay lúc 12:30."] },
+    { id:"a2", cat:"Các lưu ý quan trọng", date:null, priority:2, title:"Đúng giờ, đúng trang phục", sum:"Mỗi lần có thành viên sai giờ hoặc sai trang phục, đội bị trừ 10 điểm trong hạng mục Kỷ luật.", detail:["Kỷ luật – đúng giờ chiếm 10% tổng điểm (100 điểm)."] },
+    { id:"a3", cat:"Hướng dẫn tham gia", date:null, priority:3, title:"Dresscode Lễ Khao Quân: đỏ – vàng – đen", sum:"Trang phục tự do, ưu tiên cổ phục, áo dài cách tân hoặc trang phục có nét truyền thống.", detail:["Trang phục cũng là 1 trong 4 tiêu chí chấm tiết mục văn nghệ."], imgs:["dress1","dress2","dress3"], cutout:true },
+    { id:"a4", cat:"Hướng dẫn tham gia", date:null, priority:4, title:"Trang phục teambuilding", sum:"Lấy cảm hứng từ hội quân, võ sĩ và lễ hội dân gian; thuận tiện vận động.", detail:["Phom áo gọn, quần rộng, đai eo, các lớp áo khoác.","Bổ sung băng đeo cổ tay – chân.","Mỗi đội nhận khăn đội, quân lệnh và trang phục tại Sân Cosmo."], imgs:["costume1","costume3"] },
+    { id:"a5", cat:"Các lưu ý quan trọng", date:null, priority:5, title:"An toàn khi vượt thủy", sum:"8 biện pháp vận hành cho hoạt động đua thuyền.", detail:["Bắt buộc mặc áo phao đúng chuẩn suốt hoạt động.","Tối đa 08 người/thuyền; mỗi lượt 04 thuyền (32 người).","Mỗi thuyền có 01 người lái chuyên nghiệp.","Thêm 04 thuyền cứu hộ có nhân sự và phương tiện ứng cứu.","Gậy dài, phao cứu sinh, dây cứu hộ, bộ sơ cứu tại điểm xuất phát – về đích.","Điểm đích bố trí gần hơn để rút ngắn cự ly.","Nhân sự y tế trực tại bờ."], imgs:["boat"] },
+    { id:"a6", cat:"Các lưu ý quan trọng", date:null, priority:6, title:"Quy định trong Động Tiên Cá", sum:"Đi theo tuyến tham quan, không chạy, không tách khỏi tuyến, không tác động vào cảnh quan tự nhiên.", detail:[] },
+    { id:"a7", cat:"Thông báo chung", date:null, priority:7, title:"Điện thoại trong ngày 1", sum:"Lịch trình ghi trả điện thoại cho CBNV trong giờ ăn trưa (13:00–13:45).", detail:[] },
+    { id:"a8", cat:"Tài liệu và biểu mẫu", date:null, priority:8, title:"Tài liệu luyện võ Vovinam", sum:"VietAnt cung cấp cho MSB trước chương trình. Chưa phát hành.", detail:["01 video bài võ hoàn chỉnh.","01 video breakdown từng tổ hợp động tác.","Cue nhạc/trống."] },
+    { id:"a9", cat:"Hướng dẫn tham gia", date:null, priority:9, title:"Thể lệ tiết mục “Dòng chảy tiếp nối”", sum:"Mỗi đội 01 tiết mục, hình thức tự chọn, thể hiện một trong ba lớp: Gìn giữ – Kết nối – Mở ra tương lai.", detail:["Chấm 4 tiêu chí × 50 điểm: nghệ thuật đồng đều, số lượng người tham gia, trang phục, sáng tạo.","Biểu diễn 19:28–20:28 tại Gala, theo team hoặc bốc thăm."] }
+  ]
+};
+
+/* ===================== HELPERS ===================== */
+const $ = (s,r=document)=>r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pend = v => v ? esc(v) : `<span class="pending">${PENDING}</span>`;
+const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
+const NEW_DAYS = 3;
+const isNew = a => a.date && (Date.now() - new Date(a.date)) < NEW_DAYS*864e5;
+const fmtDate = s => new Date(s).toLocaleString("vi-VN",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
+const teamName = t => t.name || `Hiệu quân ${t.code}`;
+/* Ảnh: file nằm trong thư mục img/ cạnh trang; thiếu file thì khung tự hiện trạng thái “đang cập nhật”. */
+const media = (name, alt, cls="", eager=false) => `<div class="media ${cls}"><img src="img/${name}.webp" alt="${esc(alt)}" ${eager?'':'loading="lazy"'} decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()"></div>`;
+
+/* ===================== OVERVIEW ===================== */
+function viewOverview(){
+  const P = DATA.program;
+  const top = [...DATA.announcements].sort((a,b)=>a.priority-b.priority).slice(0,3);
+  const key1 = [["06:00","Tập trung tại Hà Nội"],["09:30–12:30","Teambuilding 7 chặng"],["17:30–21:00","Gala Lễ Khao Quân"]];
+  const key2 = [["07:00–10:30","Tham quan Tam Cốc"],["12:30","Khởi hành về Hà Nội"]];
+  return `
+  <div class="hero">
+    <div class="bg"><img src="img/hero.webp" alt="" onerror="this.parentNode.classList.add('noimg');this.remove()"></div>
+    <div class="wrap">
+      <p class="label">${esc(P.edition)}</p>
+      <h1 class="h1">Viết tiếp Hành trình Di sản</h1>
+      <p class="lead">${esc(P.keyline)}</p>
+      <dl class="facts">
+        <div><dt>Thời gian</dt><dd class="num">${esc(P.dates)}</dd></div>
+        <div><dt>Địa điểm</dt><dd>${esc(P.venue)}</dd></div>
+        <div><dt>Tham gia</dt><dd>${esc(P.audience)}</dd></div>
+      </dl>
+      <div class="actions">
+        <a class="btn btn-primary" href="#program">Xem lịch trình</a>
+        <a class="btn btn-light" href="#announcements">Lưu ý quan trọng</a>
+        <span class="countdown num" id="countdown"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="wrap">
+    <div class="intro">
+      <div class="intro-text">
+        <p class="label brand">Về chương trình</p>
+        <h2 class="h2">35 năm di sản, một hành trình tiếp nối</h2>
+        <p class="lead">Tại Thung Nham, vùng đất gắn với Cố đô Hoa Lư và thời Đinh, 150 Đại sứ Văn hóa MSB bước vào một trải nghiệm nhập vai: rèn quân, nhận lệnh, xuất chinh và khải hoàn.</p>
+        <p class="quote">Mỗi người giữ một phần. Cùng nhau viết tiếp một hành trình.</p>
+      </div>
+      ${media("sunset1","Đại sứ Văn hóa MSB","r-4x3 pos-l")}
+    </div>
+    <ul class="values" aria-label="05 giá trị cốt lõi MSB trên hành trình">
+      ${DATA.values.map(v=>`<li><span>${esc(v.stage)}</span><b>${esc(v.name)}</b><p>${esc(v.text)}</p></li>`).join("")}
+    </ul>
+  </div></div>
+
+  <div class="sec alt"><div class="wrap">
+    <div class="sec-head"><div><p class="label brand">Điểm nhấn</p><h2 class="h2">Những thử thách chính</h2></div><a class="more" href="#program" data-goto="missions">Xem chi tiết nhiệm vụ</a></div>
+    <div class="cards">${DATA.highlights.map(h=>`
+      <a class="card" href="#program" data-goto="missions">${media(h.img,h.title,"r-3x2")}
+        <span class="label">${esc(h.tag)}</span><h3 class="h4">${esc(h.title)}</h3><p class="body-2">${esc(h.text)}</p></a>`).join("")}
+    </div>
+  </div></div>
+
+  <div class="sec"><div class="wrap">
+    <div class="sec-head"><div><p class="label brand">Hành trình</p><h2 class="h2">Hai ngày tại Ninh Bình</h2></div></div>
+    <div class="days">
+      ${DATA.days.map((d,i)=>`
+      <a class="day-tile" href="#program" data-day="${d.id}">
+        ${media(d.img,d.title)}
+        <div class="in">
+          <p class="label">${esc(d.label)} · ${esc(d.date)}</p>
+          <h3 class="h3" style="font-size:28px">${esc(d.title)}</h3>
+          <ul class="num">${(i?key2:key1).map(r=>`<li><time>${r[0]}</time><span>${r[1]}</span></li>`).join("")}</ul>
+          <span class="go">Lịch trình ${esc(d.label.toLowerCase())} →</span>
+        </div>
+      </a>`).join("")}
+    </div>
+  </div></div>
+
+  <div class="sec alt"><div class="wrap">
+    <div class="split">
+      <div>
+        <p class="label brand">Đội thi</p>
+        <h2 class="h2" style="margin-top:8px">Bốn Hiệu quân, một mục tiêu chung</h2>
+        <div class="stats num">
+          <div><b>04</b><span>Hiệu quân</span></div>
+          <div><b>~37</b><span>Thành viên mỗi đội</span></div>
+          <div><b>150</b><span>Đại sứ Văn hóa</span></div>
+          <div><b>1.000</b><span>Điểm thi đua</span></div>
+        </div>
+        <a class="more" href="#teams">Danh sách đội và thể lệ</a>
+      </div>
+      ${media("costume2","Trang phục hội quân","r-4x3")}
+    </div>
+  </div></div>
+
+  <div class="sec"><div class="wrap">
+    <div class="sec-head"><div><p class="label brand">Cập nhật</p><h2 class="h2">Cần biết trước ngày đi</h2></div><a class="more" href="#announcements">Tất cả thông báo</a></div>
+    <div class="updates">${top.map(a=>`<article class="update"><span class="label">${esc(a.cat)}</span><h3 class="h4">${esc(a.title)}</h3><p class="body-2">${esc(a.sum)}</p></article>`).join("")}</div>
+  </div></div>`;
+}
+
+/* ===================== PROGRAM ===================== */
+let currentDay = store.get("vtds-day") || "day1";
+function viewProgram(){
+  const day = DATA.days.find(d=>d.id===currentDay) || DATA.days[0];
+  const today = new Date().toLocaleDateString("en-CA",{timeZone:"Asia/Ho_Chi_Minh"});
+  const nowMin = (()=>{const p=new Date().toLocaleTimeString("en-GB",{timeZone:"Asia/Ho_Chi_Minh",hour:"2-digit",minute:"2-digit"}).split(":");return +p[0]*60 + +p[1]})();
+  const m = t => {const [h,mm]=t.split(":");return +h*60 + +mm};
+  const isNow = s => day.iso===today && nowMin>=m(s.t) && nowMin < (s.e?m(s.e):m(s.t)+30);
+  const nM = day.missions.length;
+  return `
+  <div class="page-head">${media(day.img,"","",true)}
+    <div class="wrap">
+      <p class="label">Lịch trình &amp; Nhiệm vụ</p>
+      <h1 class="h2" style="font-size:clamp(30px,4vw,44px)">${esc(day.label)} · ${esc(day.title)}</h1>
+      <p>${esc(day.date)} · ${esc(day.theme)}</p>
+    </div>
+  </div>
+
+  <div class="daybar"><div class="wrap">
+    <div class="seg" role="tablist" aria-label="Chọn ngày">
+      ${DATA.days.map(d=>`<button role="tab" id="tab-${d.id}" aria-selected="${d.id===day.id}" data-setday="${d.id}"><b>${esc(d.label)}</b><small>${esc(d.short)}</small></button>`).join("")}
+    </div>
+    <nav class="jump" aria-label="Trong ngày">
+      <a href="#program" data-jump="overview">Tổng quan</a>
+      <a href="#program" data-jump="schedule">Lịch trình</a>
+      ${nM?`<a href="#program" data-jump="missions">Nhiệm vụ (${nM})</a>`:""}
+      ${day.notes.length?`<a href="#program" data-jump="notes">Lưu ý</a>`:""}
+    </nav>
+  </div></div>
+
+  <div class="sec tight anchor" id="p-overview"><div class="wrap">
+    <div class="day-ov">
+      ${media(day.img,day.title,"r-4x3")}
+      <div class="info">
+        <p class="label brand">${esc(day.date)}</p>
+        <h2 class="h2">${esc(day.theme)}</h2>
+        <p class="lead">${esc(day.goal)}</p>
+        <div class="qa">
+          <div><span class="label">Làm gì</span><p>${esc(day.qa.what)}</p></div>
+          <div><span class="label">Khi nào</span><p class="num">${esc(day.qa.when)}</p></div>
+          <div><span class="label">Ở đâu</span><p>${esc(day.qa.where)}</p></div>
+          <div><span class="label">Cần hoàn thành</span><p>${esc(day.qa.done)}</p></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="sec tight alt anchor" id="p-schedule"><div class="wrap">
+    <div class="sec-head"><div><p class="label brand">Lịch trình</p><h2 class="h2">Theo khung giờ</h2></div>
+      <div class="legend"><span class="badge">Hoạt động chung</span><span class="badge team">Nhiệm vụ đội</span></div></div>
+    <ol class="tl num">${day.schedule.map(s=>`
+      <li class="${s.key?'is-key':''} ${isNow(s)?'now':''}">
+        <time><b>${esc(s.t)}</b>${s.e?`<span>đến ${esc(s.e)}</span>`:""}</time>
+        ${s.key ? `
+        <div class="keycard">
+          <div class="kc-body">
+            <div class="kc-top">${s.team?'<span class="badge team">Nhiệm vụ đội</span>':''}${isNow(s)?'<span class="badge key">Đang diễn ra</span>':''}</div>
+            <h3 class="h3">${esc(s.title)}</h3>
+            ${s.text?`<p class="body-2">${esc(s.text)}</p>`:""}
+            <div class="row"><div class="meta">${s.place?`<span class="pin">${esc(s.place)}</span>`:""}${s.owner?`<span>Phụ trách: ${esc(s.owner)}</span>`:""}</div></div>
+            ${s.jump&&nM?`<a class="more" href="#program" data-jump="${s.jump}">Xem ${nM-1} chặng nhiệm vụ</a>`:""}
+          </div>
+          ${media(s.img,s.title)}
+          ${s.agenda&&day.gala?`
+          <details class="gala"><summary>Agenda Lễ Khao Quân · 18:00–21:00</summary>
+            <ol class="agenda">${day.gala.map(g=>`<li><time>${g[0]}–${g[1]}</time><div><b>${esc(g[2])}</b><span>${esc(g[3])}</span></div></li>`).join("")}</ol>
+          </details>`:""}
+        </div>` : `
+        <div class="row">
+          <h3 class="h4">${esc(s.title)} ${isNow(s)?'<span class="badge key">Đang diễn ra</span>':''}</h3>
+          ${s.text?`<p class="body-2">${esc(s.text)}</p>`:""}
+          ${s.place?`<div class="meta"><span class="pin">${esc(s.place)}</span></div>`:""}
+        </div>`}
+      </li>`).join("")}
+    </ol>
+  </div></div>
+
+  ${nM?`
+  <div class="sec tight anchor" id="p-missions"><div class="wrap">
+    <div class="sec-head"><div><p class="label brand">Nhiệm vụ đội</p><h2 class="h2">${nM} nhiệm vụ của mỗi Hiệu quân</h2><p class="body-2">Bảy chặng ban ngày nối tiếp nhau trong cùng một chiến dịch, và một tiết mục văn nghệ tại Gala.</p></div></div>
+    <nav class="m-index" aria-label="Danh sách nhiệm vụ">${day.missions.map((ms,i)=>`<a href="#program" data-jump="m${i+1}"><i class="num">${i+1}</i>${esc(ms.name.split(" – ")[0])}</a>`).join("")}</nav>
+    <div class="missions">${day.missions.map((ms,i)=>`
+      <article class="mission ${ms.evening?'evening':''} anchor" id="p-m${i+1}">
+        <div class="m-main">
+          <div class="m-head">
+            <span class="m-no num">${String(i+1).padStart(2,"0")}</span>
+            <div>
+              <div class="badges"><span class="badge ${ms.evening?'key':''}">${ms.evening?'Gala · buổi tối':'Teambuilding · buổi sáng'}</span><span class="badge">${esc(ms.place)}</span></div>
+              <h3 class="h3">${esc(ms.name)}</h3>
+            </div>
+          </div>
+          <p class="body-2">${esc(ms.desc)}</p>
+          ${ms.stations?`<div class="stations">${ms.stations.map(st=>`
+            <div class="station">${media(st.img,st.n,"r-1")}<div><span class="who">${esc(st.who)}</span><b class="h4" style="font-size:15px">${esc(st.n)}</b><p>${esc(st.task)}</p><p class="done">${esc(st.done)}</p></div></div>`).join("")}</div>`:""}
+          <div class="blocks">
+            <div><h5>Yêu cầu thực hiện</h5><ul class="ticks">${ms.req.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>
+            <div><h5>Lưu ý</h5><ul class="ticks muted">${ms.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>
+          </div>
+        </div>
+        <aside class="m-side">
+          ${media(ms.img,ms.name,"r-4x3")}
+          <dl>
+            <div><dt>Sản phẩm đầu ra</dt><dd>${esc(ms.out)}</dd></div>
+            <div><dt>Thời hạn</dt><dd class="num">${pend(ms.deadline)}</dd></div>
+          </dl>
+        </aside>
+      </article>`).join("")}
+    </div>
+  </div></div>`:""}
+
+  <div class="sec tight ${nM?'alt':''} anchor" id="p-notes"><div class="wrap">
+    <div class="sec-head"><div><p class="label brand">Lưu ý</p><h2 class="h2">Chuẩn bị &amp; quy định</h2></div></div>
+    ${day.notes.length?`<div class="notes">${day.notes.map(n=>`<div class="note"><h3 class="h4"><i aria-hidden="true">${n.icon}</i>${esc(n.title)}</h3><ul class="ticks muted">${n.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`
+      :`<div class="empty">Chưa có lưu ý riêng cho ${esc(day.label.toLowerCase())}. Theo dõi trang <a href="#announcements">Thông báo</a> để cập nhật.</div>`}
+  </div></div>`;
+}
+
+/* ===================== TEAMS ===================== */
+let teamQuery="", teamFilter="all", teamSort="code";
+function teamCards(){
+  let list = DATA.teams.filter(t=>{
+    if (teamQuery && ![teamName(t),t.slogan,t.captain].join(" ").toLowerCase().includes(teamQuery.toLowerCase())) return false;
+    const full = t.name && t.slogan && t.captain && t.color;
+    return teamFilter==="all" || (teamFilter==="complete" ? full : !full);
+  }).sort((a,b)=> teamSort==="name" ? teamName(a).localeCompare(teamName(b),"vi") : a.id-b.id);
+  $("#team-count").textContent = `Hiển thị ${list.length}/${DATA.teams.length} đội`;
+  $("#team-grid").innerHTML = list.length ? list.map(t=>`
+    <article class="team">
+      <div class="crest" ${t.color?`style="background:${esc(t.color)}"`:""}><span>Hiệu quân</span><b class="num">${esc(t.code)}</b></div>
+      <div class="t-body">
+        <div><h3 class="h4">${esc(teamName(t))}</h3><p class="slogan">${t.slogan?`“${esc(t.slogan)}”`:`Khẩu hiệu: ${PENDING.toLowerCase()}`}</p></div>
+        <dl class="kv">
+          <dt>Đội trưởng</dt><dd>${pend(t.captain)}</dd>
+          <dt>Màu nhận diện</dt><dd>${t.color?`<span class="swatch" style="background:${esc(t.color)};border:0"></span>${esc(t.color)}`:`<span class="pending">${PENDING}</span>`}</dd>
+          <dt>Quân số</dt><dd class="num">${esc(t.members)}</dd>
+        </dl>
+        <details><summary>Thành viên</summary><p>${t.list?esc(t.list):"Danh sách thành viên đang cập nhật."}</p></details>
+      </div>
+    </article>`).join("") : `<div class="empty" style="grid-column:1/-1">Không có đội phù hợp. Thử xoá từ khoá hoặc bộ lọc.</div>`;
+}
+function viewTeams(){
+  return `
+  <div class="page-head">${media("costume1","","",true)}
+    <div class="wrap">
+      <p class="label">Đội thi</p>
+      <h1 class="h2" style="font-size:clamp(30px,4vw,44px)">Bốn Hiệu quân</h1>
+      <p>150 Đại sứ Văn hóa chia thành 04 Hiệu quân, mỗi đội khoảng 37 người. Tên đội, màu nhận diện, khẩu hiệu và đội trưởng sẽ cập nhật khi BTC công bố.</p>
+    </div>
+  </div>
+  <div class="sec tight"><div class="wrap">
+    <div class="toolbar">
+      <label class="field" for="team-q"><span>Tìm đội</span><input id="team-q" type="search" placeholder="Tên đội, khẩu hiệu, đội trưởng" value="${esc(teamQuery)}"></label>
+      <label class="field" for="team-f"><span>Lọc</span><select id="team-f"><option value="all">Tất cả</option><option value="complete">Đã đủ thông tin</option><option value="pending">Đang cập nhật</option></select></label>
+      <label class="field" for="team-s"><span>Sắp xếp</span><select id="team-s"><option value="code">Theo số hiệu</option><option value="name">Theo tên A–Z</option></select></label>
+      <span class="count num" id="team-count" aria-live="polite"></span>
+    </div>
+    <div class="teams" id="team-grid"></div>
+  </div></div>
+  <div class="sec tight alt"><div class="wrap">
+    <div class="sec-head"><div><p class="label brand">Thể lệ</p><h2 class="h2">Cách tính 1.000 điểm</h2></div><a class="more" href="#program" data-goto="missions">Xem các nhiệm vụ</a></div>
+    <div class="score num">${DATA.scoring.map(s=>`
+      <article class="sc">
+        <div class="sc-top"><h3 class="h4">${esc(s.name)}</h3><span class="pct">${s.pct}%</span></div>
+        <div class="bar" aria-hidden="true"><i style="width:${s.pct}%"></i></div>
+        <p class="body-2"><b style="color:var(--ink)">${s.pts} điểm</b> · ${esc(s.lines[0])}</p>
+      </article>`).join("")}
+    </div>
+  </div></div>`;
+}
+
+/* ===================== ANNOUNCEMENTS ===================== */
+let annCat="Tất cả", annQuery="";
+function annFeed(){
+  const items = DATA.announcements.filter(a =>
+    (annCat==="Tất cả" || a.cat===annCat) &&
+    (!annQuery || (a.title+" "+a.sum+" "+a.detail.join(" ")).toLowerCase().includes(annQuery.toLowerCase()))
+  ).sort((a,b)=> (b.date?+new Date(b.date):0) - (a.date?+new Date(a.date):0) || a.priority-b.priority);
+  $("#ann-feed").innerHTML = items.length ? items.map(a=>`
+    <article class="post ${a.date&&!isNew(a)?'is-old':''}">
+      <aside>
+        ${isNew(a)?'<span class="badge new">Mới</span>':""}
+        <span class="cat">${esc(a.cat)}</span>
+        <span class="when num">${a.date?esc(fmtDate(a.date)):"Từ proposal VietAnt"}</span>
+      </aside>
+      <div class="pb">
+        <h3 class="h3">${esc(a.title)}</h3>
+        <p class="body-2">${esc(a.sum)}</p>
+        ${a.detail.length?`<details><summary>Xem chi tiết</summary><ul class="ticks muted">${a.detail.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></details>`:""}
+      </div>
+      ${a.imgs?`<div class="thumbs">${a.imgs.map(n=>media(n,"",(a.cutout?"cutout ":"")+(a.imgs.length>1?"r-4x5":"r-4x3"))).join("")}</div>`:"<div></div>"}
+    </article>`).join("") : `<div class="empty" style="margin-top:24px">Chưa có thông báo trong mục “${esc(annCat)}”${annQuery?` khớp với “${esc(annQuery)}”`:""}.</div>`;
+  document.querySelectorAll("#ann-tabs button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.cat===annCat));
+}
+function viewAnnouncements(){
+  const cats = ["Tất cả", ...DATA.categories];
+  const count = c => c==="Tất cả" ? DATA.announcements.length : DATA.announcements.filter(a=>a.cat===c).length;
+  return `
+  <div class="page-head">${media("dinner-hall","","",true)}
+    <div class="wrap">
+      <p class="label">Thông báo</p>
+      <h1 class="h2" style="font-size:clamp(30px,4vw,44px)">Thông báo &amp; cập nhật</h1>
+      <p>Thông báo đăng trong ${NEW_DAYS} ngày gần nhất được gắn nhãn Mới.</p>
+    </div>
+  </div>
+  <div class="sec tight"><div class="wrap">
+    <div class="toolbar"><label class="field" for="ann-q"><span>Tìm thông báo</span><input id="ann-q" type="search" placeholder="Ví dụ: áo phao, dresscode" value="${esc(annQuery)}"></label></div>
+    <div class="tabs" id="ann-tabs" role="group" aria-label="Phân loại">
+      ${cats.map(c=>`<button type="button" data-cat="${esc(c)}" aria-pressed="${c===annCat}">${esc(c)}<span class="num">${count(c)}</span></button>`).join("")}
+    </div>
+    <div class="feed" id="ann-feed"></div>
+  </div></div>`;
+}
+
+/* ===================== ROUTER ===================== */
+const ROUTES = { overview:viewOverview, program:viewProgram, teams:viewTeams, announcements:viewAnnouncements };
+let cdTimer, pendingJump = null, spy;
+function render(){
+  const route = (location.hash.slice(1) in ROUTES) ? location.hash.slice(1) : "overview";
+  document.querySelectorAll("[data-view]").forEach(s=>{ s.hidden = s.dataset.view!==route; });
+  $(`#v-${route}`).innerHTML = ROUTES[route]();
+  document.querySelectorAll("[data-nav]").forEach(a=> a.dataset.nav===route ? a.setAttribute("aria-current","page") : a.removeAttribute("aria-current"));
+  clearInterval(cdTimer); spy?.disconnect();
+  if (route==="overview"){ tick(); cdTimer=setInterval(tick,30000); }
+  if (route==="program") setupSpy();
+  if (route==="teams"){
+    $("#team-f").value=teamFilter; $("#team-s").value=teamSort; teamCards();
+    $("#team-q").addEventListener("input",e=>{teamQuery=e.target.value.trim();teamCards()});
+    $("#team-f").addEventListener("change",e=>{teamFilter=e.target.value;teamCards()});
+    $("#team-s").addEventListener("change",e=>{teamSort=e.target.value;teamCards()});
+  }
+  if (route==="announcements"){ annFeed(); $("#ann-q").addEventListener("input",e=>{annQuery=e.target.value.trim();annFeed()}); }
+}
+function jumpTo(id){ const el=document.getElementById("p-"+id); if(el) el.scrollIntoView({block:"start"}); }
+function measureBar(){ const b=$(".daybar"); if(b) document.documentElement.style.setProperty("--daybar", b.offsetHeight+"px"); }
+window.addEventListener("resize", measureBar);
+function setupSpy(){
+  measureBar();
+  const links=[...document.querySelectorAll(".jump a")]; if(!("IntersectionObserver" in window)) return;
+  spy=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("on", "p-"+l.dataset.jump===e.target.id)); } })},{rootMargin:"-45% 0px -50% 0px"});
+  ["overview","schedule","missions","notes"].forEach(k=>{const el=document.getElementById("p-"+k); if(el) spy.observe(el)});
+}
+function setDay(id, keepTop){
+  currentDay=id; store.set("vtds-day",id);
+  const y = keepTop ? null : window.scrollY;
+  render();
+  const bar=$(".daybar"); if(bar && !keepTop){ const head=$(".page-head"); window.scrollTo(0, Math.min(y, head.offsetTop+head.offsetHeight)); }
+  $("#tab-"+id)?.focus({preventScroll:true});
+}
+document.addEventListener("click",e=>{
+  const sd=e.target.closest("[data-setday]"); if(sd){ setDay(sd.dataset.setday); return; }
+  const dl=e.target.closest("a[data-day]"); if(dl){ currentDay=dl.dataset.day; store.set("vtds-day",currentDay); }
+  const go=e.target.closest("a[data-goto]"); if(go){ currentDay="day1"; store.set("vtds-day","day1"); pendingJump=go.dataset.goto; }
+  const j=e.target.closest("[data-jump]"); if(j){ e.preventDefault(); jumpTo(j.dataset.jump); return; }
+  const c=e.target.closest("#ann-tabs button"); if(c){ annCat=c.dataset.cat; annFeed(); }
+});
+document.addEventListener("keydown",e=>{
+  const t=e.target.closest?.("[data-setday]"); if(!t||!["ArrowLeft","ArrowRight"].includes(e.key)) return;
+  const ids=DATA.days.map(d=>d.id); let i=(ids.indexOf(currentDay)+(e.key==="ArrowRight"?1:-1)+ids.length)%ids.length; setDay(ids[i]);
+});
+window.addEventListener("hashchange",()=>{ render(); if(pendingJump){ const p=pendingJump; pendingJump=null; requestAnimationFrame(()=>jumpTo(p)); } else window.scrollTo(0,0); });
+
+function tick(){
+  const el=$("#countdown"); if(!el) return;
+  const s=new Date(DATA.program.start), e=new Date(DATA.program.end), n=new Date();
+  if(n<s){const ms=s-n,d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5); el.innerHTML=`Còn <b>${d}</b> ngày <b>${h}</b> giờ`;}
+  else if(n<=e) el.innerHTML="<b>Đang diễn ra</b>"; else el.textContent="Chương trình đã kết thúc";
+}
+render();
+</script>
+</body>
+</html>
