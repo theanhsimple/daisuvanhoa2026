@@ -16,19 +16,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
 /* Layout: night header + bottom tab bar on phones; one 1200px container; Program page has a sticky day bar; image-led cards, borders only where they separate. */
+/* Color system: warm ivory/cream canvas in three steps (bg → cream → surface), deep brown only for
+   header, hero, page heads and one accent band; brand orange-red for actions and selection. */
 :root{
-  --bg:#FAF7F4; --surface:#FFFFFF; --sunken:#F3EDE8; --ink:#1E1512; --ink-2:#5C4B45; --ink-3:#86726B; --line:#E8DFD9;
-  --brand:#E24A1D; --brand-strong:#B8340E; --brand-soft:#FCE9E1; --gold:#A87618; --gold-soft:#F6ECD9;
-  --night:#140B08; --night-2:#24140F; --on-night:#FFF4EC; --on-night-2:#D8BEB1;
+  color-scheme:light;
+  --bg:#FBF8F3; --cream:#F4ECE2; --surface:#FFFFFF; --sunken:#EFE6DB; --ink:#1E1512; --ink-2:#55453E; --ink-3:#7A6760; --line:#E6DBCF;
+  --brand:#E24A1D; --brand-strong:#B8340E; --brand-soft:#FCE9E1; --gold:#9A6B12; --gold-soft:#F6ECD9;
+  --night:#140B08; --night-2:#24140F; --night-3:#2E1B14; --on-night:#FFF4EC; --on-night-2:#D8BEB1;
+  --shadow:0 0 0 1px var(--line), 0 1px 2px rgba(30,21,18,.04);
+  --shadow-up:0 0 0 1px var(--line), 0 8px 24px -8px rgba(30,21,18,.14);
   --font:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --r-lg:16px; --r:12px; --r-sm:8px; --hdr:64px; --max:1200px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#110A08; --surface:#1A110E; --sunken:#231713; --ink:#F5ECE7; --ink-2:#BFAAA1; --ink-3:#8F7C74; --line:#33241E;
-  --brand:#FF6B3F; --brand-strong:#FF8A62; --brand-soft:#2E1711; --gold:#E2B55C; --gold-soft:#2A2114; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#110A08; --surface:#1A110E; --sunken:#231713; --ink:#F5ECE7; --ink-2:#BFAAA1; --ink-3:#8F7C74; --line:#33241E;
-  --brand:#FF6B3F; --brand-strong:#FF8A62; --brand-soft:#2E1711; --gold:#E2B55C; --gold-soft:#2A2114; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -101,7 +100,19 @@ main{min-height:60vh}
 .sec.tight{padding-block:56px}
 .sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:32px}
 .sec-head > div{display:grid;gap:8px;max-width:640px}
-.alt{background:var(--surface)}
+.alt{background:var(--cream)}
+.dark{background:var(--night-2);color:var(--on-night)}
+.dark .label.brand{color:#F7B57A}
+.dark .more{color:#F7B57A}
+.dark .stats span{color:var(--on-night-2)}
+.dark .media{box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+.btn-ghost{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.btn-ghost:hover{box-shadow:0 0 0 1px var(--ink-3)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.4;cursor:default;pointer-events:none}
+/* Brief highlight when a deep link lands on an item */
+@keyframes flash{0%,40%{box-shadow:0 0 0 3px var(--brand)}100%{box-shadow:0 0 0 3px transparent}}
+.flash{animation:flash 1.6s ease-out}
 
 /* ========== OVERVIEW ========== */
 .hero{position:relative;background:var(--night);color:var(--on-night);overflow:hidden;isolation:isolate}
@@ -138,7 +149,9 @@ main{min-height:60vh}
 .card .media{transition:transform .25s}
 .card:hover .media img{transform:scale(1.03)}
 .card .media img{transition:transform .4s}
-.card .h4{font-size:18px}
+.card .h4{font-size:18px;transition:color .15s}
+.card:hover .h4{color:var(--brand-strong)}
+.card{color:inherit}
 
 .days{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .day-tile{position:relative;border-radius:var(--r-lg);overflow:hidden;color:#fff;text-decoration:none;min-height:420px;display:flex;align-items:flex-end;isolation:isolate;background:var(--night)}
@@ -160,12 +173,15 @@ main{min-height:60vh}
 .stats span{font-size:14px;color:var(--ink-3)}
 
 .updates{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.update{display:grid;gap:10px;align-content:start;padding-top:20px;border-top:2px solid var(--ink)}
+.update{display:grid;gap:10px;align-content:start;padding-top:20px;border-top:2px solid var(--ink);text-decoration:none;color:inherit}
+.update .more{margin-top:2px}
+.update:hover .h4{color:var(--brand-strong)}
 
 /* ========== PAGE HEAD (shared) ========== */
 .page-head{background:var(--night);color:var(--on-night);position:relative;overflow:hidden;isolation:isolate}
-.page-head .media{position:absolute;inset:0;border-radius:0;z-index:-2;opacity:.55}
-.page-head::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,11,8,.95),rgba(20,11,8,.55) 70%,rgba(20,11,8,.3))}
+.page-head .media{position:absolute;inset:0;border-radius:0;z-index:-2}
+.page-head .media img{object-position:50% 35%}
+.page-head::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,11,8,.92) 0%,rgba(20,11,8,.72) 45%,rgba(20,11,8,.2) 100%)}
 .page-head .wrap{padding-block:56px 48px;display:grid;gap:12px}
 .page-head .label{color:#F7B57A}
 .page-head p{color:var(--on-night-2);max-width:60ch}
@@ -223,26 +239,50 @@ main{min-height:60vh}
 .agenda b{display:block;font-weight:600}
 .agenda span{color:var(--ink-3)}
 
-.m-index{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.m-index a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px 8px 8px;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--line);color:var(--ink-2)}
-.m-index a:hover{color:var(--ink);box-shadow:0 0 0 1px var(--ink-3)}
-.m-index i{font-style:normal;font-size:12px;font-weight:700;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--sunken);color:var(--ink)}
-.missions{display:grid;gap:20px}
-.mission{background:var(--surface);border-radius:var(--r-lg);box-shadow:0 0 0 1px var(--line);display:grid;grid-template-columns:1fr 340px;overflow:hidden}
-.mission > *{min-width:0}
-.m-main{padding:28px;display:grid;gap:18px;align-content:start}
-.m-head{display:flex;align-items:flex-start;gap:16px}
-.m-no{flex:none;width:48px;height:48px;border-radius:12px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:18px;font-weight:800;letter-spacing:-.02em}
-.mission.evening .m-no{background:var(--brand);color:#fff}
-.m-head > div{display:grid;gap:6px;min-width:0}
+/* Missions: selector list (left, sticky) + one detail panel (right) with prev/next.
+   Under 1024px the list becomes a horizontal chip rail directly above the panel. */
+.mx{display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:start;scroll-margin-top:calc(var(--hdr) + var(--daybar,80px) + 12px)}
+.mx > *{min-width:0}
+.m-list{position:sticky;top:calc(var(--hdr) + var(--daybar,80px) + 16px);display:grid;gap:4px;max-height:calc(100vh - var(--hdr) - var(--daybar,80px) - 32px);overflow:auto;padding:2px}
+.m-group{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:12px 12px 6px}
+.m-group:first-child{padding-top:0}
+.m-tab{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:center;width:100%;text-align:left;border:0;background:transparent;cursor:pointer;padding:10px 12px;border-radius:var(--r);color:var(--ink-2);font:inherit;min-height:56px;transition:background .15s,color .15s}
+.m-tab:hover{background:var(--sunken);color:var(--ink)}
+.m-tab i{font-style:normal;font-size:13px;font-weight:700;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--sunken);color:var(--ink-2);transition:background .15s,color .15s}
+.m-tab b{display:block;font-size:15px;font-weight:600;line-height:1.3}
+.m-tab small{display:block;font-size:13px;color:var(--ink-3);line-height:1.35;margin-top:1px}
+.m-tab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.m-tab[aria-selected="true"] i{background:var(--brand);color:#fff}
+.m-panel{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow-up);overflow:hidden;scroll-margin-top:calc(var(--hdr) + var(--daybar,80px) + 12px)}
+.m-panel.swap > *{animation:fade .22s ease}
+.m-hero{position:relative}
+.m-hero .media{border-radius:0;aspect-ratio:21/9}
+.m-step{position:absolute;left:20px;top:20px;display:inline-flex;align-items:center;gap:8px;background:rgba(20,11,8,.78);color:#fff;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+.m-step b{color:#F7B57A}
+.m-main{padding:28px 32px 32px;display:grid;gap:22px;align-content:start}
+.m-head{display:grid;gap:10px}
 .m-head .badges{display:flex;flex-wrap:wrap;gap:6px}
-.m-side{display:grid;grid-template-rows:auto 1fr;background:var(--sunken)}
-.m-side .media{border-radius:0}
-.m-side dl{padding:20px 22px;display:grid;gap:14px;align-content:start}
-.m-side dt{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
-.m-side dd{font-size:15px;line-height:1.5}
+.facts-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:var(--r);overflow:hidden}
+.facts-row div{background:var(--bg);padding:14px 16px;display:grid;gap:4px;align-content:start}
+.facts-row dt{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.facts-row dd{font-size:15px;line-height:1.5}
+.m-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;padding:16px 20px;border-top:1px solid var(--line);background:var(--bg)}
+.m-nav button{display:grid;gap:2px;border:0;background:transparent;cursor:pointer;font:inherit;text-align:left;padding:10px 12px;border-radius:var(--r);min-height:56px;color:var(--ink)}
+.m-nav button:hover{background:var(--sunken)}
+.m-nav button small{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.m-nav button b{font-size:15px;font-weight:600}
+.m-nav .next{text-align:right;justify-self:end}
+.m-nav .next b{color:var(--brand-strong)}
+.m-nav button[disabled]{visibility:hidden}
+.dots{display:flex;gap:6px;align-items:center}
+.m-nav .dots button{display:grid;place-items:center;width:20px;height:32px;min-height:0;padding:0;border-radius:6px}
+.m-nav .dots button::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--line);transition:width .2s,background .2s}
+.m-nav .dots button:hover::before{background:var(--ink-3)}
+.m-nav .dots button[aria-current="step"]{width:30px}
+.m-nav .dots button[aria-current="step"]::before{background:var(--brand);width:22px}
 .pending{color:var(--ink-3);font-style:italic}
 .blocks{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+.blocks-h{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
 .blocks h5{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
 .ticks{display:grid;gap:6px;font-size:15px;line-height:1.5}
 .ticks li{position:relative;padding-left:20px}
@@ -329,7 +369,15 @@ footer a:hover{color:var(--on-night)}
 @media (max-width:1100px){
   .teams{grid-template-columns:repeat(2,1fr)}
   .values{grid-template-columns:repeat(3,1fr)}
-  .mission{grid-template-columns:1fr 280px}
+  .mx{grid-template-columns:1fr;gap:16px}
+  .m-list{position:static;max-height:none;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px;margin-inline:-2px;scroll-snap-type:x proximity}
+  .m-list::-webkit-scrollbar{display:none}
+  .m-group{display:none}
+  .m-tab{flex:none;width:auto;grid-template-columns:28px auto;gap:8px;min-height:48px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);scroll-snap-align:start}
+  .m-tab i{width:28px;height:28px;font-size:12px}
+  .m-tab small{display:none}
+  .m-tab b{font-size:14px;white-space:nowrap}
+  .m-tab[aria-selected="true"]{box-shadow:0 0 0 1.5px var(--brand)}
   .post{grid-template-columns:150px 1fr}
   .post .thumbs{grid-column:2;grid-auto-flow:column;justify-content:start}
   .post .thumbs .media{width:96px}
@@ -340,9 +388,6 @@ footer a:hover{color:var(--on-night)}
   .updates{grid-template-columns:1fr;gap:0}
   .update{padding-block:20px;border-top:1px solid var(--line)}
   .update:first-child{border-top:2px solid var(--ink)}
-  .mission{grid-template-columns:1fr}
-  .m-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .m-side .media{height:100%;aspect-ratio:auto;min-height:200px}
   .keycard{grid-template-columns:1fr}
   .keycard .media{height:auto;aspect-ratio:16/9;min-height:0;order:-1}
   .score{grid-template-columns:1fr}
@@ -380,12 +425,15 @@ footer a:hover{color:var(--on-night)}
   .tl > li.is-key::before{left:1px;top:17px}
   .tl time{text-align:left;display:flex;gap:8px;align-items:baseline}
   .tl time b{display:inline;font-size:16px}
-  .m-main{padding:20px}
-  .m-no{width:40px;height:40px;font-size:16px;border-radius:10px}
+  .m-main{padding:20px 18px 24px;gap:18px}
+  .m-hero .media{aspect-ratio:16/9}
+  .m-step{left:12px;top:12px}
+  .facts-row{grid-template-columns:1fr}
+  .m-nav{grid-template-columns:1fr 1fr;padding:10px}
+  .m-nav .dots{display:none}
+  .m-nav button{padding:8px 10px}
   .blocks{grid-template-columns:1fr}
   .stations{grid-template-columns:1fr}
-  .m-side{grid-template-columns:1fr}
-  .m-side .media{aspect-ratio:16/9;min-height:0}
   .notes{grid-template-columns:1fr}
   .agenda{padding:0 18px 14px}
   .agenda li{grid-template-columns:1fr;gap:2px}
@@ -480,12 +528,12 @@ const DATA = {
     { name:"Hiệu quả", stage:"Công phá thành trì", text:"Rõ mục tiêu, tối ưu nguồn lực, tạo kết quả." }
   ],
   highlights:[
-    { img:"drum-stage", tag:"Sân Cosmo", title:"Trống lệnh xuất chinh", text:"Ban Lãnh đạo đánh ba hồi trống phát lệnh xuất quân." },
-    { img:"vovinam", tag:"Sân Cosmo", title:"Luyện binh Vovinam", text:"150 người đồng diễn bài võ biên đạo riêng." },
-    { img:"st2", tag:"4 trạm", title:"Giải mật lệnh Thẻ Tre", text:"Đi đủ bốn trạm, ghép bốn mảnh thẻ tre, giải mã mật lệnh." },
-    { img:"build", tag:"Sân 12 Con Giáp", title:"Dựng thành", text:"Cả đội dựng tường thành bằng tre làm căn cứ." },
-    { img:"boat", tag:"Thủy tuyến", title:"Vượt thủy", text:"Bốn lượt chèo giành bốn vật phẩm cho trận cuối." },
-    { img:"siege", tag:"Sân 12 Con Giáp", title:"Công phá tường thành", text:"Hạ bia, hạ cờ đối phương bằng máy bắn đạn dừa." }
+    { img:"drum-stage", m:1, tag:"Sân Cosmo", title:"Trống lệnh xuất chinh", text:"Ban Lãnh đạo đánh ba hồi trống phát lệnh xuất quân." },
+    { img:"vovinam", m:2, tag:"Sân Cosmo", title:"Luyện binh Vovinam", text:"150 người đồng diễn bài võ biên đạo riêng." },
+    { img:"st2", m:3, tag:"4 trạm", title:"Giải mật lệnh Thẻ Tre", text:"Đi đủ bốn trạm, ghép bốn mảnh thẻ tre, giải mã mật lệnh." },
+    { img:"build", m:4, tag:"Sân 12 Con Giáp", title:"Dựng thành", text:"Cả đội dựng tường thành bằng tre làm căn cứ." },
+    { img:"boat", m:5, tag:"Thủy tuyến", title:"Vượt thủy", text:"Bốn lượt chèo giành bốn vật phẩm cho trận cuối." },
+    { img:"siege", m:6, tag:"Sân 12 Con Giáp", title:"Công phá tường thành", text:"Hạ bia, hạ cờ đối phương bằng máy bắn đạn dừa." }
   ],
   days:[
     {
@@ -609,6 +657,7 @@ const DATA = {
 
 /* ===================== HELPERS ===================== */
 const $ = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const pend = v => v ? esc(v) : `<span class="pending">${PENDING}</span>`;
 const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
@@ -639,7 +688,7 @@ function viewOverview(){
       </dl>
       <div class="actions">
         <a class="btn btn-primary" href="#program">Xem lịch trình</a>
-        <a class="btn btn-light" href="#announcements">Lưu ý quan trọng</a>
+        <a class="btn btn-light" href="#announcements" data-anncat="Các lưu ý quan trọng">Lưu ý quan trọng</a>
         <span class="countdown num" id="countdown"></span>
       </div>
     </div>
@@ -661,10 +710,10 @@ function viewOverview(){
   </div></div>
 
   <div class="sec alt"><div class="wrap">
-    <div class="sec-head"><div><p class="label brand">Điểm nhấn</p><h2 class="h2">Những thử thách chính</h2></div><a class="more" href="#program" data-goto="missions">Xem chi tiết nhiệm vụ</a></div>
+    <div class="sec-head"><div><p class="label brand">Điểm nhấn</p><h2 class="h2">Những thử thách chính</h2></div><a class="more" href="#program/missions">Xem cả 8 nhiệm vụ</a></div>
     <div class="cards">${DATA.highlights.map(h=>`
-      <a class="card" href="#program" data-goto="missions">${media(h.img,h.title,"r-3x2")}
-        <span class="label">${esc(h.tag)}</span><h3 class="h4">${esc(h.title)}</h3><p class="body-2">${esc(h.text)}</p></a>`).join("")}
+      <a class="card" href="#program/m${h.m}">${media(h.img,h.title,"r-3x2")}
+        <span class="label">Nhiệm vụ ${String(h.m).padStart(2,"0")} · ${esc(h.tag)}</span><h3 class="h4">${esc(h.title)}</h3><p class="body-2">${esc(h.text)}</p></a>`).join("")}
     </div>
   </div></div>
 
@@ -684,7 +733,7 @@ function viewOverview(){
     </div>
   </div></div>
 
-  <div class="sec alt"><div class="wrap">
+  <div class="sec dark"><div class="wrap">
     <div class="split">
       <div>
         <p class="label brand">Đội thi</p>
@@ -695,7 +744,7 @@ function viewOverview(){
           <div><b>150</b><span>Đại sứ Văn hóa</span></div>
           <div><b>1.000</b><span>Điểm thi đua</span></div>
         </div>
-        <a class="more" href="#teams">Danh sách đội và thể lệ</a>
+        <a class="btn btn-primary" href="#teams">Danh sách đội &amp; thể lệ</a>
       </div>
       ${media("costume2","Trang phục hội quân","r-4x3")}
     </div>
@@ -703,7 +752,7 @@ function viewOverview(){
 
   <div class="sec"><div class="wrap">
     <div class="sec-head"><div><p class="label brand">Cập nhật</p><h2 class="h2">Cần biết trước ngày đi</h2></div><a class="more" href="#announcements">Tất cả thông báo</a></div>
-    <div class="updates">${top.map(a=>`<article class="update"><span class="label">${esc(a.cat)}</span><h3 class="h4">${esc(a.title)}</h3><p class="body-2">${esc(a.sum)}</p></article>`).join("")}</div>
+    <div class="updates">${top.map(a=>`<a class="update" href="#announcements/${a.id}"><span class="label">${esc(a.cat)}</span><h3 class="h4">${esc(a.title)}</h3><p class="body-2">${esc(a.sum)}</p><span class="more">Đọc thông báo</span></a>`).join("")}</div>
   </div></div>`;
 }
 
@@ -716,6 +765,7 @@ function viewProgram(){
   const m = t => {const [h,mm]=t.split(":");return +h*60 + +mm};
   const isNow = s => day.iso===today && nowMin>=m(s.t) && nowMin < (s.e?m(s.e):m(s.t)+30);
   const nM = day.missions.length;
+  const galaM = day.missions.findIndex(ms=>ms.evening) + 1;
   return `
   <div class="page-head">${media(day.img,"","",true)}
     <div class="wrap">
@@ -767,7 +817,8 @@ function viewProgram(){
             <h3 class="h3">${esc(s.title)}</h3>
             ${s.text?`<p class="body-2">${esc(s.text)}</p>`:""}
             <div class="row"><div class="meta">${s.place?`<span class="pin">${esc(s.place)}</span>`:""}${s.owner?`<span>Phụ trách: ${esc(s.owner)}</span>`:""}</div></div>
-            ${s.jump&&nM?`<a class="more" href="#program" data-jump="${s.jump}">Xem ${nM-1} chặng nhiệm vụ</a>`:""}
+            ${s.jump&&nM?`<a class="more" href="#program/m1" data-mission-link="1">Xem ${nM-1} chặng nhiệm vụ</a>`:""}
+            ${s.agenda&&galaM?`<a class="more" href="#program/m${galaM}" data-mission-link="${galaM}">Thể lệ tiết mục văn nghệ</a>`:""}
           </div>
           ${media(s.img,s.title)}
           ${s.agenda&&day.gala?`
@@ -786,34 +837,13 @@ function viewProgram(){
 
   ${nM?`
   <div class="sec tight anchor" id="p-missions"><div class="wrap">
-    <div class="sec-head"><div><p class="label brand">Nhiệm vụ đội</p><h2 class="h2">${nM} nhiệm vụ của mỗi Hiệu quân</h2><p class="body-2">Bảy chặng ban ngày nối tiếp nhau trong cùng một chiến dịch, và một tiết mục văn nghệ tại Gala.</p></div></div>
-    <nav class="m-index" aria-label="Danh sách nhiệm vụ">${day.missions.map((ms,i)=>`<a href="#program" data-jump="m${i+1}"><i class="num">${i+1}</i>${esc(ms.name.split(" – ")[0])}</a>`).join("")}</nav>
-    <div class="missions">${day.missions.map((ms,i)=>`
-      <article class="mission ${ms.evening?'evening':''} anchor" id="p-m${i+1}">
-        <div class="m-main">
-          <div class="m-head">
-            <span class="m-no num">${String(i+1).padStart(2,"0")}</span>
-            <div>
-              <div class="badges"><span class="badge ${ms.evening?'key':''}">${ms.evening?'Gala · buổi tối':'Teambuilding · buổi sáng'}</span><span class="badge">${esc(ms.place)}</span></div>
-              <h3 class="h3">${esc(ms.name)}</h3>
-            </div>
-          </div>
-          <p class="body-2">${esc(ms.desc)}</p>
-          ${ms.stations?`<div class="stations">${ms.stations.map(st=>`
-            <div class="station">${media(st.img,st.n,"r-1")}<div><span class="who">${esc(st.who)}</span><b class="h4" style="font-size:15px">${esc(st.n)}</b><p>${esc(st.task)}</p><p class="done">${esc(st.done)}</p></div></div>`).join("")}</div>`:""}
-          <div class="blocks">
-            <div><h5>Yêu cầu thực hiện</h5><ul class="ticks">${ms.req.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>
-            <div><h5>Lưu ý</h5><ul class="ticks muted">${ms.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>
-          </div>
-        </div>
-        <aside class="m-side">
-          ${media(ms.img,ms.name,"r-4x3")}
-          <dl>
-            <div><dt>Sản phẩm đầu ra</dt><dd>${esc(ms.out)}</dd></div>
-            <div><dt>Thời hạn</dt><dd class="num">${pend(ms.deadline)}</dd></div>
-          </dl>
-        </aside>
-      </article>`).join("")}
+    <div class="sec-head"><div><p class="label brand">Nhiệm vụ đội</p><h2 class="h2">${nM} nhiệm vụ của mỗi Hiệu quân</h2><p class="body-2">Bảy chặng ban ngày nối tiếp nhau trong cùng một chiến dịch, và một tiết mục văn nghệ tại Gala. Chọn một nhiệm vụ để xem chi tiết.</p></div></div>
+    <div class="mx">
+      <div class="m-list" role="tablist" aria-label="Chọn nhiệm vụ" aria-orientation="vertical">
+        ${day.missions.map((ms,i)=>`${i===0?'<p class="m-group">Buổi sáng · Teambuilding</p>':''}${ms.evening&&!day.missions[i-1]?.evening?'<p class="m-group">Buổi tối · Gala</p>':''}
+        <button class="m-tab" role="tab" id="mt-${i+1}" aria-controls="m-panel" aria-selected="false" data-mission="${i+1}" tabindex="-1"><i class="num">${i+1}</i><span><b>${esc(ms.name.split(" – ")[0])}</b><small>${esc(ms.place)}</small></span></button>`).join("")}
+      </div>
+      <article class="m-panel" id="m-panel" role="tabpanel"></article>
     </div>
   </div></div>`:""}
 
@@ -824,13 +854,59 @@ function viewProgram(){
   </div></div>`;
 }
 
+/* Mission panel: one mission at a time; selection survives day switches and reloads (localStorage)
+   and is mirrored in the URL (#program/m3) without adding history entries. */
+let currentMission = +store.get("vtds-mission") || 1;
+function renderMission(n, opts={}){
+  const day = DATA.days.find(d=>d.id===currentDay); const list = day?.missions || [];
+  const panel = $("#m-panel"); if(!panel || !list.length) return;
+  n = Math.min(Math.max(1, n|0), list.length); currentMission = n; store.set("vtds-mission", n);
+  const ms = list[n-1], prev = list[n-2], next = list[n];
+  const short = m => esc(m.name.split(" – ")[0]);
+  panel.setAttribute("aria-labelledby", "mt-"+n);
+  panel.classList.remove("swap"); void panel.offsetWidth; panel.classList.add("swap");
+  panel.innerHTML = `
+    <div class="m-hero">${media(ms.img, ms.name, "")}<span class="m-step num">Nhiệm vụ <b>${String(n).padStart(2,"0")}</b> / ${String(list.length).padStart(2,"0")}</span></div>
+    <div class="m-main">
+      <div class="m-head">
+        <div class="badges"><span class="badge ${ms.evening?'key':'team'}">${ms.evening?'Gala · buổi tối':'Teambuilding · buổi sáng'}</span></div>
+        <h3 class="h3" style="font-size:clamp(22px,2.4vw,28px)">${esc(ms.name)}</h3>
+        <p class="body-2">${esc(ms.desc)}</p>
+      </div>
+      <dl class="facts-row">
+        <div><dt>Địa điểm</dt><dd>${esc(ms.place)}</dd></div>
+        <div><dt>Thời hạn</dt><dd class="num">${pend(ms.deadline)}</dd></div>
+        <div><dt>Sản phẩm đầu ra</dt><dd>${esc(ms.out)}</dd></div>
+      </dl>
+      ${ms.stations?`<div><h4 class="blocks-h">04 trạm · mỗi trạm 01 mảnh Thẻ Tre</h4><div class="stations">${ms.stations.map(st=>`
+        <div class="station">${media(st.img,st.n,"r-1")}<div><span class="who">${esc(st.who)}</span><b class="h4" style="font-size:15px">${esc(st.n)}</b><p>${esc(st.task)}</p><p class="done">${esc(st.done)}</p></div></div>`).join("")}</div></div>`:""}
+      <div class="blocks">
+        <div><h5>Yêu cầu thực hiện</h5><ul class="ticks">${ms.req.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>
+        <div><h5>Lưu ý</h5><ul class="ticks muted">${ms.notes.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
+      </div>
+    </div>
+    <nav class="m-nav" aria-label="Chuyển nhiệm vụ">
+      <button type="button" class="prev" data-mission="${n-1}" ${prev?'':'disabled'}><small>← Trước</small><b>${prev?`${n-1}. ${short(prev)}`:''}</b></button>
+      <div class="dots">${list.map((m,i)=>`<button type="button" data-mission="${i+1}" aria-label="Nhiệm vụ ${i+1}: ${short(m)}" ${i+1===n?'aria-current="step"':''}></button>`).join("")}</div>
+      <button type="button" class="next" data-mission="${n+1}" ${next?'':'disabled'}><small>Tiếp theo →</small><b>${next?`${n+1}. ${short(next)}`:''}</b></button>
+    </nav>`;
+  document.querySelectorAll(".m-tab").forEach(t=>{ const on = +t.dataset.mission===n; t.setAttribute("aria-selected", on); t.tabIndex = on?0:-1; });
+  const tab = $("#mt-"+n);
+  // Keep the selected chip visible in the horizontal rail (mobile/tablet).
+  if (tab){ const rail=tab.parentNode; if (rail.scrollWidth>rail.clientWidth){ const x = rail.scrollLeft + tab.getBoundingClientRect().left - rail.getBoundingClientRect().left - (rail.clientWidth - tab.offsetWidth)/2; rail.scrollTo({left: Math.max(0,x), behavior: opts.instant?"auto":"smooth"}); } }
+  if (location.hash.startsWith("#program")) history.replaceState(null, "", "#program/m"+n);
+  if (opts.focusTab) tab?.focus({preventScroll:true});
+  // Prev/next sit at the bottom of a long panel: bring the panel top back into view.
+  if (opts.scroll) { const top = $(".mx").getBoundingClientRect().top; const lim = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hdr"))||64) + ($(".daybar")?.offsetHeight||0); if (top < lim || top > innerHeight*0.6) $(".mx").scrollIntoView({block:"start"}); }
+}
+
 /* ===================== TEAMS ===================== */
 let teamQuery="", teamFilter="all", teamSort="code";
+const isFull = t => !!(t.name && t.slogan && t.captain && t.color);
 function teamCards(){
   let list = DATA.teams.filter(t=>{
     if (teamQuery && ![teamName(t),t.slogan,t.captain].join(" ").toLowerCase().includes(teamQuery.toLowerCase())) return false;
-    const full = t.name && t.slogan && t.captain && t.color;
-    return teamFilter==="all" || (teamFilter==="complete" ? full : !full);
+    return teamFilter==="all" || (teamFilter==="complete" ? isFull(t) : !isFull(t));
   }).sort((a,b)=> teamSort==="name" ? teamName(a).localeCompare(teamName(b),"vi") : a.id-b.id);
   $("#team-count").textContent = `Hiển thị ${list.length}/${DATA.teams.length} đội`;
   $("#team-grid").innerHTML = list.length ? list.map(t=>`
@@ -843,9 +919,9 @@ function teamCards(){
           <dt>Màu nhận diện</dt><dd>${t.color?`<span class="swatch" style="background:${esc(t.color)};border:0"></span>${esc(t.color)}`:`<span class="pending">${PENDING}</span>`}</dd>
           <dt>Quân số</dt><dd class="num">${esc(t.members)}</dd>
         </dl>
-        <details><summary>Thành viên</summary><p>${t.list?esc(t.list):"Danh sách thành viên đang cập nhật."}</p></details>
+        ${t.list?`<details><summary>Xem thành viên</summary><p>${esc(t.list)}</p></details>`:`<p class="small">Danh sách thành viên: ${PENDING.toLowerCase()}</p>`}
       </div>
-    </article>`).join("") : `<div class="empty" style="grid-column:1/-1">Không có đội phù hợp. Thử xoá từ khoá hoặc bộ lọc.</div>`;
+    </article>`).join("") : `<div class="empty" style="grid-column:1/-1"><p>Không có đội phù hợp${teamFilter==="complete"?": chưa đội nào có đủ tên, màu, khẩu hiệu và đội trưởng":""}.</p><button type="button" class="btn btn-ghost" data-reset="team" style="margin-top:14px">Xoá tìm kiếm &amp; bộ lọc</button></div>`;
 }
 function viewTeams(){
   return `
@@ -859,14 +935,14 @@ function viewTeams(){
   <div class="sec tight"><div class="wrap">
     <div class="toolbar">
       <label class="field" for="team-q"><span>Tìm đội</span><input id="team-q" type="search" placeholder="Tên đội, khẩu hiệu, đội trưởng" value="${esc(teamQuery)}"></label>
-      <label class="field" for="team-f"><span>Lọc</span><select id="team-f"><option value="all">Tất cả</option><option value="complete">Đã đủ thông tin</option><option value="pending">Đang cập nhật</option></select></label>
+      <label class="field" for="team-f"><span>Lọc</span><select id="team-f"><option value="all">Tất cả</option><option value="complete">Đã đủ thông tin (${DATA.teams.filter(isFull).length})</option><option value="pending">Đang cập nhật (${DATA.teams.filter(t=>!isFull(t)).length})</option></select></label>
       <label class="field" for="team-s"><span>Sắp xếp</span><select id="team-s"><option value="code">Theo số hiệu</option><option value="name">Theo tên A–Z</option></select></label>
       <span class="count num" id="team-count" aria-live="polite"></span>
     </div>
     <div class="teams" id="team-grid"></div>
   </div></div>
   <div class="sec tight alt"><div class="wrap">
-    <div class="sec-head"><div><p class="label brand">Thể lệ</p><h2 class="h2">Cách tính 1.000 điểm</h2></div><a class="more" href="#program" data-goto="missions">Xem các nhiệm vụ</a></div>
+    <div class="sec-head"><div><p class="label brand">Thể lệ</p><h2 class="h2">Cách tính 1.000 điểm</h2></div><a class="more" href="#program/missions">Xem các nhiệm vụ</a></div>
     <div class="score num">${DATA.scoring.map(s=>`
       <article class="sc">
         <div class="sc-top"><h3 class="h4">${esc(s.name)}</h3><span class="pct">${s.pct}%</span></div>
@@ -885,7 +961,7 @@ function annFeed(){
     (!annQuery || (a.title+" "+a.sum+" "+a.detail.join(" ")).toLowerCase().includes(annQuery.toLowerCase()))
   ).sort((a,b)=> (b.date?+new Date(b.date):0) - (a.date?+new Date(a.date):0) || a.priority-b.priority);
   $("#ann-feed").innerHTML = items.length ? items.map(a=>`
-    <article class="post ${a.date&&!isNew(a)?'is-old':''}">
+    <article class="post ${a.date&&!isNew(a)?'is-old':''}" id="post-${a.id}">
       <aside>
         ${isNew(a)?'<span class="badge new">Mới</span>':""}
         <span class="cat">${esc(a.cat)}</span>
@@ -897,7 +973,8 @@ function annFeed(){
         ${a.detail.length?`<details><summary>Xem chi tiết</summary><ul class="ticks muted">${a.detail.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></details>`:""}
       </div>
       ${a.imgs?`<div class="thumbs">${a.imgs.map(n=>media(n,"",(a.cutout?"cutout ":"")+(a.imgs.length>1?"r-4x5":"r-4x3"))).join("")}</div>`:"<div></div>"}
-    </article>`).join("") : `<div class="empty" style="margin-top:24px">Chưa có thông báo trong mục “${esc(annCat)}”${annQuery?` khớp với “${esc(annQuery)}”`:""}.</div>`;
+    </article>`).join("") : `<div class="empty" style="margin-top:24px"><p>Chưa có thông báo trong mục “${esc(annCat)}”${annQuery?` khớp với “${esc(annQuery)}”`:""}.</p><button type="button" class="btn btn-ghost" data-reset="ann" style="margin-top:14px">Xem tất cả thông báo</button></div>`;
+  $("#ann-count").textContent = `${items.length} thông báo${annCat!=="Tất cả"?` · ${annCat}`:""}${annQuery?` · khớp “${annQuery}”`:""}`;
   document.querySelectorAll("#ann-tabs button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.cat===annCat));
 }
 function viewAnnouncements(){
@@ -912,7 +989,7 @@ function viewAnnouncements(){
     </div>
   </div>
   <div class="sec tight"><div class="wrap">
-    <div class="toolbar"><label class="field" for="ann-q"><span>Tìm thông báo</span><input id="ann-q" type="search" placeholder="Ví dụ: áo phao, dresscode" value="${esc(annQuery)}"></label></div>
+    <div class="toolbar"><label class="field" for="ann-q"><span>Tìm thông báo</span><input id="ann-q" type="search" placeholder="Ví dụ: áo phao, dresscode" value="${esc(annQuery)}"></label><span class="count num" id="ann-count" aria-live="polite"></span></div>
     <div class="tabs" id="ann-tabs" role="group" aria-label="Phân loại">
       ${cats.map(c=>`<button type="button" data-cat="${esc(c)}" aria-pressed="${c===annCat}">${esc(c)}<span class="num">${count(c)}</span></button>`).join("")}
     </div>
@@ -922,15 +999,20 @@ function viewAnnouncements(){
 
 /* ===================== ROUTER ===================== */
 const ROUTES = { overview:viewOverview, program:viewProgram, teams:viewTeams, announcements:viewAnnouncements };
-let cdTimer, pendingJump = null, spy;
-function render(){
-  const route = (location.hash.slice(1) in ROUTES) ? location.hash.slice(1) : "overview";
+let cdTimer, spy;
+/* Hash = "#route" or "#route/sub". sub: program → section id (schedule, missions, notes) or mission "m3";
+   announcements → post id ("a3"). deep=true only for real navigations, so re-renders (day switch) stay put. */
+function parseHash(){ const [r, sub] = location.hash.slice(1).split("/"); return { route: r in ROUTES ? r : "overview", sub: sub || "" }; }
+function render(deep){
+  const { route, sub } = parseHash();
+  if (deep && route==="program" && sub){ const md = DATA.days.find(d=>d.missions.length); if (/^m\d+$/.test(sub) || sub==="missions"){ currentDay = md.id; store.set("vtds-day", md.id); } if (/^m\d+$/.test(sub)) currentMission = +sub.slice(1); }
+  if (deep && route==="announcements" && sub){ annCat="Tất cả"; annQuery=""; }
   document.querySelectorAll("[data-view]").forEach(s=>{ s.hidden = s.dataset.view!==route; });
   $(`#v-${route}`).innerHTML = ROUTES[route]();
   document.querySelectorAll("[data-nav]").forEach(a=> a.dataset.nav===route ? a.setAttribute("aria-current","page") : a.removeAttribute("aria-current"));
   clearInterval(cdTimer); spy?.disconnect();
   if (route==="overview"){ tick(); cdTimer=setInterval(tick,30000); }
-  if (route==="program") setupSpy();
+  if (route==="program"){ setupSpy(); renderMission(currentMission, {instant:true}); }
   if (route==="teams"){
     $("#team-f").value=teamFilter; $("#team-s").value=teamSort; teamCards();
     $("#team-q").addEventListener("input",e=>{teamQuery=e.target.value.trim();teamCards()});
@@ -938,6 +1020,12 @@ function render(){
     $("#team-s").addEventListener("change",e=>{teamSort=e.target.value;teamCards()});
   }
   if (route==="announcements"){ annFeed(); $("#ann-q").addEventListener("input",e=>{annQuery=e.target.value.trim();annFeed()}); }
+  if (!deep) return;
+  setTimeout(()=>{
+    if (route==="program" && sub){ /^m\d+$/.test(sub) ? $(".mx")?.scrollIntoView({block:"start"}) : jumpTo(sub); }
+    else if (route==="announcements" && sub){ const el=document.getElementById("post-"+sub); if(el){ el.querySelector("details")?.setAttribute("open",""); el.scrollIntoView({block:"center"}); el.classList.add("flash"); } }
+    else window.scrollTo(0,0);
+  }, 0);
 }
 function jumpTo(id){ const el=document.getElementById("p-"+id); if(el) el.scrollIntoView({block:"start"}); }
 function measureBar(){ const b=$(".daybar"); if(b) document.documentElement.style.setProperty("--daybar", b.offsetHeight+"px"); }
@@ -951,6 +1039,7 @@ function setupSpy(){
 function setDay(id, keepTop){
   currentDay=id; store.set("vtds-day",id);
   const y = keepTop ? null : window.scrollY;
+  history.replaceState(null, "", "#program");
   render();
   const bar=$(".daybar"); if(bar && !keepTop){ const head=$(".page-head"); window.scrollTo(0, Math.min(y, head.offsetTop+head.offsetHeight)); }
   $("#tab-"+id)?.focus({preventScroll:true});
@@ -958,15 +1047,25 @@ function setDay(id, keepTop){
 document.addEventListener("click",e=>{
   const sd=e.target.closest("[data-setday]"); if(sd){ setDay(sd.dataset.setday); return; }
   const dl=e.target.closest("a[data-day]"); if(dl){ currentDay=dl.dataset.day; store.set("vtds-day",currentDay); }
-  const go=e.target.closest("a[data-goto]"); if(go){ currentDay="day1"; store.set("vtds-day","day1"); pendingJump=go.dataset.goto; }
+  const mb=e.target.closest("button[data-mission]"); if(mb){ renderMission(+mb.dataset.mission, {scroll:true, focusTab: !!mb.closest(".m-list")}); return; }
+  // Mission links inside the Program page switch in place instead of re-rendering the page.
+  const ml=e.target.closest("a[data-mission-link]"); if(ml && $("#m-panel")){ e.preventDefault(); renderMission(+ml.dataset.missionLink); $(".mx").scrollIntoView({block:"start"}); return; }
+  const ac=e.target.closest("a[data-anncat]"); if(ac){ annCat=ac.dataset.anncat; annQuery=""; }
   const j=e.target.closest("[data-jump]"); if(j){ e.preventDefault(); jumpTo(j.dataset.jump); return; }
   const c=e.target.closest("#ann-tabs button"); if(c){ annCat=c.dataset.cat; annFeed(); }
+  const rs=e.target.closest("[data-reset]"); if(rs){ if(rs.dataset.reset==="ann"){ annCat="Tất cả"; annQuery=""; $("#ann-q").value=""; annFeed(); } else { teamQuery=""; teamFilter="all"; $("#team-q").value=""; $("#team-f").value="all"; teamCards(); } }
 });
 document.addEventListener("keydown",e=>{
+  const mt=e.target.closest?.(".m-tab");
+  if (mt && ["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","Home","End"].includes(e.key)){
+    e.preventDefault(); const n=$$(".m-tab").length; let i=+mt.dataset.mission;
+    i = e.key==="Home"?1 : e.key==="End"?n : ((i-1+(/Right|Down/.test(e.key)?1:-1)+n)%n)+1;
+    renderMission(i, {focusTab:true}); return;
+  }
   const t=e.target.closest?.("[data-setday]"); if(!t||!["ArrowLeft","ArrowRight"].includes(e.key)) return;
   const ids=DATA.days.map(d=>d.id); let i=(ids.indexOf(currentDay)+(e.key==="ArrowRight"?1:-1)+ids.length)%ids.length; setDay(ids[i]);
 });
-window.addEventListener("hashchange",()=>{ render(); if(pendingJump){ const p=pendingJump; pendingJump=null; requestAnimationFrame(()=>jumpTo(p)); } else window.scrollTo(0,0); });
+window.addEventListener("hashchange",()=>render(true));
 
 function tick(){
   const el=$("#countdown"); if(!el) return;
@@ -974,7 +1073,7 @@ function tick(){
   if(n<s){const ms=s-n,d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5); el.innerHTML=`Còn <b>${d}</b> ngày <b>${h}</b> giờ`;}
   else if(n<=e) el.innerHTML="<b>Đang diễn ra</b>"; else el.textContent="Chương trình đã kết thúc";
 }
-render();
+render(true);
 </script>
 </body>
 </html>
