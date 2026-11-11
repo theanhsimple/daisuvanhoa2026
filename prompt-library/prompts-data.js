@@ -466,6 +466,407 @@ window.YAI_DATA = {
       "rank": 14
     },
     {
+      "id": "nd01",
+      "category": "content",
+      "title": "Bài đăng mạng xã hội nội bộ ngắn",
+      "target_audiences": [
+        "moi-nhan-su",
+        "truyen-thong",
+        "van-hoa"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Viết 3 phiên bản bài đăng ngắn cho nhóm chat hoặc trang nội bộ, chọn được ngay bản phù hợp.",
+      "use_cases": [
+        "Thông báo nhanh một hoạt động trên nhóm chat",
+        "Đăng tin lên trang mạng xã hội nội bộ"
+      ],
+      "prompt": "Bạn là người viết nội dung mạng xã hội nội bộ. Hãy viết 3 phiên bản bài đăng về [chủ đề hoặc hoạt động] cho [kênh: nhóm chat, trang nội bộ, Workplace]. Người đọc là [đối tượng]. Thông tin đã chốt: [thời gian, địa điểm, cách tham gia]. Mỗi phiên bản dưới 80 từ, có câu mở đầu gây chú ý, nội dung chính và lời kêu gọi hành động. Phiên bản 1 trang trọng, phiên bản 2 thân thiện, phiên bản 3 vui nhộn có tối đa 3 biểu tượng cảm xúc. Không thêm thông tin chưa được cung cấp.",
+      "required_inputs": [
+        "Chủ đề, hoạt động cần đăng",
+        "Kênh đăng và người đọc",
+        "Thông tin đã chốt: thời gian, địa điểm, cách tham gia"
+      ],
+      "verification": [
+        "Thông tin thời gian, địa điểm khớp với thông báo chính thức.",
+        "Biểu tượng cảm xúc phù hợp văn hóa kênh nội bộ.",
+        "Người phụ trách kênh duyệt trước khi đăng."
+      ],
+      "tags": [
+        "bài đăng",
+        "mạng xã hội",
+        "nhóm chat",
+        "thông báo",
+        "post",
+        "caption"
+      ],
+      "example": {
+        "input": "Chủ đề: giải chạy bộ nội bộ · Kênh: nhóm chat toàn khối · Người đọc: cán bộ nhân viên · Đăng ký trước thứ Sáu qua biểu mẫu",
+        "output": "3 bài đăng dưới 80 từ với 3 giọng khác nhau, mỗi bài có câu mở đầu, thông tin đăng ký và lời kêu gọi; không có chi tiết nào ngoài thông tin đã cho."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 40
+    },
+    {
+      "id": "nd02",
+      "category": "content",
+      "title": "Bản tin nội bộ hằng tháng",
+      "target_audiences": [
+        "truyen-thong",
+        "van-hoa",
+        "quan-ly"
+      ],
+      "goals": [
+        "viet",
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Gom các tin rời rạc trong tháng thành một bản tin có cấu trúc, dễ đọc lướt.",
+      "use_cases": [
+        "Tổng hợp hoạt động của phòng, khối trong tháng",
+        "Bản tin email gửi toàn đơn vị"
+      ],
+      "prompt": "Bạn là biên tập viên bản tin nội bộ. Dưới đây là các ghi chú tin tức tháng [tháng] của [đơn vị]: [dán ghi chú]. Hãy biên tập thành bản tin gồm: tiêu đề bản tin, đoạn mở đầu 2 câu, 3–5 mục tin, mỗi mục có tiêu đề in đậm và 2–3 câu nội dung, mục \"Sắp diễn ra\" và lời kết. Giọng văn gần gũi, chuyên nghiệp. Chỉ dùng thông tin trong ghi chú; mục nào thiếu dữ liệu thì ghi \"cần bổ sung\".",
+      "required_inputs": [
+        "Ghi chú các tin trong tháng (đã bỏ thông tin nhạy cảm)",
+        "Tên đơn vị, tháng phát hành",
+        "Các hoạt động sắp diễn ra nếu có"
+      ],
+      "verification": [
+        "Tên người, chức danh, con số đối chiếu với nguồn tin.",
+        "Tin có hình ảnh cần xin phép người xuất hiện trong ảnh.",
+        "Lãnh đạo đơn vị duyệt trước khi gửi."
+      ],
+      "tags": [
+        "bản tin",
+        "newsletter",
+        "tin tức",
+        "tổng hợp tháng",
+        "email nội bộ"
+      ],
+      "example": {
+        "input": "Ghi chú 6 tin của phòng Truyền thông tháng 10: chào đón 3 nhân viên mới, kết quả cuộc thi ảnh, lịch đào tạo AI…",
+        "output": "Bản tin có tiêu đề, mở đầu 2 câu, 5 mục tin có tiêu đề in đậm, mục Sắp diễn ra và lời kết; chỗ thiếu thông tin ghi “cần bổ sung”."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 41
+    },
+    {
+      "id": "nd03",
+      "category": "content",
+      "title": "Kịch bản video ngắn 60 giây",
+      "target_audiences": [
+        "truyen-thong",
+        "van-hoa"
+      ],
+      "goals": [
+        "viet",
+        "hinh-anh"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot",
+        "CapCut"
+      ],
+      "purpose": "Có kịch bản phân cảnh cho video dọc ngắn, quay được bằng điện thoại.",
+      "use_cases": [
+        "Video giới thiệu hoạt động, con người trong đơn vị",
+        "Video nhắc nhở, truyền thông chính sách ngắn"
+      ],
+      "prompt": "Bạn là biên kịch video ngắn. Hãy viết kịch bản video dọc dài [thời lượng, ví dụ 60 giây] về [chủ đề] cho [kênh]. Thông điệp chính: [thông điệp]. Người xem: [đối tượng]. Trình bày dạng bảng: Giây | Hình ảnh cần quay | Lời thoại hoặc chữ trên màn hình | Âm thanh. 3 giây đầu phải gây chú ý; kết thúc bằng lời kêu gọi rõ ràng. Chỉ dùng bối cảnh quay được trong văn phòng bằng điện thoại; không dùng nhạc hoặc hình ảnh có bản quyền.",
+      "required_inputs": [
+        "Chủ đề và thông điệp chính",
+        "Kênh đăng, thời lượng",
+        "Bối cảnh, người có thể tham gia quay"
+      ],
+      "verification": [
+        "Người xuất hiện trong video đồng ý được quay và đăng.",
+        "Nhạc nền lấy từ thư viện được phép dùng.",
+        "Kiểm tra chữ trên màn hình đọc kịp trong thời lượng."
+      ],
+      "tags": [
+        "video",
+        "kịch bản",
+        "reels",
+        "tiktok",
+        "short video",
+        "phân cảnh"
+      ],
+      "example": {
+        "input": "Chủ đề: một ngày của đội hỗ trợ khách hàng · 60 giây · Kênh: trang nội bộ · Thông điệp: mỗi cuộc gọi là một lời cảm ơn",
+        "output": "Bảng 7–9 dòng theo mốc giây, mở đầu bằng cảnh gây chú ý trong 3 giây, có chữ trên màn hình ngắn gọn và lời kêu gọi ở cảnh cuối."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 42
+    },
+    {
+      "id": "nd04",
+      "category": "content",
+      "title": "Thông cáo, thông báo chính thức",
+      "target_audiences": [
+        "truyen-thong",
+        "quan-ly"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "nang-cao",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Copilot"
+      ],
+      "purpose": "Soạn bản thông báo chính thức đúng cấu trúc, câu chữ chặt chẽ, sẵn sàng cho người có thẩm quyền duyệt.",
+      "use_cases": [
+        "Thông báo thay đổi chính sách, quy trình nội bộ",
+        "Bản tin công bố một sự kiện, kết quả"
+      ],
+      "prompt": "Bạn là chuyên viên truyền thông viết văn bản chính thức. Hãy soạn [loại văn bản: thông báo nội bộ hoặc thông cáo] về [nội dung]. Thông tin đã được duyệt: [các ý chính, thời điểm áp dụng, đầu mối liên hệ]. Cấu trúc: tiêu đề, đoạn mở nêu điều gì thay đổi và từ khi nào, các điểm chính dạng gạch đầu dòng, hướng dẫn người đọc cần làm gì, đầu mối liên hệ. Câu ngắn, rõ, không dùng từ ngữ cảm xúc. Không thêm số liệu, cam kết hay trích dẫn của bất kỳ ai khi chưa được cung cấp.",
+      "required_inputs": [
+        "Nội dung đã được duyệt",
+        "Thời điểm áp dụng",
+        "Đầu mối liên hệ"
+      ],
+      "verification": [
+        "Pháp chế hoặc người có thẩm quyền rà soát trước khi phát hành.",
+        "Ngày hiệu lực, tên đơn vị, đầu mối đúng từng chữ.",
+        "Không có câu nào có thể hiểu theo hai nghĩa."
+      ],
+      "tags": [
+        "thông cáo",
+        "thông báo",
+        "văn bản chính thức",
+        "chính sách",
+        "công bố"
+      ],
+      "example": {
+        "input": "Loại: thông báo nội bộ · Nội dung: đổi giờ làm việc mùa đông từ ngày 1/12 · Đầu mối: phòng Hành chính",
+        "output": "Văn bản 150–200 từ: tiêu đề, đoạn mở nêu thay đổi và ngày hiệu lực, 3–4 gạch đầu dòng, phần “Bạn cần làm gì”, đầu mối liên hệ."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 43
+    },
+    {
+      "id": "nd05",
+      "category": "content",
+      "title": "Viết lại nội dung cho dễ hiểu",
+      "target_audiences": [
+        "moi-nhan-su",
+        "truyen-thong",
+        "nhan-su"
+      ],
+      "goals": [
+        "viet",
+        "danh-gia"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Biến đoạn văn nhiều thuật ngữ thành nội dung người không chuyên đọc hiểu ngay.",
+      "use_cases": [
+        "Giải thích quy trình, chính sách cho nhân viên mới",
+        "Chuyển nội dung kỹ thuật sang ngôn ngữ đời thường"
+      ],
+      "prompt": "Bạn là biên tập viên chuyên viết dễ hiểu. Hãy viết lại đoạn sau cho [đối tượng người đọc] đọc hiểu ngay: [dán đoạn văn]. Yêu cầu: câu tối đa 20 chữ, giải thích thuật ngữ bằng ví dụ đời thường, giữ đúng 100% ý nghĩa và số liệu gốc. Trình bày: bản viết lại, sau đó bảng Thuật ngữ gốc | Cách nói dễ hiểu. Nếu có chỗ bản gốc chưa rõ nghĩa, liệt kê riêng thành câu hỏi cần làm rõ thay vì tự đoán.",
+      "required_inputs": [
+        "Đoạn văn cần viết lại (không chứa thông tin mật)",
+        "Người đọc là ai"
+      ],
+      "verification": [
+        "So từng ý với bản gốc, không mất hoặc đổi nghĩa.",
+        "Số liệu, mốc thời gian giữ nguyên.",
+        "Nhờ một người đúng đối tượng đọc thử."
+      ],
+      "tags": [
+        "viết lại",
+        "đơn giản hóa",
+        "dễ hiểu",
+        "thuật ngữ",
+        "plain language",
+        "biên tập"
+      ],
+      "example": {
+        "input": "Đoạn hướng dẫn quy trình thanh toán công tác phí 250 chữ, nhiều thuật ngữ kế toán · Người đọc: nhân viên mới",
+        "output": "Bản viết lại câu ngắn, kèm bảng 5–6 thuật ngữ và cách nói dễ hiểu, cuối cùng là 1–2 câu hỏi về chỗ bản gốc chưa rõ."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 44
+    },
+    {
+      "id": "nd06",
+      "category": "content",
+      "title": "Đặt tiêu đề và dòng mở đầu hấp dẫn",
+      "target_audiences": [
+        "truyen-thong",
+        "moi-nhan-su"
+      ],
+      "goals": [
+        "viet",
+        "y-tuong"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 3 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có nhiều lựa chọn tiêu đề theo các hướng khác nhau, kèm lý do để chọn nhanh.",
+      "use_cases": [
+        "Tiêu đề email, bài đăng, bản tin",
+        "Tiêu đề slide, banner sự kiện"
+      ],
+      "prompt": "Bạn là chuyên gia viết tiêu đề. Nội dung bài viết: [tóm tắt nội dung hoặc dán bài]. Kênh: [email, bài đăng, banner]. Người đọc: [đối tượng]. Hãy đề xuất 10 tiêu đề chia thành 5 hướng: lợi ích, câu hỏi, con số có trong nội dung, cấp bách, kể chuyện; mỗi hướng 2 tiêu đề, tối đa [số chữ] chữ. Với mỗi tiêu đề ghi 1 dòng lý do. Không dùng con số hoặc lời hứa không có trong nội dung; không giật tít.",
+      "required_inputs": [
+        "Nội dung hoặc bản tóm tắt bài",
+        "Kênh và giới hạn độ dài"
+      ],
+      "verification": [
+        "Tiêu đề không hứa điều nội dung không có.",
+        "Số liệu trong tiêu đề khớp nội dung.",
+        "Đọc thử trên điện thoại xem có bị cắt chữ."
+      ],
+      "tags": [
+        "tiêu đề",
+        "headline",
+        "tít",
+        "subject line",
+        "mở bài"
+      ],
+      "example": {
+        "input": "Nội dung: bài giới thiệu chương trình đào tạo AI 4 buổi · Kênh: email · Tối đa 10 chữ",
+        "output": "10 tiêu đề chia 5 hướng, mỗi tiêu đề kèm 1 dòng lý do, không có con số nào ngoài “4 buổi”."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 45
+    },
+    {
+      "id": "nd07",
+      "category": "content",
+      "title": "Câu chuyện con người truyền cảm hứng",
+      "target_audiences": [
+        "truyen-thong",
+        "van-hoa"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "trung-binh",
+      "time": "15–20 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "purpose": "Viết bài chân dung đồng nghiệp từ ghi chú phỏng vấn, giữ đúng lời người được phỏng vấn.",
+      "use_cases": [
+        "Chuyên mục gương mặt tiêu biểu, đại sứ văn hóa",
+        "Bài vinh danh cá nhân, tập thể"
+      ],
+      "prompt": "Bạn là phóng viên nội bộ. Dưới đây là ghi chú phỏng vấn [tên người hoặc vai trò, đã được đồng ý chia sẻ]: [dán ghi chú]. Hãy viết bài chân dung khoảng [số từ] từ theo cấu trúc: mở đầu bằng một khoảnh khắc cụ thể, hành trình làm việc, giá trị văn hóa người đó thể hiện ([giá trị]), câu nói đáng nhớ, kết bài. Chỉ dùng chi tiết có trong ghi chú; trích dẫn phải đúng nguyên văn và để trong ngoặc kép. Đề xuất thêm 3 tiêu đề.",
+      "required_inputs": [
+        "Ghi chú phỏng vấn đã được người được phỏng vấn đồng ý",
+        "Giá trị văn hóa muốn làm nổi bật",
+        "Độ dài mong muốn"
+      ],
+      "verification": [
+        "Người được phỏng vấn đọc và đồng ý bản cuối.",
+        "Mọi trích dẫn đúng nguyên văn ghi chú.",
+        "Không đưa thông tin đời tư khi chưa được phép."
+      ],
+      "tags": [
+        "chân dung",
+        "câu chuyện",
+        "storytelling",
+        "phỏng vấn",
+        "vinh danh",
+        "gương mặt"
+      ],
+      "example": {
+        "input": "Ghi chú phỏng vấn một chuyên viên 8 năm ở chi nhánh, giá trị: tận tâm · 400 từ",
+        "output": "Bài 400 từ mở đầu bằng một khoảnh khắc cụ thể, có 2 trích dẫn đúng nguyên văn trong ghi chú và 3 tiêu đề gợi ý."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 46
+    },
+    {
+      "id": "nd08",
+      "category": "content",
+      "title": "Lịch nội dung một tháng",
+      "target_audiences": [
+        "truyen-thong",
+        "van-hoa",
+        "quan-ly"
+      ],
+      "goals": [
+        "ke-hoach",
+        "y-tuong"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Lập lịch đăng bài theo tuần, cân bằng chủ đề và kênh.",
+      "use_cases": [
+        "Lên kế hoạch truyền thông cho một chiến dịch",
+        "Duy trì trang nội bộ đều đặn"
+      ],
+      "prompt": "Bạn là người lập kế hoạch nội dung. Hãy lập lịch nội dung tháng [tháng] cho [kênh] của [đơn vị]. Mục tiêu: [mục tiêu truyền thông]. Các mốc đã có: [sự kiện, ngày quan trọng]. Tần suất: [số bài mỗi tuần]. Trình bày bảng: Tuần | Ngày đăng | Chủ đề | Dạng nội dung (bài viết, ảnh, video, bình chọn) | Mục tiêu | Người phụ trách (để trống). Cân bằng giữa thông tin, gắn kết và vinh danh. Không tự đặt thêm sự kiện ngoài các mốc đã cho.",
+      "required_inputs": [
+        "Kênh, mục tiêu truyền thông",
+        "Các mốc, sự kiện trong tháng",
+        "Tần suất đăng"
+      ],
+      "verification": [
+        "Đối chiếu ngày đăng với lịch sự kiện chính thức.",
+        "Kiểm tra nguồn lực làm được khối lượng đề xuất.",
+        "Trưởng nhóm duyệt kế hoạch."
+      ],
+      "tags": [
+        "lịch nội dung",
+        "content calendar",
+        "kế hoạch truyền thông",
+        "lịch đăng bài"
+      ],
+      "example": {
+        "input": "Tháng 12 · Kênh: trang nội bộ · Mục tiêu: gắn kết cuối năm · Mốc: tiệc cuối năm, hội thao · 3 bài/tuần",
+        "output": "Bảng 12–13 dòng theo 4 tuần, dạng nội dung đa dạng, chỉ dùng các mốc đã cho, cột người phụ trách để trống."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 47
+    },
+    {
       "id": "d1",
       "title": "Câu lệnh tạo hình minh họa",
       "category": "design",
@@ -617,6 +1018,354 @@ window.YAI_DATA = {
       "rank": 30
     },
     {
+      "id": "tk01",
+      "category": "design",
+      "title": "Brief thiết kế poster sự kiện",
+      "target_audiences": [
+        "van-hoa",
+        "truyen-thong",
+        "thiet-ke"
+      ],
+      "goals": [
+        "hinh-anh",
+        "ke-hoach"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có bản brief đầy đủ để gửi designer hoặc tự làm trên Canva, tránh sửa đi sửa lại.",
+      "use_cases": [
+        "Đặt thiết kế poster, banner cho sự kiện",
+        "Chuẩn bị thông tin trước khi tự thiết kế"
+      ],
+      "prompt": "Bạn là art director. Hãy viết brief thiết kế [loại ấn phẩm: poster, banner, backdrop] cho [sự kiện]. Thông tin: [tên sự kiện, thời gian, địa điểm], thông điệp chính [thông điệp], đối tượng xem [đối tượng], kích thước [kích thước], nơi sử dụng [in ấn hoặc màn hình]. Brief gồm: mục tiêu, nội dung chữ bắt buộc theo thứ tự ưu tiên, phong cách hình ảnh, màu sắc theo nhận diện [màu hoặc bộ nhận diện], những điều cần tránh, định dạng file bàn giao. Không tự thêm nội dung chữ ngoài thông tin đã cho.",
+      "required_inputs": [
+        "Thông tin sự kiện và thông điệp",
+        "Kích thước, nơi sử dụng",
+        "Bộ nhận diện hoặc màu chủ đạo"
+      ],
+      "verification": [
+        "Nội dung chữ đúng chính tả, đúng thông tin.",
+        "Kích thước, định dạng khớp yêu cầu in hoặc màn hình.",
+        "Logo dùng đúng phiên bản trong bộ nhận diện."
+      ],
+      "tags": [
+        "brief",
+        "poster",
+        "banner",
+        "thiết kế",
+        "ấn phẩm",
+        "canva"
+      ],
+      "example": {
+        "input": "Poster A3 cho ngày hội đọc sách · In ấn · Màu tím và cam theo nhận diện",
+        "output": "Brief 1 trang: mục tiêu, 5 dòng chữ theo thứ tự ưu tiên, phong cách, màu, điều cần tránh, định dạng bàn giao."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 48
+    },
+    {
+      "id": "tk02",
+      "category": "design",
+      "title": "Gợi ý bảng màu và font chữ",
+      "target_audiences": [
+        "thiet-ke",
+        "truyen-thong",
+        "van-hoa"
+      ],
+      "goals": [
+        "y-tuong",
+        "hinh-anh"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có 3 phương án phối màu và font hài hòa, kèm mã màu để dùng ngay.",
+      "use_cases": [
+        "Chọn tông màu cho chủ đề sự kiện",
+        "Làm bộ slide, ấn phẩm đồng bộ"
+      ],
+      "prompt": "Bạn là chuyên gia nhận diện thương hiệu. Chủ đề: [chủ đề]. Cảm xúc muốn truyền tải: [ví dụ trẻ trung, ấm áp]. Màu bắt buộc phải có: [màu thương hiệu hoặc \"không có\"]. Hãy đề xuất 3 bảng màu, mỗi bảng 5 màu kèm mã HEX và vai trò (nền, chữ, nhấn, phụ). Kèm mỗi bảng 1 cặp font tiêu đề và nội dung hỗ trợ tiếng Việt có sẵn trên Google Fonts hoặc Canva. Giải thích ngắn vì sao hợp chủ đề và lưu ý độ tương phản chữ trên nền.",
+      "required_inputs": [
+        "Chủ đề và cảm xúc mong muốn",
+        "Màu thương hiệu bắt buộc"
+      ],
+      "verification": [
+        "Thử font hiển thị đủ dấu tiếng Việt.",
+        "Đo độ tương phản chữ và nền bằng công cụ kiểm tra.",
+        "Không thay màu thương hiệu chính khi chưa được duyệt."
+      ],
+      "tags": [
+        "bảng màu",
+        "font",
+        "phối màu",
+        "typography",
+        "nhận diện",
+        "màu sắc"
+      ],
+      "example": {
+        "input": "Chủ đề: Tết sum vầy · Cảm xúc: ấm áp, hiện đại · Màu bắt buộc: tím thương hiệu",
+        "output": "3 bảng màu 5 mã HEX có vai trò từng màu, mỗi bảng 1 cặp font hỗ trợ tiếng Việt và 2–3 câu giải thích."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 49
+    },
+    {
+      "id": "tk03",
+      "category": "design",
+      "title": "Prompt tạo ảnh minh họa phong cách đồng bộ",
+      "target_audiences": [
+        "thiet-ke",
+        "truyen-thong"
+      ],
+      "goals": [
+        "hinh-anh"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "ChatGPT",
+        "Gemini",
+        "Canva"
+      ],
+      "purpose": "Tạo một bộ ảnh minh họa cùng phong cách cho bài viết, slide hoặc ấn phẩm.",
+      "use_cases": [
+        "Cần 4–6 ảnh minh họa đồng bộ cho một bộ slide",
+        "Ảnh minh họa cho chuỗi bài đăng"
+      ],
+      "prompt": "Bạn là họa sĩ minh họa. Hãy viết [số lượng] prompt tạo ảnh cho bộ minh họa chủ đề [chủ đề], dùng chung một phong cách: [phong cách, ví dụ flat 2D, màu pastel, nét viền mỏng], bảng màu [màu], tỷ lệ [tỷ lệ khung hình]. Mỗi prompt mô tả: chủ thể, hành động, bối cảnh, góc nhìn, ánh sáng. Lặp lại nguyên văn đoạn mô tả phong cách ở cuối mỗi prompt để ảnh đồng bộ. Không có chữ trong ảnh, không vẽ người nổi tiếng, logo hay nhân vật có bản quyền.",
+      "required_inputs": [
+        "Chủ đề và số lượng ảnh",
+        "Phong cách, bảng màu, tỷ lệ"
+      ],
+      "verification": [
+        "Kiểm tra ảnh không có chữ sai, logo hoặc nhân vật có bản quyền.",
+        "Chọn ảnh đồng bộ nhất, tạo lại ảnh lệch phong cách.",
+        "Ghi chú ảnh do AI tạo nếu đơn vị có quy định."
+      ],
+      "tags": [
+        "tạo ảnh",
+        "minh họa",
+        "image prompt",
+        "phong cách",
+        "AI art",
+        "đồng bộ"
+      ],
+      "example": {
+        "input": "Chủ đề: làm việc nhóm hiệu quả · 5 ảnh · Flat 2D, pastel tím cam · Tỷ lệ 16:9",
+        "output": "5 prompt tạo ảnh, mỗi prompt có chủ thể, bối cảnh, góc nhìn, ánh sáng và cùng một đoạn mô tả phong cách ở cuối."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 50
+    },
+    {
+      "id": "tk04",
+      "category": "design",
+      "title": "Bố cục slide từ nội dung thô",
+      "target_audiences": [
+        "moi-nhan-su",
+        "quan-ly",
+        "thiet-ke"
+      ],
+      "goals": [
+        "ke-hoach",
+        "viet"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chia nội dung dài thành từng slide với tiêu đề, ý chính và gợi ý hình minh họa.",
+      "use_cases": [
+        "Chuẩn bị bài thuyết trình từ tài liệu Word",
+        "Rút gọn báo cáo thành slide"
+      ],
+      "prompt": "Bạn là chuyên gia thiết kế bài thuyết trình. Từ nội dung sau: [dán nội dung], hãy chia thành khoảng [số slide] slide cho buổi thuyết trình [thời lượng] phút với người nghe là [đối tượng]. Mỗi slide gồm: tiêu đề là một câu kết luận, tối đa 3 ý ngắn, gợi ý hình hoặc biểu đồ minh họa, ghi chú lời nói 2–3 câu. Slide đầu là mở đề, slide cuối là kết luận và lời kêu gọi. Không thêm số liệu ngoài nội dung gốc.",
+      "required_inputs": [
+        "Nội dung thô cần trình bày",
+        "Số slide, thời lượng, người nghe"
+      ],
+      "verification": [
+        "Mỗi số liệu trên slide có trong nội dung gốc.",
+        "Tập nói thử theo ghi chú để canh thời gian.",
+        "Kiểm tra mỗi slide chỉ một ý chính."
+      ],
+      "tags": [
+        "slide",
+        "thuyết trình",
+        "bố cục",
+        "presentation",
+        "outline",
+        "powerpoint"
+      ],
+      "example": {
+        "input": "Báo cáo 2 trang về kết quả chương trình đào tạo · 8 slide · 10 phút · Người nghe: ban lãnh đạo",
+        "output": "8 slide với tiêu đề dạng kết luận, tối đa 3 ý mỗi slide, gợi ý biểu đồ và ghi chú lời nói."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 51
+    },
+    {
+      "id": "tk05",
+      "category": "design",
+      "title": "Ý tưởng concept trang trí sự kiện",
+      "target_audiences": [
+        "van-hoa",
+        "thiet-ke"
+      ],
+      "goals": [
+        "y-tuong",
+        "hinh-anh"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có 3 concept trang trí kèm vật dụng chính, màu sắc và điểm check-in.",
+      "use_cases": [
+        "Trang trí sảnh, sân khấu cho sự kiện nội bộ",
+        "Góc check-in chụp ảnh"
+      ],
+      "prompt": "Bạn là nhà thiết kế không gian sự kiện. Sự kiện: [tên sự kiện], chủ đề [chủ đề], địa điểm [loại không gian và diện tích ước lượng], số khách [số người], ngân sách [mức ngân sách]. Hãy đề xuất 3 concept trang trí, mỗi concept gồm: tên và ý tưởng 2 câu, bảng màu, 5–7 hạng mục chính (backdrop, cổng, bàn đón khách…), một góc check-in, vật liệu dễ tìm và có thể tái sử dụng. Đánh dấu hạng mục nào cần đơn vị thi công. Không đưa giá cụ thể; chỉ ghi mức chi phí tương đối (thấp, vừa, cao).",
+      "required_inputs": [
+        "Chủ đề, địa điểm, số khách",
+        "Mức ngân sách"
+      ],
+      "verification": [
+        "Khảo sát mặt bằng thật trước khi chốt.",
+        "Hỏi báo giá thật từ nhà cung cấp.",
+        "Kiểm tra an toàn phòng cháy với vật liệu trang trí."
+      ],
+      "tags": [
+        "trang trí",
+        "concept",
+        "backdrop",
+        "check-in",
+        "sân khấu",
+        "không gian"
+      ],
+      "example": {
+        "input": "Sự kiện: tất niên · Chủ đề: hành trình di sản · Sảnh 300 m² · 250 khách · Ngân sách vừa",
+        "output": "3 concept, mỗi concept có ý tưởng, bảng màu, 5–7 hạng mục, góc check-in, mức chi phí tương đối, không có con số giá."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 52
+    },
+    {
+      "id": "tk06",
+      "category": "design",
+      "title": "Prompt tạo video ngắn từ ảnh",
+      "target_audiences": [
+        "truyen-thong",
+        "thiet-ke"
+      ],
+      "goals": [
+        "hinh-anh"
+      ],
+      "difficulty": "nang-cao",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Gemini",
+        "ChatGPT",
+        "CapCut"
+      ],
+      "purpose": "Viết prompt chuyển động cho công cụ tạo video AI từ ảnh có sẵn.",
+      "use_cases": [
+        "Biến ảnh sự kiện thành clip mở đầu",
+        "Video nền cho màn hình LED"
+      ],
+      "prompt": "Bạn là đạo diễn hình ảnh chuyển động. Tôi có ảnh: [mô tả ảnh hoặc đính kèm]. Hãy viết 3 prompt tạo video dài [số giây] giây từ ảnh này, mỗi prompt mô tả: chuyển động máy quay (lia, đẩy vào, xoay), chuyển động của chủ thể, ánh sáng, nhịp độ, cảm xúc. Giữ nguyên khuôn mặt và trang phục người trong ảnh; không thêm chữ, logo hoặc người mới. Ghi chú phương án nào phù hợp làm video mở màn, video nền hoặc chuyển cảnh.",
+      "required_inputs": [
+        "Ảnh gốc (đã được phép sử dụng)",
+        "Thời lượng và mục đích dùng"
+      ],
+      "verification": [
+        "Người trong ảnh đồng ý cho chỉnh sửa bằng AI.",
+        "Kiểm tra video không biến dạng khuôn mặt, tay.",
+        "Ghi chú nội dung do AI tạo nếu đơn vị yêu cầu."
+      ],
+      "tags": [
+        "video AI",
+        "chuyển động",
+        "image to video",
+        "motion",
+        "clip"
+      ],
+      "example": {
+        "input": "Ảnh tập thể đội tình nguyện trước tòa nhà · 6 giây · Dùng làm video mở màn",
+        "output": "3 prompt chuyển động khác nhau, mỗi prompt có chuyển động máy quay, ánh sáng, nhịp độ và ghi chú mục đích phù hợp."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 53
+    },
+    {
+      "id": "tk07",
+      "category": "design",
+      "title": "Góp ý thiết kế theo tiêu chí",
+      "target_audiences": [
+        "thiet-ke",
+        "truyen-thong",
+        "quan-ly"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "ChatGPT",
+        "Gemini",
+        "Claude"
+      ],
+      "purpose": "Nhận góp ý có cấu trúc cho poster, banner, slide trước khi phát hành.",
+      "use_cases": [
+        "Duyệt nhanh ấn phẩm trước khi in",
+        "Tự kiểm tra thiết kế khi không có designer"
+      ],
+      "prompt": "Bạn là trưởng nhóm thiết kế khó tính nhưng công bằng. Tôi gửi kèm [loại ấn phẩm] dùng cho [mục đích, nơi hiển thị], người xem là [đối tượng]. Hãy góp ý theo 6 tiêu chí: thông điệp chính có nổi bật không, thứ tự đọc, chữ có đọc được ở khoảng cách xem thực tế không, màu sắc và nhận diện, khoảng trống, lỗi chính tả. Mỗi tiêu chí chấm 1–5 và nêu 1 điểm tốt, 1 điểm cần sửa cụ thể. Cuối cùng liệt kê 3 việc nên sửa trước tiên. Không đề xuất thay đổi nội dung thông tin.",
+      "required_inputs": [
+        "Ảnh ấn phẩm",
+        "Mục đích và nơi hiển thị",
+        "Người xem"
+      ],
+      "verification": [
+        "Xem lại góp ý trên bản in thử hoặc màn hình thật.",
+        "Đối chiếu lỗi chính tả AI phát hiện với bản gốc.",
+        "Người phụ trách thương hiệu duyệt bản sửa."
+      ],
+      "tags": [
+        "góp ý",
+        "review",
+        "đánh giá thiết kế",
+        "poster",
+        "feedback"
+      ],
+      "example": {
+        "input": "Ảnh banner sảnh 2×1 m cho ngày hội sức khỏe · Người xem: nhân viên đi qua sảnh",
+        "output": "Bảng 6 tiêu chí có điểm 1–5, mỗi tiêu chí 1 điểm tốt và 1 điểm cần sửa; cuối cùng là 3 việc ưu tiên."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 54
+    },
+    {
       "id": "e1",
       "title": "Ý tưởng chương trình văn hóa",
       "category": "event",
@@ -764,6 +1513,354 @@ window.YAI_DATA = {
       "rank": 22
     },
     {
+      "id": "sk01",
+      "category": "event",
+      "title": "Kịch bản MC chương trình",
+      "target_audiences": [
+        "van-hoa",
+        "truyen-thong"
+      ],
+      "goals": [
+        "viet",
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "15–20 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có kịch bản dẫn chương trình theo từng phần, lời dẫn tự nhiên, đúng thời lượng.",
+      "use_cases": [
+        "Dẫn lễ kỷ niệm, tất niên, hội thao",
+        "Dẫn workshop, buổi chia sẻ nội bộ"
+      ],
+      "prompt": "Bạn là biên kịch MC sự kiện. Chương trình: [tên sự kiện], thời lượng [thời lượng], khán giả [đối tượng, số người], phong cách dẫn [trang trọng hoặc sôi động]. Trình tự đã chốt: [dán danh sách các phần, người phát biểu, tiết mục]. Hãy viết kịch bản MC dạng bảng: Thời gian | Phần | Lời dẫn | Ghi chú kỹ thuật (nhạc, đèn, màn chiếu). Lời dẫn mỗi lần không quá 60 giây đọc. Tên người, chức danh để trong [ngoặc vuông] để ban tổ chức điền chính xác. Thêm 2 câu dẫn dự phòng khi chương trình bị chậm.",
+      "required_inputs": [
+        "Trình tự chương trình đã chốt",
+        "Thời lượng, khán giả, phong cách"
+      ],
+      "verification": [
+        "Tên, chức danh người phát biểu do ban tổ chức điền và kiểm tra.",
+        "Đọc to để canh thời gian từng phần.",
+        "Thống nhất ghi chú kỹ thuật với đội âm thanh ánh sáng."
+      ],
+      "tags": [
+        "MC",
+        "kịch bản",
+        "dẫn chương trình",
+        "lời dẫn",
+        "sự kiện"
+      ],
+      "example": {
+        "input": "Lễ vinh danh đại sứ văn hóa · 90 phút · 150 người · Trang trọng, ấm áp · 7 phần đã chốt",
+        "output": "Bảng theo mốc thời gian, lời dẫn mỗi phần dưới 60 giây, tên người để trong [ngoặc vuông], có 2 câu dẫn dự phòng."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 55
+    },
+    {
+      "id": "sk02",
+      "category": "event",
+      "title": "Trò chơi gắn kết đội nhóm",
+      "target_audiences": [
+        "van-hoa",
+        "quan-ly",
+        "nhan-su"
+      ],
+      "goals": [
+        "y-tuong"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có danh sách trò chơi phù hợp không gian, số người và thời gian.",
+      "use_cases": [
+        "Mở đầu buổi họp, workshop",
+        "Team building trong nhà hoặc ngoài trời"
+      ],
+      "prompt": "Bạn là người tổ chức hoạt động gắn kết. Hãy gợi ý [số lượng] trò chơi cho [số người] người, không gian [trong phòng họp, sảnh, ngoài trời], thời lượng mỗi trò [số phút]. Mục tiêu: [phá băng, phối hợp, sáng tạo]. Mỗi trò chơi gồm: tên, mục tiêu, dụng cụ, luật chơi từng bước, cách chia đội, câu hỏi tổng kết rút bài học. Ưu tiên trò không cần vận động mạnh, phù hợp mọi lứa tuổi, không gây khó xử cho người hướng nội.",
+      "required_inputs": [
+        "Số người, không gian, thời lượng",
+        "Mục tiêu hoạt động"
+      ],
+      "verification": [
+        "Chơi thử trước với 3–4 người.",
+        "Chuẩn bị đủ dụng cụ.",
+        "Có phương án cho người không muốn tham gia vận động."
+      ],
+      "tags": [
+        "trò chơi",
+        "team building",
+        "phá băng",
+        "icebreaker",
+        "gắn kết",
+        "hoạt động nhóm"
+      ],
+      "example": {
+        "input": "30 người · Phòng họp lớn · 10 phút mỗi trò · Mục tiêu: phá băng đầu workshop",
+        "output": "5 trò chơi, mỗi trò có mục tiêu, dụng cụ, luật chơi từng bước, cách chia đội và 1–2 câu hỏi tổng kết."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 56
+    },
+    {
+      "id": "sk03",
+      "category": "event",
+      "title": "Câu hỏi đố vui theo chủ đề",
+      "target_audiences": [
+        "van-hoa",
+        "nhan-su",
+        "truyen-thong"
+      ],
+      "goals": [
+        "y-tuong",
+        "dao-tao"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot",
+        "NotebookLM"
+      ],
+      "purpose": "Soạn bộ câu đố vui từ tài liệu có sẵn, có đáp án và nguồn.",
+      "use_cases": [
+        "Minigame trong sự kiện, workshop",
+        "Cuộc thi tìm hiểu văn hóa, lịch sử đơn vị"
+      ],
+      "prompt": "Bạn là người soạn câu đố vui. Dựa trên tài liệu sau: [dán tài liệu hoặc đính kèm], hãy soạn [số câu] câu đố vui cho [đối tượng] chủ đề [chủ đề]. Mỗi câu gồm: câu hỏi, 4 phương án, đáp án đúng, câu giải thích ngắn và trích đoạn tài liệu làm căn cứ. Sắp xếp từ dễ đến khó. Chỉ hỏi về thông tin có trong tài liệu; không hỏi về thông tin cá nhân.",
+      "required_inputs": [
+        "Tài liệu làm nguồn câu hỏi",
+        "Số câu, đối tượng, chủ đề"
+      ],
+      "verification": [
+        "Đối chiếu từng đáp án với trích đoạn tài liệu.",
+        "Thử với 2–3 người để cân độ khó.",
+        "Kiểm tra không có hai đáp án cùng đúng."
+      ],
+      "tags": [
+        "đố vui",
+        "quiz",
+        "minigame",
+        "câu hỏi",
+        "cuộc thi",
+        "trắc nghiệm"
+      ],
+      "example": {
+        "input": "Tài liệu: lịch sử 30 năm hình thành đơn vị · 15 câu · Đối tượng: nhân viên mới",
+        "output": "15 câu từ dễ đến khó, mỗi câu 4 phương án, 1 đáp án, giải thích ngắn và trích đoạn làm căn cứ."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 57
+    },
+    {
+      "id": "sk04",
+      "category": "event",
+      "title": "Checklist hậu cần sự kiện",
+      "target_audiences": [
+        "van-hoa",
+        "van-hanh"
+      ],
+      "goals": [
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Không bỏ sót việc hậu cần trước, trong và sau sự kiện.",
+      "use_cases": [
+        "Chuẩn bị sự kiện nội bộ quy mô vừa",
+        "Bàn giao việc cho nhóm hỗ trợ"
+      ],
+      "prompt": "Bạn là trưởng ban hậu cần sự kiện. Sự kiện: [tên], ngày [ngày], địa điểm [địa điểm], [số khách] khách, hình thức [trong nhà hoặc ngoài trời]. Hãy lập checklist hậu cần chia 4 mốc: trước 2 tuần, trước 1 ngày, trong ngày sự kiện, sau sự kiện. Mỗi mốc gồm các nhóm: địa điểm, âm thanh ánh sáng, ăn uống, đón khách, an toàn và y tế, truyền thông, thanh toán. Trình bày dạng bảng: Việc | Mốc | Người phụ trách (để trống) | Ghi chú. Thêm 5 rủi ro thường gặp và phương án dự phòng.",
+      "required_inputs": [
+        "Thông tin sự kiện",
+        "Số khách, hình thức tổ chức"
+      ],
+      "verification": [
+        "Rà lại với nhà cung cấp và địa điểm thật.",
+        "Phân công người phụ trách từng việc.",
+        "Kiểm tra phương án y tế, thoát hiểm."
+      ],
+      "tags": [
+        "hậu cần",
+        "checklist",
+        "logistics",
+        "chuẩn bị sự kiện",
+        "dự phòng"
+      ],
+      "example": {
+        "input": "Hội thao cuối năm · Sân vận động thuê ngoài · 400 người · Ngoài trời",
+        "output": "Bảng 30–40 việc chia 4 mốc và 7 nhóm, cột người phụ trách để trống, kèm 5 rủi ro và phương án dự phòng."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 58
+    },
+    {
+      "id": "sk05",
+      "category": "event",
+      "title": "Phát biểu khai mạc, bế mạc",
+      "target_audiences": [
+        "quan-ly",
+        "van-hoa"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Soạn bài phát biểu ngắn, đúng tinh thần sự kiện cho người lãnh đạo đọc.",
+      "use_cases": [
+        "Lãnh đạo khai mạc sự kiện, hội nghị",
+        "Phát biểu bế mạc, cảm ơn"
+      ],
+      "prompt": "Bạn là người viết diễn văn. Hãy soạn bài phát biểu [khai mạc hoặc bế mạc] dài khoảng [số phút] phút đọc cho [chức danh người phát biểu] tại [sự kiện]. Khán giả: [đối tượng]. Ý chính cần nói: [các ý]. Cấu trúc: chào hỏi, ý nghĩa sự kiện, 2–3 thông điệp chính, lời cảm ơn, lời chúc. Câu ngắn, dễ đọc thành tiếng, có chỗ ngắt nghỉ. Tên khách mời và đơn vị để trong [ngoặc vuông]. Không thêm thành tích, số liệu khi chưa được cung cấp.",
+      "required_inputs": [
+        "Người phát biểu, sự kiện, khán giả",
+        "Ý chính cần nói",
+        "Thời lượng"
+      ],
+      "verification": [
+        "Người phát biểu đọc thử và chỉnh theo giọng của mình.",
+        "Danh sách khách mời, thứ tự chào hỏi đúng nghi thức.",
+        "Số liệu, thành tích được xác nhận."
+      ],
+      "tags": [
+        "phát biểu",
+        "diễn văn",
+        "khai mạc",
+        "bế mạc",
+        "lãnh đạo",
+        "speech"
+      ],
+      "example": {
+        "input": "Phát biểu khai mạc hội thao · 3 phút · Giám đốc khối · Ý chính: tinh thần đoàn kết, an toàn",
+        "output": "Bài khoảng 350 từ, câu ngắn dễ đọc, tên khách mời trong [ngoặc vuông], không có thành tích nào ngoài ý đã cho."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 59
+    },
+    {
+      "id": "sk06",
+      "category": "event",
+      "title": "Khảo sát sau sự kiện",
+      "target_audiences": [
+        "van-hoa",
+        "nhan-su"
+      ],
+      "goals": [
+        "phan-tich",
+        "ke-hoach"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Thiết kế phiếu khảo sát ngắn, đo được mức hài lòng và ý kiến cải thiện.",
+      "use_cases": [
+        "Lấy phản hồi sau sự kiện, đào tạo",
+        "So sánh chất lượng giữa các lần tổ chức"
+      ],
+      "prompt": "Bạn là chuyên gia thiết kế khảo sát. Hãy soạn phiếu khảo sát sau [sự kiện] cho [đối tượng], làm trong tối đa [số phút] phút. Gồm: 5–7 câu chấm điểm thang 1–5 về [các khía cạnh: nội dung, tổ chức, địa điểm…], 1 câu đo mức sẵn sàng giới thiệu cho đồng nghiệp, 2 câu hỏi mở. Câu hỏi trung lập, không gợi ý câu trả lời. Không hỏi thông tin định danh cá nhân. Kèm gợi ý tiêu đề và lời mở đầu 2 câu cho phiếu.",
+      "required_inputs": [
+        "Sự kiện và đối tượng tham gia",
+        "Các khía cạnh cần đánh giá"
+      ],
+      "verification": [
+        "Làm thử phiếu để kiểm tra thời gian.",
+        "Câu hỏi không dẫn dắt.",
+        "Khảo sát ẩn danh đúng như lời mở đầu."
+      ],
+      "tags": [
+        "khảo sát",
+        "survey",
+        "phản hồi",
+        "đánh giá sự kiện",
+        "form"
+      ],
+      "example": {
+        "input": "Sau workshop AI 120 người · 3 phút · Khía cạnh: nội dung, diễn giả, thực hành, hậu cần",
+        "output": "Phiếu 9–10 câu: 6 câu thang 1–5, 1 câu mức sẵn sàng giới thiệu, 2 câu mở; có tiêu đề và lời mở đầu, không hỏi họ tên."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 60
+    },
+    {
+      "id": "sk07",
+      "category": "event",
+      "title": "Kế hoạch chương trình văn hóa theo năm",
+      "target_audiences": [
+        "van-hoa",
+        "quan-ly"
+      ],
+      "goals": [
+        "ke-hoach",
+        "y-tuong"
+      ],
+      "difficulty": "nang-cao",
+      "time": "15–20 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Phác thảo lịch hoạt động văn hóa cả năm gắn với giá trị cốt lõi.",
+      "use_cases": [
+        "Lập kế hoạch cho đội đại sứ văn hóa",
+        "Đề xuất ngân sách và nguồn lực năm"
+      ],
+      "prompt": "Bạn là chuyên gia văn hóa doanh nghiệp. Giá trị cốt lõi của đơn vị: [các giá trị]. Nguồn lực: [số người phụ trách, mức ngân sách]. Các mốc cố định trong năm: [ngày kỷ niệm, lễ tết]. Hãy đề xuất kế hoạch hoạt động văn hóa 12 tháng dạng bảng: Tháng | Hoạt động | Giá trị gắn kết | Hình thức | Quy mô | Cách đo hiệu quả. Cân bằng hoạt động lớn và nhỏ, trực tiếp và trực tuyến. Không quá [số] hoạt động lớn mỗi năm. Ghi rõ đây là bản đề xuất cần lãnh đạo duyệt.",
+      "required_inputs": [
+        "Giá trị cốt lõi",
+        "Nguồn lực, ngân sách",
+        "Các mốc cố định"
+      ],
+      "verification": [
+        "Đối chiếu với lịch kinh doanh để tránh mùa cao điểm.",
+        "Ước tính chi phí thật trước khi trình.",
+        "Lãnh đạo và bộ phận nhân sự duyệt."
+      ],
+      "tags": [
+        "kế hoạch năm",
+        "văn hóa doanh nghiệp",
+        "giá trị cốt lõi",
+        "đại sứ văn hóa",
+        "lịch hoạt động"
+      ],
+      "example": {
+        "input": "Giá trị: tận tâm, đổi mới, hợp tác · 5 người phụ trách · Ngân sách vừa · Mốc: ngày thành lập, Tết, 8/3, 20/10",
+        "output": "Bảng 12 tháng, mỗi tháng 1–2 hoạt động gắn với giá trị, có hình thức, quy mô và cách đo; tối đa 4 hoạt động lớn."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 61
+    },
+    {
       "id": "o1",
       "title": "Tóm tắt tài liệu có trích dẫn",
       "category": "office",
@@ -909,6 +2006,392 @@ window.YAI_DATA = {
       "rank": 21
     },
     {
+      "id": "cv01",
+      "category": "office",
+      "title": "Trả lời email khó",
+      "target_audiences": [
+        "moi-nhan-su",
+        "quan-ly",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Soạn email phản hồi lịch sự, rõ lập trường khi phải từ chối, phản đối hoặc báo tin không vui.",
+      "use_cases": [
+        "Từ chối một đề nghị, yêu cầu ngoài phạm vi",
+        "Phản hồi email có giọng gay gắt"
+      ],
+      "prompt": "Bạn là chuyên gia giao tiếp công sở. Tôi nhận được email sau: [dán email, đã bỏ thông tin nhạy cảm]. Mục tiêu của tôi: [đồng ý một phần, từ chối, xin thêm thời gian…]. Điều tôi có thể đề xuất: [phương án thay thế]. Hãy viết 2 phiên bản trả lời: một bản ngắn gọn, một bản chi tiết hơn. Giọng lịch sự, bình tĩnh, không đổ lỗi, không xin lỗi quá mức. Tối đa 150 từ mỗi bản. Không hứa điều tôi chưa nêu.",
+      "required_inputs": [
+        "Email nhận được (đã ẩn thông tin nhạy cảm)",
+        "Mục tiêu khi trả lời",
+        "Phương án có thể đề xuất"
+      ],
+      "verification": [
+        "Đọc lại giọng điệu khi đặt mình vào vị trí người nhận.",
+        "Không có cam kết nào ngoài điều bạn đã nêu.",
+        "Email quan trọng nên nhờ quản lý xem trước."
+      ],
+      "tags": [
+        "email",
+        "trả lời",
+        "từ chối",
+        "giao tiếp",
+        "phản hồi khó"
+      ],
+      "example": {
+        "input": "Email đồng nghiệp phòng khác yêu cầu gửi báo cáo trong ngày · Mục tiêu: xin lùi sang thứ Năm · Đề xuất: gửi bản tóm tắt trước",
+        "output": "2 bản trả lời dưới 150 từ, nêu rõ lý do, đề xuất gửi bản tóm tắt trước, không xin lỗi quá mức."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 62
+    },
+    {
+      "id": "cv02",
+      "category": "office",
+      "title": "Sắp xếp việc ưu tiên trong tuần",
+      "target_audiences": [
+        "moi-nhan-su",
+        "quan-ly"
+      ],
+      "goals": [
+        "ke-hoach"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Phân loại danh sách việc theo mức khẩn cấp và quan trọng, có lịch làm cụ thể.",
+      "use_cases": [
+        "Đầu tuần có quá nhiều việc",
+        "Cần báo quản lý thứ tự ưu tiên"
+      ],
+      "prompt": "Bạn là trợ lý quản lý thời gian. Đây là danh sách việc của tôi tuần này: [dán danh sách, kèm hạn nếu có]. Thời gian làm việc thực tế mỗi ngày khoảng [số giờ]; các cuộc họp cố định: [lịch họp]. Hãy: (1) xếp việc vào ma trận Khẩn cấp và Quan trọng, (2) đề xuất lịch làm từ thứ Hai đến thứ Sáu theo khung giờ, (3) chỉ ra việc nên ủy quyền, dời hoặc hỏi lại quản lý. Không tự đặt hạn cho việc chưa có hạn; ghi \"cần xác nhận hạn\".",
+      "required_inputs": [
+        "Danh sách việc và hạn",
+        "Số giờ làm việc thực tế, lịch họp cố định"
+      ],
+      "verification": [
+        "Kiểm tra lại hạn chót với người giao việc.",
+        "Điều chỉnh lịch theo năng lượng làm việc của bạn.",
+        "Báo quản lý những việc đề xuất dời."
+      ],
+      "tags": [
+        "ưu tiên",
+        "quản lý thời gian",
+        "to-do",
+        "eisenhower",
+        "lịch làm việc"
+      ],
+      "example": {
+        "input": "12 việc, 5 việc có hạn · 6 giờ làm việc thực tế/ngày · Họp giao ban sáng thứ Hai",
+        "output": "Ma trận 4 ô, lịch theo khung giờ 5 ngày, danh sách 3 việc nên ủy quyền hoặc dời; việc chưa có hạn ghi “cần xác nhận hạn”."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 63
+    },
+    {
+      "id": "cv03",
+      "category": "office",
+      "title": "Chuẩn bị nội dung buổi họp",
+      "target_audiences": [
+        "quan-ly",
+        "moi-nhan-su",
+        "van-hanh"
+      ],
+      "goals": [
+        "ke-hoach"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có chương trình họp có mục tiêu, thời lượng và người phụ trách từng phần.",
+      "use_cases": [
+        "Gửi agenda trước cuộc họp",
+        "Họp ra quyết định cần chuẩn bị kỹ"
+      ],
+      "prompt": "Bạn là thư ký cuộc họp chuyên nghiệp. Cuộc họp: [chủ đề], thời lượng [số phút], người tham dự [vai trò, số người], mục tiêu cuối cùng [quyết định hoặc kết quả cần có]. Hãy soạn chương trình họp: mục tiêu một câu, danh sách mục thảo luận có thời lượng và người dẫn dắt (để trống tên), tài liệu cần đọc trước, câu hỏi cần trả lời cuối buổi. Tổng thời lượng không vượt [số phút] và chừa 5 phút chốt việc. Kèm email gửi chương trình họp dưới 100 từ.",
+      "required_inputs": [
+        "Chủ đề, mục tiêu cuộc họp",
+        "Thời lượng, người tham dự"
+      ],
+      "verification": [
+        "Tổng thời gian các mục khớp thời lượng họp.",
+        "Người dẫn dắt từng mục đã đồng ý.",
+        "Tài liệu đọc trước được gửi kèm."
+      ],
+      "tags": [
+        "họp",
+        "agenda",
+        "chương trình họp",
+        "meeting",
+        "chuẩn bị"
+      ],
+      "example": {
+        "input": "Họp chốt kế hoạch tất niên · 45 phút · 8 người · Cần chốt ngày, địa điểm, ngân sách",
+        "output": "Chương trình 5–6 mục có thời lượng, tổng 45 phút có 5 phút chốt việc, 3 câu hỏi cần trả lời và email gửi kèm."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 64
+    },
+    {
+      "id": "cv04",
+      "category": "office",
+      "title": "Viết hướng dẫn quy trình từng bước",
+      "target_audiences": [
+        "van-hanh",
+        "nhan-su",
+        "moi-nhan-su"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chuyển cách làm trong đầu thành tài liệu hướng dẫn người khác làm theo được.",
+      "use_cases": [
+        "Bàn giao công việc khi nghỉ phép, chuyển vị trí",
+        "Chuẩn hóa thao tác lặp lại trong nhóm"
+      ],
+      "prompt": "Bạn là chuyên viên viết tài liệu quy trình. Đây là mô tả cách tôi làm [tên công việc]: [dán mô tả hoặc ghi chú]. Người đọc: [người mới hoặc đồng nghiệp]. Hãy viết hướng dẫn gồm: mục đích, khi nào dùng, chuẩn bị gì, các bước đánh số (mỗi bước bắt đầu bằng động từ, kèm kết quả mong đợi), lỗi thường gặp và cách xử lý, người liên hệ khi vướng (để trong [ngoặc vuông]). Chỗ nào mô tả của tôi chưa rõ, liệt kê thành câu hỏi ở cuối thay vì tự đoán.",
+      "required_inputs": [
+        "Mô tả cách làm hiện tại",
+        "Người đọc tài liệu"
+      ],
+      "verification": [
+        "Nhờ một người chưa từng làm đọc và làm thử.",
+        "Cập nhật ảnh chụp màn hình nếu có.",
+        "Không đưa mật khẩu, thông tin đăng nhập vào tài liệu."
+      ],
+      "tags": [
+        "quy trình",
+        "hướng dẫn",
+        "SOP",
+        "bàn giao",
+        "tài liệu"
+      ],
+      "example": {
+        "input": "Mô tả cách làm đề nghị thanh toán chi phí sự kiện · Người đọc: nhân viên mới",
+        "output": "Hướng dẫn 8–10 bước có kết quả mong đợi, mục lỗi thường gặp, đầu mối liên hệ trong [ngoặc vuông] và 2 câu hỏi cần làm rõ."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 65
+    },
+    {
+      "id": "cv05",
+      "category": "office",
+      "title": "Viết lại tin nhắn cho rõ ràng",
+      "target_audiences": [
+        "moi-nhan-su"
+      ],
+      "goals": [
+        "viet",
+        "danh-gia"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 2 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Sửa nhanh tin nhắn công việc cho ngắn, rõ, đúng giọng.",
+      "use_cases": [
+        "Nhắn quản lý, đồng nghiệp phòng khác",
+        "Nhắc việc mà không gây khó chịu"
+      ],
+      "prompt": "Hãy viết lại tin nhắn sau cho rõ ràng và lịch sự hơn, gửi cho [người nhận] qua [kênh: Zalo, Teams, email]: [dán tin nhắn]. Yêu cầu: nêu việc cần làm và hạn ngay ở câu đầu, tối đa [số câu] câu, giọng [thân thiện hoặc trang trọng]. Giữ nguyên mọi thông tin, không thêm chi tiết mới. Đưa 2 phiên bản để tôi chọn.",
+      "required_inputs": [
+        "Tin nhắn gốc",
+        "Người nhận, kênh, giọng mong muốn"
+      ],
+      "verification": [
+        "Thông tin, hạn chót giữ nguyên.",
+        "Đọc lại xem có thể bị hiểu là ra lệnh không."
+      ],
+      "tags": [
+        "tin nhắn",
+        "nhắc việc",
+        "chat",
+        "giao tiếp",
+        "viết lại"
+      ],
+      "example": {
+        "input": "Tin nhắn: “a ơi gửi e cái file hôm trước nha gấp” · Người nhận: trưởng phòng khác · Teams · Trang trọng",
+        "output": "2 phiên bản 2–3 câu nêu rõ tên file và thời hạn cần nhận, giọng lịch sự."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 66
+    },
+    {
+      "id": "cv06",
+      "category": "office",
+      "title": "Tóm tắt chuỗi email dài",
+      "target_audiences": [
+        "quan-ly",
+        "moi-nhan-su"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 3 phút",
+      "compatible_tools": [
+        "Copilot",
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "purpose": "Nắm nhanh một chuỗi email nhiều người trả lời: đã chốt gì, ai cần làm gì.",
+      "use_cases": [
+        "Quay lại sau kỳ nghỉ, nhiều email tồn",
+        "Được thêm vào giữa một chuỗi trao đổi"
+      ],
+      "prompt": "Bạn là trợ lý điều hành. Đây là chuỗi email về [chủ đề]: [dán chuỗi email, đã bỏ thông tin nhạy cảm]. Hãy tóm tắt: (1) bối cảnh trong 2 câu, (2) các điểm đã thống nhất, (3) các điểm còn tranh luận và quan điểm của từng bên, (4) bảng việc cần làm: Việc | Người phụ trách | Hạn. Chỉ dựa vào nội dung email; việc chưa rõ người phụ trách ghi \"chưa giao\".",
+      "required_inputs": [
+        "Chuỗi email (đã ẩn thông tin nhạy cảm)"
+      ],
+      "verification": [
+        "Đối chiếu các điểm “đã thống nhất” với email gốc.",
+        "Xác nhận lại việc được giao cho bạn."
+      ],
+      "tags": [
+        "tóm tắt email",
+        "email thread",
+        "việc cần làm",
+        "action items"
+      ],
+      "example": {
+        "input": "Chuỗi 18 email giữa 5 người về chọn nhà cung cấp in ấn",
+        "output": "Bối cảnh 2 câu, 3 điểm đã thống nhất, 2 điểm còn tranh luận kèm quan điểm, bảng 4 việc cần làm có cột người phụ trách."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 67
+    },
+    {
+      "id": "cv07",
+      "category": "office",
+      "title": "Mẫu tự đánh giá công việc",
+      "target_audiences": [
+        "moi-nhan-su",
+        "nhan-su"
+      ],
+      "goals": [
+        "viet",
+        "danh-gia"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Copilot"
+      ],
+      "purpose": "Viết bản tự đánh giá cuối kỳ có dẫn chứng, cân bằng thành tích và điểm cần phát triển.",
+      "use_cases": [
+        "Đánh giá hiệu quả công việc giữa năm, cuối năm",
+        "Chuẩn bị buổi trao đổi 1-1 với quản lý"
+      ],
+      "prompt": "Bạn là người hướng dẫn viết tự đánh giá công việc. Đây là ghi chú công việc kỳ [kỳ đánh giá] của tôi: [dán ghi chú, kết quả đã được xác nhận]. Mục tiêu đầu kỳ: [mục tiêu]. Hãy viết bản tự đánh giá gồm: 3–5 kết quả nổi bật theo cấu trúc Tình huống – Việc tôi làm – Kết quả; 2 điểm cần phát triển kèm hành động cụ thể; mục tiêu kỳ tới. Giọng khách quan, không phóng đại. Chỉ dùng con số có trong ghi chú; chỗ thiếu số liệu ghi \"cần bổ sung số liệu\".",
+      "required_inputs": [
+        "Ghi chú kết quả công việc đã được xác nhận",
+        "Mục tiêu đầu kỳ"
+      ],
+      "verification": [
+        "Mọi con số khớp dữ liệu thật.",
+        "Bản cuối là lời của bạn: đọc và chỉnh lại theo giọng mình.",
+        "Không đưa thông tin mật của dự án vào công cụ AI."
+      ],
+      "tags": [
+        "tự đánh giá",
+        "đánh giá hiệu quả",
+        "performance review",
+        "KPI",
+        "1-1"
+      ],
+      "example": {
+        "input": "Ghi chú 6 tháng: tổ chức 3 sự kiện, viết 20 bài đăng, đào tạo 2 người mới · Mục tiêu: tăng tương tác kênh nội bộ",
+        "output": "3–4 kết quả theo cấu trúc Tình huống – Việc làm – Kết quả, 2 điểm cần phát triển, mục tiêu kỳ tới; chỗ thiếu số liệu được đánh dấu."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 68
+    },
+    {
+      "id": "cv08",
+      "category": "office",
+      "title": "Biên bản bàn giao công việc",
+      "target_audiences": [
+        "moi-nhan-su",
+        "van-hanh",
+        "quan-ly"
+      ],
+      "goals": [
+        "viet",
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có biên bản bàn giao đầy đủ việc đang làm, tài liệu, đầu mối và rủi ro.",
+      "use_cases": [
+        "Nghỉ phép dài, nghỉ sinh",
+        "Chuyển vị trí, chuyển dự án"
+      ],
+      "prompt": "Bạn là trưởng nhóm cẩn thận. Tôi sắp bàn giao công việc cho [người nhận bàn giao] trong [thời gian]. Danh sách việc đang làm: [dán danh sách và trạng thái]. Hãy soạn biên bản bàn giao dạng bảng: Việc | Trạng thái | Bước tiếp theo | Hạn | Tài liệu, đường dẫn | Đầu mối liên quan. Thêm mục: việc định kỳ cần duy trì, rủi ro cần chú ý, cách liên hệ tôi khi khẩn cấp (để trống). Không đưa mật khẩu hay thông tin đăng nhập vào biên bản.",
+      "required_inputs": [
+        "Danh sách việc và trạng thái",
+        "Người nhận bàn giao, thời gian"
+      ],
+      "verification": [
+        "Hai bên cùng đọc và xác nhận từng dòng.",
+        "Kiểm tra quyền truy cập tài liệu của người nhận.",
+        "Quản lý trực tiếp ký xác nhận."
+      ],
+      "tags": [
+        "bàn giao",
+        "handover",
+        "nghỉ phép",
+        "biên bản",
+        "chuyển giao"
+      ],
+      "example": {
+        "input": "Bàn giao 2 tuần nghỉ phép · 7 việc đang làm, 3 việc định kỳ hằng tuần",
+        "output": "Bảng 7 dòng có bước tiếp theo và hạn, mục việc định kỳ, 3 rủi ro cần chú ý, ô liên hệ khẩn cấp để trống."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 69
+    },
+    {
       "id": "r1",
       "title": "Động não 15 ý tưởng theo 3 nhóm",
       "category": "research",
@@ -1051,6 +2534,353 @@ window.YAI_DATA = {
         "output": "Chuỗi 5 câu hỏi tại sao, bảng nguyên nhân 4 nhóm, 3 nguyên nhân khả dĩ (ví dụ trùng lịch cao điểm) kèm cách kiểm chứng như hỏi nhanh 10 người hoặc so lịch."
       },
       "rank": 28
+    },
+    {
+      "id": "nc01",
+      "category": "research",
+      "title": "So sánh các phương án ra quyết định",
+      "target_audiences": [
+        "quan-ly",
+        "van-hanh",
+        "du-lieu"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Đặt các phương án cạnh nhau theo cùng tiêu chí để ra quyết định có căn cứ.",
+      "use_cases": [
+        "Chọn nhà cung cấp, công cụ, địa điểm",
+        "Trình bày đề xuất cho quản lý"
+      ],
+      "prompt": "Bạn là chuyên viên phân tích. Tôi cần chọn giữa các phương án: [liệt kê phương án và thông tin đã có về từng phương án]. Mục tiêu: [mục tiêu]. Tiêu chí quan trọng: [tiêu chí, kèm trọng số nếu có]. Hãy lập bảng so sánh theo tiêu chí, chấm điểm 1–5 có giải thích, tính điểm tổng theo trọng số, nêu rủi ro chính của từng phương án và đề xuất 1 phương án kèm điều kiện để đề xuất thay đổi. Chỉ dùng thông tin tôi cung cấp; chỗ thiếu ghi \"cần thu thập\".",
+      "required_inputs": [
+        "Danh sách phương án và thông tin từng phương án",
+        "Mục tiêu, tiêu chí, trọng số"
+      ],
+      "verification": [
+        "Kiểm tra lại thông tin đầu vào của từng phương án.",
+        "Thử đổi trọng số xem kết luận có thay đổi không.",
+        "Người có thẩm quyền ra quyết định cuối cùng."
+      ],
+      "tags": [
+        "so sánh",
+        "ra quyết định",
+        "phương án",
+        "ma trận",
+        "lựa chọn"
+      ],
+      "example": {
+        "input": "3 địa điểm tổ chức tất niên với sức chứa, khoảng cách, mức giá tương đối · Tiêu chí: chi phí 40%, đi lại 30%, không gian 30%",
+        "output": "Bảng 3 phương án × 3 tiêu chí có điểm và giải thích, điểm tổng theo trọng số, rủi ro từng phương án, 1 đề xuất kèm điều kiện."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 70
+    },
+    {
+      "id": "nc02",
+      "category": "research",
+      "title": "Phân tích SWOT",
+      "target_audiences": [
+        "quan-ly",
+        "van-hanh",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "phan-tich",
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Nhìn tổng thể điểm mạnh, yếu, cơ hội, thách thức và rút ra hướng hành động.",
+      "use_cases": [
+        "Đánh giá một chương trình, sáng kiến",
+        "Chuẩn bị kế hoạch năm"
+      ],
+      "prompt": "Bạn là chuyên gia chiến lược. Đối tượng phân tích: [chương trình, sản phẩm, đơn vị]. Thông tin đã có: [dán dữ liệu, nhận xét, kết quả]. Hãy lập ma trận SWOT, mỗi ô 3–5 ý cụ thể, mỗi ý ghi căn cứ từ thông tin đã cho. Sau đó đề xuất 4 nhóm hành động: dùng điểm mạnh để nắm cơ hội, khắc phục điểm yếu, phòng thách thức, giảm rủi ro kép. Đánh dấu ý nào là suy luận, ý nào có căn cứ trực tiếp.",
+      "required_inputs": [
+        "Đối tượng phân tích",
+        "Dữ liệu, nhận xét đã có"
+      ],
+      "verification": [
+        "Kiểm tra từng căn cứ với dữ liệu gốc.",
+        "Thảo luận với nhóm để bổ sung góc nhìn.",
+        "Ý suy luận cần thêm dữ liệu trước khi dùng."
+      ],
+      "tags": [
+        "SWOT",
+        "chiến lược",
+        "phân tích",
+        "điểm mạnh",
+        "cơ hội"
+      ],
+      "example": {
+        "input": "Chương trình đại sứ văn hóa năm đầu: 60 thành viên, kết quả khảo sát, ý kiến từ chi nhánh",
+        "output": "Ma trận 4 ô, mỗi ô 3–5 ý có căn cứ, 4 nhóm hành động, các ý suy luận được đánh dấu."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 71
+    },
+    {
+      "id": "nc03",
+      "category": "research",
+      "title": "Hỏi đáp trên tài liệu dài",
+      "target_audiences": [
+        "moi-nhan-su",
+        "du-lieu",
+        "quan-ly"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "NotebookLM"
+      ],
+      "purpose": "Đặt câu hỏi cho tài liệu và nhận câu trả lời có trích dẫn vị trí.",
+      "use_cases": [
+        "Tra cứu nhanh quy chế, hướng dẫn dài",
+        "Kiểm tra một điều khoản trước khi trả lời người khác"
+      ],
+      "prompt": "Bạn là trợ lý tra cứu tài liệu. Chỉ dựa vào tài liệu đính kèm [tên tài liệu], hãy trả lời các câu hỏi sau: [danh sách câu hỏi]. Với mỗi câu: trả lời ngắn gọn, trích nguyên văn đoạn liên quan và ghi vị trí (mục, trang). Nếu tài liệu không có câu trả lời, ghi \"Tài liệu không đề cập\" và không suy đoán. Cuối cùng liệt kê các điểm trong tài liệu có thể gây hiểu nhầm.",
+      "required_inputs": [
+        "Tài liệu được phép dùng với công cụ AI",
+        "Danh sách câu hỏi"
+      ],
+      "verification": [
+        "Mở đúng vị trí được trích để kiểm tra.",
+        "Văn bản có hiệu lực là bản mới nhất.",
+        "Câu trả lời liên quan quy định cần bộ phận phụ trách xác nhận."
+      ],
+      "tags": [
+        "hỏi đáp",
+        "tra cứu",
+        "trích dẫn",
+        "tài liệu",
+        "quy chế",
+        "NotebookLM"
+      ],
+      "example": {
+        "input": "Tài liệu: sổ tay nhân viên 60 trang · 5 câu hỏi về nghỉ phép và công tác",
+        "output": "5 câu trả lời ngắn kèm trích nguyên văn và vị trí; câu không có trong tài liệu ghi “Tài liệu không đề cập”."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 72
+    },
+    {
+      "id": "nc04",
+      "category": "research",
+      "title": "Tổng hợp ý kiến phản hồi theo chủ đề",
+      "target_audiences": [
+        "du-lieu",
+        "nhan-su",
+        "van-hoa"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "NotebookLM"
+      ],
+      "purpose": "Gom hàng chục ý kiến rời rạc thành nhóm chủ đề có số lượng và trích dẫn tiêu biểu.",
+      "use_cases": [
+        "Câu hỏi mở trong khảo sát",
+        "Ý kiến góp ý sau sự kiện, đào tạo"
+      ],
+      "prompt": "Bạn là chuyên viên phân tích định tính. Dưới đây là [số lượng] ý kiến phản hồi về [chủ đề], đã ẩn danh: [dán ý kiến]. Hãy: (1) nhóm thành 4–7 chủ đề, mỗi chủ đề có tên, mô tả 1 câu, số ý kiến thuộc chủ đề và 2 trích dẫn tiêu biểu nguyên văn; (2) phân loại sắc thái tích cực, trung tính, tiêu cực; (3) nêu 3 đề xuất cải thiện rút ra. Đếm chính xác theo dữ liệu; một ý kiến có thể thuộc nhiều chủ đề, ghi rõ cách đếm.",
+      "required_inputs": [
+        "Danh sách ý kiến đã ẩn danh",
+        "Chủ đề khảo sát"
+      ],
+      "verification": [
+        "Đếm lại số ý kiến của 1–2 chủ đề để kiểm tra.",
+        "Trích dẫn đúng nguyên văn.",
+        "Không suy ra danh tính người góp ý."
+      ],
+      "tags": [
+        "phản hồi",
+        "khảo sát",
+        "định tính",
+        "nhóm chủ đề",
+        "ý kiến",
+        "feedback"
+      ],
+      "example": {
+        "input": "85 ý kiến trả lời câu “Bạn muốn cải thiện gì ở các buổi đào tạo?”",
+        "output": "5–6 chủ đề có số ý kiến và 2 trích dẫn nguyên văn mỗi chủ đề, tỷ lệ sắc thái, 3 đề xuất; có ghi chú cách đếm."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 73
+    },
+    {
+      "id": "nc05",
+      "category": "research",
+      "title": "Lập câu hỏi phỏng vấn người dùng",
+      "target_audiences": [
+        "thiet-ke",
+        "kinh-doanh",
+        "du-lieu"
+      ],
+      "goals": [
+        "phan-tich",
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Soạn bộ câu hỏi phỏng vấn mở, không dẫn dắt, để hiểu nhu cầu thật.",
+      "use_cases": [
+        "Tìm hiểu nhu cầu trước khi làm sản phẩm, chương trình",
+        "Phỏng vấn nhân viên về trải nghiệm nội bộ"
+      ],
+      "prompt": "Bạn là nhà nghiên cứu người dùng. Mục tiêu nghiên cứu: [điều cần tìm hiểu]. Người được phỏng vấn: [đối tượng]. Thời lượng: [số phút]. Hãy soạn kịch bản phỏng vấn gồm: lời mở đầu xin phép và cam kết ẩn danh, 3 câu khởi động, 8–10 câu hỏi chính dạng mở, mỗi câu kèm 1–2 câu hỏi đào sâu, câu kết thúc. Tránh câu hỏi dẫn dắt hoặc hỏi ý kiến về giải pháp giả định; ưu tiên hỏi về trải nghiệm cụ thể đã xảy ra.",
+      "required_inputs": [
+        "Mục tiêu nghiên cứu",
+        "Đối tượng và thời lượng phỏng vấn"
+      ],
+      "verification": [
+        "Phỏng vấn thử với 1 người để chỉnh câu hỏi.",
+        "Xin đồng ý trước khi ghi âm.",
+        "Lưu ghi chú theo quy định bảo mật."
+      ],
+      "tags": [
+        "phỏng vấn",
+        "nghiên cứu người dùng",
+        "user interview",
+        "câu hỏi mở",
+        "nhu cầu"
+      ],
+      "example": {
+        "input": "Mục tiêu: hiểu vì sao nhân viên ít dùng cổng thông tin nội bộ · Đối tượng: nhân viên chi nhánh · 30 phút",
+        "output": "Kịch bản có lời mở đầu, 3 câu khởi động, 9 câu hỏi chính dạng mở kèm câu đào sâu, không câu nào gợi ý sẵn câu trả lời."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 74
+    },
+    {
+      "id": "nc06",
+      "category": "research",
+      "title": "Phân tích nguyên nhân gốc rễ",
+      "target_audiences": [
+        "van-hanh",
+        "quan-ly"
+      ],
+      "goals": [
+        "phan-tich",
+        "danh-gia"
+      ],
+      "difficulty": "nang-cao",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Tìm nguyên nhân thật của một vấn đề lặp lại thay vì xử lý triệu chứng.",
+      "use_cases": [
+        "Lỗi, sự cố lặp lại trong quy trình",
+        "Sau một sự kiện có vấn đề cần rút kinh nghiệm"
+      ],
+      "prompt": "Bạn là chuyên gia cải tiến quy trình. Vấn đề: [mô tả vấn đề, tần suất, ảnh hưởng]. Thông tin đã biết: [dữ kiện, mốc thời gian, các bước liên quan]. Hãy phân tích bằng 2 cách: (1) 5 lần hỏi \"Tại sao\", (2) sơ đồ xương cá theo 5 nhóm Con người, Quy trình, Công cụ, Thông tin, Môi trường. Sau đó nêu 2–3 nguyên nhân gốc có khả năng nhất, dữ liệu cần thu thập để xác nhận, và giải pháp ngắn hạn, dài hạn. Không quy lỗi cho cá nhân; tập trung vào hệ thống.",
+      "required_inputs": [
+        "Mô tả vấn đề, tần suất, ảnh hưởng",
+        "Các dữ kiện đã biết"
+      ],
+      "verification": [
+        "Xác nhận nguyên nhân bằng dữ liệu trước khi hành động.",
+        "Thảo luận với người trực tiếp làm quy trình.",
+        "Theo dõi xem vấn đề có giảm sau khi sửa."
+      ],
+      "tags": [
+        "nguyên nhân gốc",
+        "5 why",
+        "xương cá",
+        "root cause",
+        "cải tiến"
+      ],
+      "example": {
+        "input": "Vấn đề: đăng ký sự kiện nội bộ thường thiếu 20–30% người dự so với số đăng ký · Đã biết: nhắc lịch 1 lần, form dài",
+        "output": "Chuỗi 5 câu Tại sao, sơ đồ 5 nhóm nguyên nhân, 2–3 nguyên nhân gốc, dữ liệu cần thu thập và giải pháp ngắn hạn, dài hạn."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 75
+    },
+    {
+      "id": "nc07",
+      "category": "research",
+      "title": "Tổng quan nhanh một chủ đề mới",
+      "target_audiences": [
+        "moi-nhan-su",
+        "quan-ly"
+      ],
+      "goals": [
+        "phan-tich",
+        "dao-tao"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Hiểu nhanh một chủ đề lạ đủ để tham gia thảo luận và biết cần hỏi gì tiếp.",
+      "use_cases": [
+        "Chuẩn bị trước cuộc họp về lĩnh vực chưa quen",
+        "Định hướng trước khi đọc tài liệu chuyên sâu"
+      ],
+      "prompt": "Bạn là người hướng dẫn kiên nhẫn. Tôi là [vai trò], chưa biết về [chủ đề]. Hãy giải thích trong khoảng 400 từ: khái niệm cốt lõi bằng ví dụ đời thường, 5 thuật ngữ cần biết, ứng dụng liên quan đến công việc [mô tả công việc], các hiểu lầm phổ biến, 5 câu hỏi tôi nên hỏi chuyên gia. Ghi rõ phần nào là kiến thức phổ biến, phần nào có thể đã thay đổi gần đây và cần kiểm tra nguồn cập nhật.",
+      "required_inputs": [
+        "Chủ đề cần tìm hiểu",
+        "Vai trò, công việc của bạn"
+      ],
+      "verification": [
+        "Đối chiếu khái niệm với nguồn chính thức.",
+        "Thông tin có tính thời sự cần kiểm tra nguồn mới.",
+        "Hỏi lại chuyên gia những điểm còn mơ hồ."
+      ],
+      "tags": [
+        "tìm hiểu",
+        "tổng quan",
+        "giải thích",
+        "khái niệm",
+        "học nhanh"
+      ],
+      "example": {
+        "input": "Vai trò: chuyên viên truyền thông · Chủ đề: dữ liệu mở và quyền riêng tư · Công việc: viết bài nội bộ",
+        "output": "Bài khoảng 400 từ: khái niệm qua ví dụ, 5 thuật ngữ, ứng dụng cho việc viết bài, hiểu lầm phổ biến, 5 câu hỏi; phần cần kiểm tra được đánh dấu."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 76
     },
     {
       "id": "o2",
@@ -1199,6 +3029,354 @@ window.YAI_DATA = {
         "output": "Danh sách 5 khối theo thứ tự đọc từ trên xuống, mỗi khối có tiêu đề phụ, con số lấy đúng từ bảng, biểu tượng gợi ý; một khối dùng biểu đồ cột; dòng nguồn ở chân trang."
       },
       "rank": 29
+    },
+    {
+      "id": "dl01",
+      "category": "data",
+      "title": "Viết công thức Excel từ mô tả",
+      "target_audiences": [
+        "du-lieu",
+        "moi-nhan-su",
+        "van-hanh"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 3 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có công thức Excel hoặc Google Sheets đúng ý mà không cần nhớ cú pháp.",
+      "use_cases": [
+        "Tính tổng, đếm có điều kiện",
+        "Tra cứu dữ liệu giữa hai bảng"
+      ],
+      "prompt": "Bạn là chuyên gia Excel. Bảng của tôi có các cột: [tên cột và ý nghĩa, ví dụ A: Họ tên, B: Phòng ban, C: Ngày đăng ký]. Dữ liệu bắt đầu từ dòng [số dòng]. Tôi muốn: [mô tả kết quả cần tính]. Phần mềm: [Excel hoặc Google Sheets]. Hãy đưa công thức, giải thích từng phần bằng lời thường, một ví dụ với 3 dòng dữ liệu giả định, và lỗi hay gặp khi dùng công thức này. Nếu có 2 cách, nêu cách đơn giản hơn trước.",
+      "required_inputs": [
+        "Tên các cột và ý nghĩa",
+        "Kết quả cần tính",
+        "Phần mềm đang dùng"
+      ],
+      "verification": [
+        "Thử công thức trên vài dòng tính tay được.",
+        "Kiểm tra vùng tham chiếu có khóa ($) đúng chưa.",
+        "Không dán dữ liệu thật có thông tin cá nhân vào AI."
+      ],
+      "tags": [
+        "Excel",
+        "Google Sheets",
+        "công thức",
+        "COUNTIFS",
+        "XLOOKUP",
+        "bảng tính"
+      ],
+      "example": {
+        "input": "Cột A: Họ tên, B: Phòng ban, C: Trạng thái tham dự · Muốn đếm số người “Đã tham dự” theo từng phòng ban · Excel",
+        "output": "Công thức COUNTIFS kèm giải thích từng phần, ví dụ 3 dòng dữ liệu giả định và 2 lỗi thường gặp."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 77
+    },
+    {
+      "id": "dl02",
+      "category": "data",
+      "title": "Đọc và nhận xét biểu đồ",
+      "target_audiences": [
+        "du-lieu",
+        "quan-ly"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Rút ra nhận xét chính từ biểu đồ, kèm câu hỏi cần kiểm tra thêm.",
+      "use_cases": [
+        "Chuẩn bị lời bình cho slide báo cáo",
+        "Đọc nhanh dashboard trước cuộc họp"
+      ],
+      "prompt": "Bạn là chuyên viên phân tích dữ liệu. Tôi gửi kèm biểu đồ [tên biểu đồ] thể hiện [nội dung, đơn vị, kỳ dữ liệu]. Hãy: (1) mô tả xu hướng chính trong 2 câu, (2) nêu 3 điểm đáng chú ý kèm con số đọc được từ biểu đồ, (3) chỉ ra điều biểu đồ chưa nói được, (4) đề xuất 3 câu hỏi cần kiểm tra thêm. Phân biệt rõ điều quan sát được và điều suy luận; không đưa nguyên nhân như sự thật.",
+      "required_inputs": [
+        "Ảnh biểu đồ",
+        "Nội dung, đơn vị, kỳ dữ liệu"
+      ],
+      "verification": [
+        "Đối chiếu con số AI đọc với dữ liệu gốc.",
+        "Không kết luận nguyên nhân khi chưa có dữ liệu.",
+        "Kiểm tra trục bắt đầu từ 0 hay không."
+      ],
+      "tags": [
+        "biểu đồ",
+        "chart",
+        "nhận xét",
+        "dashboard",
+        "xu hướng"
+      ],
+      "example": {
+        "input": "Biểu đồ cột số người tham gia đào tạo theo tháng, 12 tháng gần nhất",
+        "output": "2 câu xu hướng, 3 điểm đáng chú ý có số đọc từ biểu đồ, điều biểu đồ chưa nói, 3 câu hỏi kiểm tra; suy luận được đánh dấu."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 78
+    },
+    {
+      "id": "dl03",
+      "category": "data",
+      "title": "Làm sạch và chuẩn hóa dữ liệu",
+      "target_audiences": [
+        "du-lieu",
+        "van-hanh"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Phát hiện lỗi dữ liệu và có các bước chuẩn hóa trước khi phân tích.",
+      "use_cases": [
+        "Dữ liệu đăng ký nhập tay, nhiều định dạng",
+        "Gộp dữ liệu từ nhiều file"
+      ],
+      "prompt": "Bạn là chuyên viên xử lý dữ liệu. Đây là mẫu 20 dòng dữ liệu đã ẩn danh: [dán dữ liệu]. Các cột: [mô tả cột]. Hãy: (1) liệt kê các loại lỗi phát hiện được (trùng, thiếu, sai định dạng ngày, viết hoa không thống nhất, khoảng trắng thừa…) kèm ví dụ dòng, (2) đề xuất quy tắc chuẩn hóa cho từng cột, (3) các bước làm trong [Excel hoặc Google Sheets] kèm công thức. Không tự sửa giá trị khi không chắc đúng; đánh dấu \"cần kiểm tra\".",
+      "required_inputs": [
+        "Mẫu dữ liệu đã ẩn danh",
+        "Mô tả các cột",
+        "Công cụ đang dùng"
+      ],
+      "verification": [
+        "Lưu bản gốc trước khi làm sạch.",
+        "Kiểm tra số dòng trước và sau xử lý.",
+        "Không dán dữ liệu cá nhân thật vào AI."
+      ],
+      "tags": [
+        "làm sạch dữ liệu",
+        "chuẩn hóa",
+        "trùng lặp",
+        "data cleaning",
+        "Excel"
+      ],
+      "example": {
+        "input": "20 dòng mẫu danh sách đăng ký: ngày ghi 3 kiểu, tên phòng ban viết khác nhau, 2 dòng trùng",
+        "output": "Danh sách 5–6 loại lỗi kèm dòng ví dụ, quy tắc chuẩn hóa từng cột, các bước làm trong Excel kèm công thức."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 79
+    },
+    {
+      "id": "dl04",
+      "category": "data",
+      "title": "Đề xuất chỉ số đo lường (KPI)",
+      "target_audiences": [
+        "quan-ly",
+        "du-lieu",
+        "van-hoa"
+      ],
+      "goals": [
+        "phan-tich",
+        "ke-hoach"
+      ],
+      "difficulty": "nang-cao",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chọn bộ chỉ số đo được, gắn với mục tiêu, có cách thu thập rõ ràng.",
+      "use_cases": [
+        "Đo hiệu quả chương trình văn hóa, đào tạo",
+        "Xây dashboard theo dõi dự án"
+      ],
+      "prompt": "Bạn là chuyên gia đo lường hiệu quả. Chương trình: [tên chương trình], mục tiêu: [mục tiêu]. Dữ liệu có thể thu thập: [nguồn dữ liệu sẵn có]. Hãy đề xuất 6–8 chỉ số chia 3 nhóm: đầu vào, hoạt động, kết quả. Mỗi chỉ số gồm: tên, định nghĩa, công thức tính, nguồn dữ liệu, tần suất đo, người cập nhật (để trống). Không đặt giá trị mục tiêu cụ thể; ghi \"cần xác định từ dữ liệu nền\". Cảnh báo chỉ số nào dễ bị làm đẹp số liệu.",
+      "required_inputs": [
+        "Chương trình và mục tiêu",
+        "Nguồn dữ liệu sẵn có"
+      ],
+      "verification": [
+        "Mỗi chỉ số thu thập được với nguồn lực hiện có.",
+        "Thống nhất định nghĩa với các bên liên quan.",
+        "Mục tiêu đặt dựa trên dữ liệu nền thật."
+      ],
+      "tags": [
+        "KPI",
+        "chỉ số",
+        "đo lường",
+        "hiệu quả",
+        "OKR",
+        "metrics"
+      ],
+      "example": {
+        "input": "Chương trình đại sứ văn hóa · Mục tiêu: lan tỏa giá trị cốt lõi · Dữ liệu: danh sách tham gia, khảo sát, số bài đăng",
+        "output": "7 chỉ số chia 3 nhóm, mỗi chỉ số có định nghĩa, công thức, nguồn, tần suất; không có giá trị mục tiêu; 2 cảnh báo về chỉ số dễ làm đẹp."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 80
+    },
+    {
+      "id": "dl05",
+      "category": "data",
+      "title": "Gợi ý biểu đồ phù hợp dữ liệu",
+      "target_audiences": [
+        "du-lieu",
+        "truyen-thong",
+        "quan-ly"
+      ],
+      "goals": [
+        "phan-tich",
+        "hinh-anh"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chọn đúng loại biểu đồ cho thông điệp muốn nói và cách trình bày dễ đọc.",
+      "use_cases": [
+        "Làm slide báo cáo có số liệu",
+        "Thiết kế dashboard đơn giản"
+      ],
+      "prompt": "Bạn là chuyên gia trực quan hóa dữ liệu. Dữ liệu của tôi: [mô tả các cột, số dòng, kỳ dữ liệu]. Thông điệp muốn người xem nắm: [thông điệp]. Người xem: [đối tượng], xem trên [slide, báo cáo in, màn hình điện thoại]. Hãy đề xuất 2 loại biểu đồ phù hợp nhất, giải thích vì sao, loại biểu đồ nên tránh, cách đặt tiêu đề dạng kết luận, màu sắc, nhãn số liệu. Kèm các bước tạo biểu đồ trong [Excel, Google Sheets, Canva].",
+      "required_inputs": [
+        "Mô tả dữ liệu",
+        "Thông điệp và nơi trình bày"
+      ],
+      "verification": [
+        "Biểu đồ không bóp méo tỷ lệ.",
+        "Tiêu đề khớp với dữ liệu thực.",
+        "Thử xem trên đúng thiết bị trình chiếu."
+      ],
+      "tags": [
+        "biểu đồ",
+        "trực quan hóa",
+        "data visualization",
+        "chart",
+        "slide"
+      ],
+      "example": {
+        "input": "Số người tham gia 4 hoạt động văn hóa qua 3 quý · Thông điệp: hội thao tăng mạnh nhất · Slide cho lãnh đạo · Excel",
+        "output": "2 loại biểu đồ đề xuất kèm lý do, 1 loại nên tránh, tiêu đề mẫu dạng kết luận, gợi ý màu và các bước làm trong Excel."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 81
+    },
+    {
+      "id": "dl06",
+      "category": "data",
+      "title": "Phân tích kết quả khảo sát định lượng",
+      "target_audiences": [
+        "du-lieu",
+        "nhan-su",
+        "van-hoa"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Rút ra phát hiện chính từ bảng tổng hợp khảo sát, kèm giới hạn của dữ liệu.",
+      "use_cases": [
+        "Báo cáo kết quả khảo sát hài lòng",
+        "So sánh kết quả giữa các nhóm"
+      ],
+      "prompt": "Bạn là chuyên viên phân tích khảo sát. Đây là bảng tổng hợp kết quả khảo sát [tên khảo sát] với [số người trả lời] người trả lời trên [tổng số được mời]: [dán bảng tổng hợp, không có dữ liệu cá nhân]. Hãy: (1) nêu 5 phát hiện chính kèm con số, (2) so sánh giữa các nhóm [nhóm cần so sánh] nếu có, (3) chỉ ra giới hạn dữ liệu (tỷ lệ phản hồi, cỡ mẫu nhỏ), (4) đề xuất 3 hành động. Tính toán phải trình bày cách tính; không suy ra quan hệ nhân quả.",
+      "required_inputs": [
+        "Bảng tổng hợp kết quả (không có dữ liệu cá nhân)",
+        "Số người trả lời và số được mời"
+      ],
+      "verification": [
+        "Tính lại 1–2 tỷ lệ để kiểm tra.",
+        "Nhóm có ít người trả lời cần thận trọng khi kết luận.",
+        "Không suy ra danh tính người trả lời từ nhóm nhỏ."
+      ],
+      "tags": [
+        "khảo sát",
+        "phân tích",
+        "tỷ lệ",
+        "hài lòng",
+        "survey"
+      ],
+      "example": {
+        "input": "Bảng tổng hợp khảo sát sau workshop: 96/120 người trả lời, 6 câu thang 1–5, chia theo khối",
+        "output": "5 phát hiện có con số và cách tính, so sánh giữa các khối, giới hạn dữ liệu, 3 hành động đề xuất."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 82
+    },
+    {
+      "id": "dl07",
+      "category": "data",
+      "title": "Báo cáo tuần, tháng từ số liệu",
+      "target_audiences": [
+        "quan-ly",
+        "du-lieu",
+        "van-hanh"
+      ],
+      "goals": [
+        "viet",
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chuyển bảng số liệu thành báo cáo ngắn có nhận định, so sánh kỳ trước và việc cần làm.",
+      "use_cases": [
+        "Báo cáo định kỳ cho quản lý",
+        "Tổng hợp số liệu hoạt động của nhóm"
+      ],
+      "prompt": "Bạn là chuyên viên báo cáo. Đây là số liệu [kỳ báo cáo] và kỳ trước của [đơn vị, hoạt động]: [dán bảng số liệu]. Người đọc: [người nhận]. Hãy viết báo cáo tối đa 250 từ gồm: 3 điểm chính đầu tiên, bảng so sánh kỳ này và kỳ trước có cột chênh lệch, giải thích các thay đổi lớn (nếu không rõ nguyên nhân ghi \"cần làm rõ\"), việc cần làm kỳ tới. Tính chênh lệch chính xác, ghi rõ đơn vị.",
+      "required_inputs": [
+        "Số liệu kỳ này và kỳ trước",
+        "Người đọc báo cáo"
+      ],
+      "verification": [
+        "Kiểm tra lại các phép tính chênh lệch.",
+        "Nguyên nhân thay đổi được người phụ trách xác nhận.",
+        "Số liệu nội bộ chỉ dùng trên công cụ được phép."
+      ],
+      "tags": [
+        "báo cáo tuần",
+        "báo cáo tháng",
+        "số liệu",
+        "so sánh kỳ",
+        "tổng hợp"
+      ],
+      "example": {
+        "input": "Số bài đăng, lượt tương tác, số người tham gia hoạt động tháng 10 và tháng 9 · Người đọc: trưởng phòng",
+        "output": "Báo cáo dưới 250 từ: 3 điểm chính, bảng so sánh có chênh lệch và đơn vị, giải thích thay đổi lớn, việc cần làm tháng sau."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 83
     },
     {
       "id": "l1",
@@ -1351,6 +3529,348 @@ window.YAI_DATA = {
       "rank": 24
     },
     {
+      "id": "dt01",
+      "category": "learning",
+      "title": "Mô tả công việc (JD)",
+      "target_audiences": [
+        "nhan-su",
+        "quan-ly"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Soạn bản mô tả công việc rõ trách nhiệm, yêu cầu, tránh ngôn từ phân biệt.",
+      "use_cases": [
+        "Tuyển dụng vị trí mới",
+        "Cập nhật mô tả công việc hiện có"
+      ],
+      "prompt": "Bạn là chuyên viên tuyển dụng. Hãy soạn mô tả công việc cho vị trí [tên vị trí] thuộc [phòng ban]. Thông tin: báo cáo cho [chức danh quản lý], nhiệm vụ chính [liệt kê], yêu cầu bắt buộc [kinh nghiệm, kỹ năng], yêu cầu ưu tiên [nếu có], hình thức làm việc [toàn thời gian, địa điểm]. Cấu trúc: giới thiệu ngắn vị trí, trách nhiệm chính (5–7 gạch đầu dòng bắt đầu bằng động từ), yêu cầu bắt buộc, yêu cầu ưu tiên, điều ứng viên nhận được ([quyền lợi đã được duyệt]). Không dùng ngôn từ phân biệt tuổi, giới tính, ngoại hình; không thêm mức lương hay quyền lợi chưa được cung cấp.",
+      "required_inputs": [
+        "Thông tin vị trí, nhiệm vụ, yêu cầu",
+        "Quyền lợi đã được duyệt"
+      ],
+      "verification": [
+        "Bộ phận nhân sự và quản lý trực tiếp duyệt.",
+        "Yêu cầu bắt buộc thật sự cần cho công việc.",
+        "Không có ngôn từ phân biệt đối xử."
+      ],
+      "tags": [
+        "JD",
+        "mô tả công việc",
+        "tuyển dụng",
+        "job description",
+        "vị trí"
+      ],
+      "example": {
+        "input": "Vị trí: chuyên viên truyền thông nội bộ · Báo cáo cho trưởng phòng · 6 nhiệm vụ · Yêu cầu: 2 năm kinh nghiệm viết",
+        "output": "JD gồm giới thiệu 2 câu, 6 trách nhiệm bắt đầu bằng động từ, yêu cầu bắt buộc và ưu tiên tách riêng, quyền lợi chỉ gồm mục đã cho."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 84
+    },
+    {
+      "id": "dt02",
+      "category": "learning",
+      "title": "Bộ câu hỏi phỏng vấn theo năng lực",
+      "target_audiences": [
+        "nhan-su",
+        "quan-ly"
+      ],
+      "goals": [
+        "dao-tao",
+        "danh-gia"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có câu hỏi hành vi theo năng lực và tiêu chí chấm để phỏng vấn công bằng.",
+      "use_cases": [
+        "Phỏng vấn tuyển dụng",
+        "Đánh giá ứng viên nội bộ"
+      ],
+      "prompt": "Bạn là chuyên gia tuyển dụng. Vị trí: [tên vị trí]. Năng lực cần đánh giá: [3–5 năng lực]. Hãy soạn cho mỗi năng lực 2 câu hỏi hành vi dạng \"Hãy kể về một lần…\", kèm câu hỏi đào sâu theo cấu trúc Tình huống – Nhiệm vụ – Hành động – Kết quả, và thang chấm 1–4 có mô tả câu trả lời ở mức thấp và mức cao. Không hỏi về đời tư, tình trạng hôn nhân, kế hoạch sinh con, tôn giáo.",
+      "required_inputs": [
+        "Vị trí tuyển dụng",
+        "Năng lực cần đánh giá"
+      ],
+      "verification": [
+        "Người phỏng vấn thống nhất cách chấm trước.",
+        "Câu hỏi tuân thủ quy định tuyển dụng của đơn vị.",
+        "Ghi chép phỏng vấn lưu đúng quy định bảo mật."
+      ],
+      "tags": [
+        "phỏng vấn",
+        "câu hỏi",
+        "năng lực",
+        "STAR",
+        "tuyển dụng"
+      ],
+      "example": {
+        "input": "Vị trí: trưởng nhóm sự kiện · Năng lực: lập kế hoạch, xử lý tình huống, làm việc nhóm",
+        "output": "6 câu hỏi hành vi, mỗi câu có câu hỏi đào sâu theo STAR và thang chấm 1–4 mô tả mức thấp, mức cao."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 85
+    },
+    {
+      "id": "dt03",
+      "category": "learning",
+      "title": "Thư chào đón nhân viên mới",
+      "target_audiences": [
+        "nhan-su",
+        "quan-ly",
+        "van-hoa"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Gửi lời chào đón ấm áp kèm thông tin ngày đầu đi làm rõ ràng.",
+      "use_cases": [
+        "Email chào đón trước ngày đầu tiên",
+        "Tin nhắn giới thiệu thành viên mới với nhóm"
+      ],
+      "prompt": "Bạn là trưởng nhóm thân thiện. Hãy viết email chào đón [tên nhân viên mới] vào vị trí [vị trí] tại [phòng ban], bắt đầu ngày [ngày]. Thông tin ngày đầu: [giờ, địa điểm, người đón, giấy tờ cần mang]. Cấu trúc: lời chào, vài câu về nhóm và công việc sắp tới, khối thông tin ngày đầu dạng gạch đầu dòng, người liên hệ khi cần. Tối đa 180 từ, giọng ấm áp. Kèm một tin nhắn 2–3 câu giới thiệu người mới với nhóm.",
+      "required_inputs": [
+        "Tên, vị trí, ngày bắt đầu",
+        "Thông tin ngày đầu đi làm"
+      ],
+      "verification": [
+        "Giờ, địa điểm, người đón chính xác.",
+        "Không tiết lộ thông tin cá nhân của người mới khi chưa được đồng ý."
+      ],
+      "tags": [
+        "onboarding",
+        "chào đón",
+        "nhân viên mới",
+        "email",
+        "hội nhập"
+      ],
+      "example": {
+        "input": "Nhân viên mới: chuyên viên dữ liệu · Bắt đầu thứ Hai · 8h30 tại tầng 5, người đón: trưởng nhóm",
+        "output": "Email dưới 180 từ có khối thông tin ngày đầu 4 dòng, kèm tin nhắn 2–3 câu giới thiệu với nhóm."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 86
+    },
+    {
+      "id": "dt04",
+      "category": "learning",
+      "title": "Góp ý cho nhân viên theo mô hình SBI",
+      "target_audiences": [
+        "quan-ly",
+        "nhan-su"
+      ],
+      "goals": [
+        "viet",
+        "danh-gia"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Copilot"
+      ],
+      "purpose": "Chuẩn bị lời góp ý cụ thể, tập trung hành vi, giữ được quan hệ.",
+      "use_cases": [
+        "Chuẩn bị buổi 1-1 góp ý",
+        "Ghi nhận và khen ngợi đúng cách"
+      ],
+      "prompt": "Bạn là huấn luyện viên quản lý. Tôi cần góp ý cho một thành viên trong nhóm về [tình huống, mô tả khách quan, không nêu tên]. Mục tiêu: [điều muốn thay đổi hoặc ghi nhận]. Hãy soạn lời góp ý theo mô hình Tình huống – Hành vi – Tác động, kèm câu hỏi mở để nghe người đó chia sẻ và đề xuất bước tiếp theo cùng thống nhất. Đưa 2 phiên bản: góp ý cải thiện và ghi nhận điểm tốt nếu có. Tránh từ ngữ phán xét tính cách như \"luôn luôn\", \"không bao giờ\".",
+      "required_inputs": [
+        "Mô tả tình huống khách quan (không nêu tên)",
+        "Mục tiêu của buổi góp ý"
+      ],
+      "verification": [
+        "Lời góp ý dựa trên quan sát thật, không suy diễn.",
+        "Nói trực tiếp, riêng tư; không gửi qua nhóm chat.",
+        "Không đưa thông tin nhân sự định danh vào công cụ AI."
+      ],
+      "tags": [
+        "góp ý",
+        "feedback",
+        "SBI",
+        "1-1",
+        "quản lý nhân sự",
+        "coaching"
+      ],
+      "example": {
+        "input": "Tình huống: hai lần gần đây báo cáo tuần nộp trễ 1 ngày khiến nhóm phải chờ tổng hợp · Mục tiêu: nộp đúng hạn",
+        "output": "Lời góp ý 3 phần Tình huống – Hành vi – Tác động, 2 câu hỏi mở, bước tiếp theo; không có từ “luôn luôn”, “không bao giờ”."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 87
+    },
+    {
+      "id": "dt05",
+      "category": "learning",
+      "title": "Bài tập tình huống cho buổi đào tạo",
+      "target_audiences": [
+        "nhan-su",
+        "quan-ly"
+      ],
+      "goals": [
+        "dao-tao"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Tạo tình huống thực tế để học viên thảo luận và vận dụng kiến thức.",
+      "use_cases": [
+        "Đào tạo kỹ năng mềm, quy trình",
+        "Hoạt động nhóm trong workshop"
+      ],
+      "prompt": "Bạn là giảng viên thiết kế bài tập. Chủ đề đào tạo: [chủ đề]. Học viên: [đối tượng, kinh nghiệm]. Kiến thức cần vận dụng: [các ý chính]. Hãy soạn [số] tình huống, mỗi tình huống gồm: bối cảnh 4–6 câu gần với công việc thật (nhân vật dùng tên giả), câu hỏi thảo luận, gợi ý đáp án cho giảng viên, lỗi học viên hay mắc. Mức độ tăng dần. Không dùng tên người, đơn vị hoặc sự việc có thật.",
+      "required_inputs": [
+        "Chủ đề và kiến thức cần vận dụng",
+        "Học viên, số tình huống"
+      ],
+      "verification": [
+        "Tình huống không giống sự việc có thật để tránh hiểu lầm.",
+        "Giảng viên thử giải trước.",
+        "Gợi ý đáp án khớp quy định hiện hành."
+      ],
+      "tags": [
+        "tình huống",
+        "case study",
+        "bài tập",
+        "đào tạo",
+        "thảo luận nhóm"
+      ],
+      "example": {
+        "input": "Chủ đề: xử lý khiếu nại khách hàng · Học viên: giao dịch viên mới · 3 tình huống",
+        "output": "3 tình huống tăng dần độ khó, mỗi tình huống có bối cảnh, câu hỏi thảo luận, gợi ý đáp án và lỗi thường gặp."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 88
+    },
+    {
+      "id": "dt06",
+      "category": "learning",
+      "title": "Kế hoạch phát triển cá nhân (IDP)",
+      "target_audiences": [
+        "moi-nhan-su",
+        "quan-ly",
+        "nhan-su"
+      ],
+      "goals": [
+        "ke-hoach",
+        "dao-tao"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Biến mục tiêu nghề nghiệp thành kế hoạch học tập 3–6 tháng có hành động cụ thể.",
+      "use_cases": [
+        "Trao đổi phát triển nghề nghiệp với quản lý",
+        "Tự lập lộ trình học kỹ năng mới"
+      ],
+      "prompt": "Bạn là cố vấn phát triển nghề nghiệp. Vị trí hiện tại: [vị trí]. Mục tiêu trong [thời gian]: [mục tiêu]. Điểm mạnh: [điểm mạnh]. Kỹ năng cần phát triển: [kỹ năng]. Thời gian có thể dành: [số giờ mỗi tuần]. Hãy lập kế hoạch theo mô hình 70-20-10 (học qua công việc, học từ người khác, học chính thức), dạng bảng: Kỹ năng | Hoạt động | Thuộc nhóm | Thời hạn | Dấu hiệu hoàn thành | Hỗ trợ cần có. Hoạt động phải làm được trong thời gian đã nêu.",
+      "required_inputs": [
+        "Vị trí, mục tiêu, thời gian",
+        "Điểm mạnh, kỹ năng cần phát triển"
+      ],
+      "verification": [
+        "Thống nhất kế hoạch với quản lý trực tiếp.",
+        "Khóa học đề xuất có trong danh mục đào tạo của đơn vị.",
+        "Xem lại tiến độ mỗi tháng."
+      ],
+      "tags": [
+        "IDP",
+        "phát triển cá nhân",
+        "lộ trình học",
+        "70-20-10",
+        "nghề nghiệp"
+      ],
+      "example": {
+        "input": "Chuyên viên truyền thông muốn lên trưởng nhóm trong 6 tháng · Cần phát triển: quản lý dự án, giao việc · 3 giờ/tuần",
+        "output": "Bảng 8–10 hoạt động chia 3 nhóm 70-20-10, có thời hạn, dấu hiệu hoàn thành và hỗ trợ cần có."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 89
+    },
+    {
+      "id": "dt07",
+      "category": "learning",
+      "title": "Bài giảng vi mô 5 phút",
+      "target_audiences": [
+        "nhan-su",
+        "moi-nhan-su"
+      ],
+      "goals": [
+        "dao-tao",
+        "viet"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot",
+        "NotebookLM"
+      ],
+      "purpose": "Biến một chủ đề thành bài học ngắn đọc hoặc nghe trong 5 phút, kèm câu hỏi kiểm tra.",
+      "use_cases": [
+        "Chuỗi bài học gửi email hằng tuần",
+        "Kiến thức nhanh trước giờ làm việc"
+      ],
+      "prompt": "Bạn là chuyên gia thiết kế bài học vi mô. Hãy soạn bài học 5 phút về [chủ đề] cho [đối tượng], dựa trên tài liệu [tài liệu nguồn nếu có]. Cấu trúc: tiêu đề hấp dẫn, 1 câu \"Sau bài này bạn sẽ…\", 3 ý chính mỗi ý có ví dụ gần với công việc, 1 việc áp dụng ngay hôm nay, 3 câu hỏi trắc nghiệm kiểm tra kèm đáp án. Tổng không quá 400 từ. Chỉ dùng kiến thức có trong tài liệu nguồn nếu được cung cấp.",
+      "required_inputs": [
+        "Chủ đề và đối tượng",
+        "Tài liệu nguồn nếu có"
+      ],
+      "verification": [
+        "Nội dung khớp tài liệu nguồn và quy định hiện hành.",
+        "Đáp án trắc nghiệm chỉ có một phương án đúng.",
+        "Đọc thử để canh thời gian 5 phút."
+      ],
+      "tags": [
+        "microlearning",
+        "bài học ngắn",
+        "đào tạo",
+        "5 phút",
+        "kiến thức"
+      ],
+      "example": {
+        "input": "Chủ đề: nhận diện email lừa đảo · Đối tượng: mọi nhân viên · Nguồn: hướng dẫn an toàn thông tin nội bộ",
+        "output": "Bài dưới 400 từ có mục tiêu, 3 ý chính có ví dụ, 1 việc áp dụng ngay và 3 câu trắc nghiệm có đáp án."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 90
+    },
+    {
       "id": "s1",
       "title": "Thư phản hồi phản ánh của khách hàng",
       "category": "sales",
@@ -1494,6 +4014,347 @@ window.YAI_DATA = {
         "output": "AI hỏi từng lượt 1–2 câu như khách thật, có phản đối tự nhiên; sau 6 lượt nhận xét theo 4 tiêu chí, mỗi tiêu chí 1 điểm tốt và 1 điểm cần cải thiện."
       },
       "rank": 27
+    },
+    {
+      "id": "kd01",
+      "category": "sales",
+      "title": "Kịch bản gọi điện chăm sóc khách hàng",
+      "target_audiences": [
+        "kinh-doanh"
+      ],
+      "goals": [
+        "viet",
+        "dao-tao"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Có kịch bản gọi điện tự nhiên, có nhánh xử lý theo phản hồi của khách.",
+      "use_cases": [
+        "Gọi chăm sóc định kỳ, nhắc lịch",
+        "Giới thiệu dịch vụ đã công bố"
+      ],
+      "prompt": "Bạn là chuyên gia chăm sóc khách hàng. Mục đích cuộc gọi: [mục đích]. Nhóm khách hàng: [mô tả chung, không có thông tin cá nhân]. Thông tin dịch vụ đã công bố: [dán thông tin chính thức]. Hãy viết kịch bản gồm: lời chào và xác nhận thời điểm thuận tiện, lý do gọi, 3 câu hỏi tìm hiểu nhu cầu, phần giới thiệu ngắn, xử lý 4 phản hồi thường gặp (bận, không quan tâm, hỏi phí, đã dùng dịch vụ khác), kết thúc cuộc gọi. Câu ngắn, tự nhiên khi nói. Không đưa thông tin phí, lãi suất, ưu đãi ngoài tài liệu đã cho.",
+      "required_inputs": [
+        "Mục đích cuộc gọi, nhóm khách hàng",
+        "Thông tin dịch vụ chính thức"
+      ],
+      "verification": [
+        "Bộ phận sản phẩm, tuân thủ duyệt kịch bản.",
+        "Mọi thông tin về phí, ưu đãi khớp tài liệu chính thức.",
+        "Tập nói thử để câu chữ tự nhiên."
+      ],
+      "tags": [
+        "kịch bản gọi điện",
+        "telesales",
+        "chăm sóc khách hàng",
+        "cuộc gọi",
+        "xử lý từ chối"
+      ],
+      "example": {
+        "input": "Mục đích: nhắc khách cập nhật ứng dụng phiên bản mới · Nhóm: khách dùng ứng dụng trên 1 năm · Thông tin: thông báo chính thức",
+        "output": "Kịch bản 6 phần, có 4 nhánh xử lý phản hồi, câu ngắn dễ nói; không có thông tin nào ngoài thông báo chính thức."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 91
+    },
+    {
+      "id": "kd02",
+      "category": "sales",
+      "title": "Email giới thiệu sản phẩm cho khách hàng doanh nghiệp",
+      "target_audiences": [
+        "kinh-doanh",
+        "truyen-thong"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Viết email giới thiệu ngắn, tập trung vào nhu cầu khách hàng, có lời mời hành động rõ.",
+      "use_cases": [
+        "Tiếp cận khách hàng doanh nghiệp mới",
+        "Giới thiệu giải pháp sau buổi gặp"
+      ],
+      "prompt": "Bạn là chuyên viên quan hệ khách hàng doanh nghiệp. Khách hàng: [ngành nghề, quy mô, vấn đề họ đang gặp]. Sản phẩm hoặc giải pháp: [thông tin chính thức đã công bố]. Mục tiêu email: [hẹn gặp, gửi tài liệu, gọi tư vấn]. Hãy viết email dưới 150 từ: tiêu đề cá nhân hóa, câu mở nói về vấn đề của khách, 2–3 lợi ích phù hợp nhất, lời mời hành động cụ thể. Viết 2 phiên bản tiêu đề. Không đưa số liệu, cam kết hiệu quả hay so sánh với đối thủ khi chưa có căn cứ.",
+      "required_inputs": [
+        "Thông tin khách hàng (không có dữ liệu mật)",
+        "Thông tin sản phẩm chính thức",
+        "Mục tiêu email"
+      ],
+      "verification": [
+        "Lợi ích và điều kiện khớp tài liệu sản phẩm.",
+        "Tuân thủ quy định gửi email tiếp thị.",
+        "Quản lý duyệt với khách hàng quan trọng."
+      ],
+      "tags": [
+        "email bán hàng",
+        "B2B",
+        "giới thiệu sản phẩm",
+        "khách hàng doanh nghiệp",
+        "outreach"
+      ],
+      "example": {
+        "input": "Khách: công ty phân phối 200 nhân viên, muốn trả lương nhanh · Giải pháp: dịch vụ chi lương đã công bố · Mục tiêu: hẹn gặp",
+        "output": "Email dưới 150 từ, câu mở nói về nhu cầu trả lương, 3 lợi ích từ tài liệu, lời mời hẹn gặp; 2 tiêu đề gợi ý."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 92
+    },
+    {
+      "id": "kd03",
+      "category": "sales",
+      "title": "Xử lý từ chối của khách hàng",
+      "target_audiences": [
+        "kinh-doanh"
+      ],
+      "goals": [
+        "dao-tao",
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chuẩn bị cách trả lời các lời từ chối thường gặp, lắng nghe trước khi thuyết phục.",
+      "use_cases": [
+        "Luyện tập trước buổi gặp khách",
+        "Xây bộ câu trả lời chuẩn cho nhóm"
+      ],
+      "prompt": "Bạn là huấn luyện viên bán hàng. Sản phẩm: [thông tin đã công bố]. Khách hàng mục tiêu: [mô tả]. Các lời từ chối thường gặp: [liệt kê, ví dụ \"phí cao\", \"đang dùng bên khác\"]. Với mỗi lời từ chối, hãy đưa: câu thể hiện đã hiểu, 1–2 câu hỏi để hiểu lý do thật, cách trả lời dựa trên lợi ích phù hợp, khi nào nên dừng và hẹn lại. Trình bày dạng bảng. Không gây áp lực, không nói xấu đối thủ, không hứa ngoài chính sách.",
+      "required_inputs": [
+        "Thông tin sản phẩm chính thức",
+        "Danh sách lời từ chối thường gặp"
+      ],
+      "verification": [
+        "Câu trả lời khớp chính sách hiện hành.",
+        "Nhóm cùng luyện đóng vai trước khi dùng.",
+        "Tôn trọng quyết định của khách."
+      ],
+      "tags": [
+        "xử lý từ chối",
+        "objection handling",
+        "bán hàng",
+        "thuyết phục",
+        "kỹ năng"
+      ],
+      "example": {
+        "input": "Sản phẩm: gói tài khoản doanh nghiệp đã công bố · 5 lời từ chối thường gặp",
+        "output": "Bảng 5 dòng, mỗi lời từ chối có câu đồng cảm, câu hỏi tìm lý do, cách trả lời và thời điểm nên dừng."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 93
+    },
+    {
+      "id": "kd04",
+      "category": "sales",
+      "title": "Trả lời đánh giá, bình luận của khách hàng",
+      "target_audiences": [
+        "kinh-doanh",
+        "truyen-thong"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Phản hồi đánh giá công khai một cách chuyên nghiệp, kể cả đánh giá tiêu cực.",
+      "use_cases": [
+        "Trả lời đánh giá trên ứng dụng, trang mạng xã hội",
+        "Phản hồi bình luận phàn nàn công khai"
+      ],
+      "prompt": "Bạn là chuyên viên chăm sóc khách hàng trên kênh công khai. Đây là đánh giá của khách (đã ẩn tên): [dán đánh giá]. Hướng xử lý đã được xác nhận: [hướng xử lý hoặc \"chưa có\"]. Hãy viết phản hồi công khai dưới 80 từ: cảm ơn, ghi nhận cụ thể điều khách nói, nêu bước tiếp theo, mời khách liên hệ qua [kênh riêng] để hỗ trợ. Không hỏi hay nhắc thông tin cá nhân, số tài khoản trên kênh công khai; không tranh cãi; không hứa ngoài hướng xử lý đã xác nhận.",
+      "required_inputs": [
+        "Nội dung đánh giá (đã ẩn tên)",
+        "Hướng xử lý đã xác nhận",
+        "Kênh liên hệ riêng"
+      ],
+      "verification": [
+        "Không có thông tin cá nhân của khách trong phản hồi.",
+        "Người phụ trách kênh duyệt với đánh giá nhạy cảm.",
+        "Theo dõi để xử lý thật, không chỉ trả lời."
+      ],
+      "tags": [
+        "đánh giá",
+        "review",
+        "bình luận",
+        "phàn nàn",
+        "mạng xã hội",
+        "chăm sóc khách hàng"
+      ],
+      "example": {
+        "input": "Đánh giá 2 sao: ứng dụng báo lỗi khi chuyển khoản buổi tối · Hướng xử lý: đã chuyển bộ phận kỹ thuật · Kênh riêng: tổng đài",
+        "output": "Phản hồi dưới 80 từ: cảm ơn, ghi nhận lỗi buổi tối, nêu đã chuyển bộ phận kỹ thuật, mời liên hệ tổng đài; không hỏi số tài khoản."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 94
+    },
+    {
+      "id": "kd05",
+      "category": "sales",
+      "title": "Chân dung khách hàng mục tiêu",
+      "target_audiences": [
+        "kinh-doanh",
+        "truyen-thong",
+        "thiet-ke"
+      ],
+      "goals": [
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Xây chân dung khách hàng từ dữ liệu, phân biệt rõ dữ kiện và giả định.",
+      "use_cases": [
+        "Chuẩn bị chiến dịch, sản phẩm mới",
+        "Thống nhất hiểu biết về khách hàng trong nhóm"
+      ],
+      "prompt": "Bạn là chuyên gia nghiên cứu khách hàng. Dữ liệu tôi có về nhóm khách hàng [tên nhóm]: [dán dữ liệu tổng hợp, kết quả khảo sát, ghi chú phỏng vấn đã ẩn danh]. Hãy xây 2–3 chân dung khách hàng, mỗi chân dung gồm: tên gọi đại diện, đặc điểm chung, mục tiêu, khó khăn, kênh tiếp cận, điều họ cần nghe từ chúng ta, câu nói đại diện. Đánh dấu rõ từng ý là [Dữ kiện] hay [Giả định]. Không dùng thông tin của bất kỳ khách hàng cụ thể nào.",
+      "required_inputs": [
+        "Dữ liệu tổng hợp, khảo sát đã ẩn danh",
+        "Nhóm khách hàng cần phân tích"
+      ],
+      "verification": [
+        "Kiểm chứng các ý [Giả định] bằng dữ liệu hoặc phỏng vấn thêm.",
+        "Không dựa chân dung vào định kiến.",
+        "Cập nhật chân dung khi có dữ liệu mới."
+      ],
+      "tags": [
+        "persona",
+        "chân dung khách hàng",
+        "khách hàng mục tiêu",
+        "phân khúc",
+        "insight"
+      ],
+      "example": {
+        "input": "Dữ liệu tổng hợp nhóm khách hàng hộ kinh doanh nhỏ: kết quả khảo sát 300 người, 10 ghi chú phỏng vấn",
+        "output": "2–3 chân dung có đủ 7 mục, từng ý đánh dấu [Dữ kiện] hoặc [Giả định]."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 95
+    },
+    {
+      "id": "kd06",
+      "category": "sales",
+      "title": "Tóm tắt cuộc gặp khách hàng",
+      "target_audiences": [
+        "kinh-doanh",
+        "quan-ly"
+      ],
+      "goals": [
+        "phan-tich",
+        "viet"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Ghi lại nhanh nội dung buổi gặp, cam kết hai bên và việc cần theo dõi.",
+      "use_cases": [
+        "Sau cuộc gặp, cuộc gọi với khách hàng",
+        "Cập nhật thông tin cho đồng nghiệp tiếp quản"
+      ],
+      "prompt": "Bạn là trợ lý kinh doanh. Đây là ghi chú cuộc gặp với khách hàng [mã hoặc tên viết tắt, không dùng thông tin định danh nhạy cảm]: [dán ghi chú]. Hãy tóm tắt: mục đích buổi gặp, nhu cầu khách nêu ra, câu hỏi khách còn chờ trả lời, cam kết của mỗi bên, bảng việc cần làm: Việc | Người phụ trách | Hạn. Kèm email cảm ơn và xác nhận nội dung gửi khách dưới 120 từ. Chỉ dùng thông tin trong ghi chú.",
+      "required_inputs": [
+        "Ghi chú cuộc gặp (không có dữ liệu nhạy cảm)"
+      ],
+      "verification": [
+        "Cam kết ghi đúng như đã trao đổi.",
+        "Không lưu thông tin khách hàng trên công cụ không được phép.",
+        "Cập nhật vào hệ thống quản lý khách hàng của đơn vị."
+      ],
+      "tags": [
+        "ghi chú cuộc gặp",
+        "meeting notes",
+        "khách hàng",
+        "follow-up",
+        "email cảm ơn"
+      ],
+      "example": {
+        "input": "Ghi chú buổi gặp khách doanh nghiệp KH-07 về nhu cầu thu hộ: 8 ý gạch đầu dòng",
+        "output": "Tóm tắt 4 mục, bảng 3–4 việc cần làm, email xác nhận dưới 120 từ chỉ dùng thông tin trong ghi chú."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 96
+    },
+    {
+      "id": "kd07",
+      "category": "sales",
+      "title": "Bộ câu trả lời chuẩn cho tổng đài, chat",
+      "target_audiences": [
+        "kinh-doanh"
+      ],
+      "goals": [
+        "viet",
+        "dao-tao"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "NotebookLM"
+      ],
+      "purpose": "Chuẩn hóa câu trả lời cho các câu hỏi lặp lại, nhất quán giữa các nhân viên.",
+      "use_cases": [
+        "Xây thư viện câu trả lời mẫu cho chat",
+        "Đào tạo nhân viên tổng đài mới"
+      ],
+      "prompt": "Bạn là trưởng nhóm chăm sóc khách hàng. Dựa trên tài liệu chính thức [tên tài liệu], hãy soạn câu trả lời mẫu cho các câu hỏi sau: [danh sách câu hỏi thường gặp]. Mỗi câu gồm: phiên bản chat (dưới 60 chữ), phiên bản nói qua điện thoại, thông tin cần hỏi lại khách nếu chưa đủ, trường hợp phải chuyển cho bộ phận khác. Giọng thân thiện, xưng hô [cách xưng hô]. Câu hỏi nào tài liệu không trả lời được ghi \"Cần bộ phận phụ trách xác nhận\".",
+      "required_inputs": [
+        "Tài liệu chính thức về sản phẩm, quy trình",
+        "Danh sách câu hỏi thường gặp",
+        "Quy định xưng hô"
+      ],
+      "verification": [
+        "Bộ phận sản phẩm, tuân thủ duyệt từng câu.",
+        "Cập nhật khi chính sách thay đổi.",
+        "Không hướng dẫn khách cung cấp mã OTP, mật khẩu."
+      ],
+      "tags": [
+        "câu trả lời mẫu",
+        "tổng đài",
+        "chatbot",
+        "FAQ",
+        "chăm sóc khách hàng"
+      ],
+      "example": {
+        "input": "Tài liệu: hướng dẫn khôi phục mật khẩu ứng dụng · 6 câu hỏi thường gặp · Xưng hô: “anh/chị” – “em”",
+        "output": "6 mục, mỗi mục có bản chat dưới 60 chữ, bản nói, thông tin cần hỏi lại và khi nào chuyển bộ phận khác."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 97
     },
     {
       "id": "p1",
@@ -1644,6 +4505,346 @@ window.YAI_DATA = {
         "output": "Bảng 8–10 rủi ro xếp theo ưu tiên, mỗi dòng có nguyên nhân, khả năng, ảnh hưởng, dấu hiệu cảnh báo sớm, biện pháp phòng ngừa và người theo dõi; đánh giá nào là giả định được ghi rõ."
       },
       "rank": 25
+    },
+    {
+      "id": "da01",
+      "category": "pm",
+      "title": "Lập kế hoạch dự án và các mốc",
+      "target_audiences": [
+        "van-hanh",
+        "quan-ly",
+        "van-hoa"
+      ],
+      "goals": [
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chia dự án thành giai đoạn, việc chính và mốc kiểm soát rõ ràng.",
+      "use_cases": [
+        "Khởi động dự án, sự kiện lớn",
+        "Trình bày kế hoạch cho lãnh đạo"
+      ],
+      "prompt": "Bạn là quản lý dự án có kinh nghiệm. Dự án: [tên, mục tiêu]. Thời gian: từ [ngày bắt đầu] đến [ngày kết thúc]. Nguồn lực: [nhân sự, vai trò]. Ràng buộc: [ngân sách, mốc cố định]. Hãy lập kế hoạch gồm: các giai đoạn, việc chính trong mỗi giai đoạn, mốc kiểm soát (milestone) có tiêu chí hoàn thành, việc phụ thuộc lẫn nhau. Trình bày bảng: Giai đoạn | Việc | Bắt đầu | Kết thúc | Phụ thuộc | Người phụ trách (để trống). Chừa thời gian dự phòng khoảng 10–15%.",
+      "required_inputs": [
+        "Mục tiêu, thời gian dự án",
+        "Nguồn lực và ràng buộc"
+      ],
+      "verification": [
+        "Kiểm tra lịch nghỉ lễ, sự kiện trùng.",
+        "Người phụ trách xác nhận thời gian ước tính.",
+        "Lãnh đạo duyệt mốc và nguồn lực."
+      ],
+      "tags": [
+        "kế hoạch dự án",
+        "milestone",
+        "timeline",
+        "gantt",
+        "giai đoạn"
+      ],
+      "example": {
+        "input": "Dự án: ra mắt cổng thông tin nội bộ mới · 3 tháng · 5 người · Mốc cố định: ra mắt trước Tết",
+        "output": "Bảng 4 giai đoạn, 15–20 việc có ngày và phụ thuộc, 4 mốc kiểm soát có tiêu chí, có thời gian dự phòng."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 98
+    },
+    {
+      "id": "da02",
+      "category": "pm",
+      "title": "Biên bản họp và việc cần làm",
+      "target_audiences": [
+        "moi-nhan-su",
+        "van-hanh",
+        "quan-ly"
+      ],
+      "goals": [
+        "viet",
+        "phan-tich"
+      ],
+      "difficulty": "de",
+      "time": "Khoảng 5 phút",
+      "compatible_tools": [
+        "Copilot",
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "purpose": "Chuyển ghi chú hoặc bản ghi cuộc họp thành biên bản gọn, có người và hạn cho từng việc.",
+      "use_cases": [
+        "Sau họp dự án, họp giao ban",
+        "Gửi biên bản cho người vắng mặt"
+      ],
+      "prompt": "Bạn là thư ký dự án. Đây là ghi chú cuộc họp [tên cuộc họp] ngày [ngày]: [dán ghi chú hoặc bản ghi]. Hãy soạn biên bản gồm: người tham dự, mục tiêu cuộc họp, các quyết định đã chốt, vấn đề còn mở, bảng việc cần làm: Việc | Người phụ trách | Hạn | Ghi chú. Chỉ ghi quyết định khi ghi chú thể hiện rõ đã chốt; việc chưa có người hoặc hạn ghi \"cần xác nhận\". Tối đa 1 trang.",
+      "required_inputs": [
+        "Ghi chú hoặc bản ghi cuộc họp"
+      ],
+      "verification": [
+        "Gửi người chủ trì xác nhận trước khi phát hành.",
+        "Kiểm tra tên người và hạn với từng người phụ trách."
+      ],
+      "tags": [
+        "biên bản họp",
+        "minutes",
+        "action items",
+        "việc cần làm",
+        "họp dự án"
+      ],
+      "example": {
+        "input": "Ghi chú họp tiến độ dự án sự kiện cuối năm, 7 người, 40 phút",
+        "output": "Biên bản 1 trang: 3 quyết định đã chốt, 2 vấn đề còn mở, bảng 6 việc; việc thiếu hạn ghi “cần xác nhận”."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 99
+    },
+    {
+      "id": "da03",
+      "category": "pm",
+      "title": "Ma trận phân công RACI",
+      "target_audiences": [
+        "van-hanh",
+        "quan-ly"
+      ],
+      "goals": [
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Làm rõ ai thực hiện, ai chịu trách nhiệm, ai cần được hỏi ý kiến và thông báo.",
+      "use_cases": [
+        "Dự án nhiều phòng ban tham gia",
+        "Tránh chồng chéo, bỏ sót việc"
+      ],
+      "prompt": "Bạn là chuyên gia quản trị dự án. Dự án: [tên dự án]. Các vai trò tham gia: [danh sách vai trò, không cần tên người]. Các việc chính: [danh sách việc]. Hãy lập ma trận RACI dạng bảng (Việc × Vai trò) với R = thực hiện, A = chịu trách nhiệm cuối cùng, C = được hỏi ý kiến, I = được thông báo. Mỗi việc chỉ có đúng một A. Sau bảng, chỉ ra việc có nguy cơ quá tải hoặc thiếu người thực hiện và câu hỏi cần thống nhất.",
+      "required_inputs": [
+        "Danh sách vai trò",
+        "Danh sách việc chính"
+      ],
+      "verification": [
+        "Mỗi việc chỉ có một A.",
+        "Các bên liên quan xác nhận vai trò của mình.",
+        "Cập nhật khi thay đổi nhân sự."
+      ],
+      "tags": [
+        "RACI",
+        "phân công",
+        "trách nhiệm",
+        "vai trò",
+        "dự án"
+      ],
+      "example": {
+        "input": "Dự án ngày hội gia đình · Vai trò: trưởng ban, truyền thông, hậu cần, tài chính, đại sứ văn hóa · 10 việc chính",
+        "output": "Ma trận 10 việc × 5 vai trò, mỗi việc đúng một A; ghi chú 2 vai trò có nguy cơ quá tải và 2 câu hỏi cần thống nhất."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 100
+    },
+    {
+      "id": "da04",
+      "category": "pm",
+      "title": "Đánh giá sau dự án (bài học kinh nghiệm)",
+      "target_audiences": [
+        "van-hanh",
+        "quan-ly",
+        "van-hoa"
+      ],
+      "goals": [
+        "danh-gia",
+        "phan-tich"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Tổng kết điều làm tốt, chưa tốt và bài học áp dụng cho lần sau.",
+      "use_cases": [
+        "Kết thúc dự án, sự kiện",
+        "Họp rút kinh nghiệm với nhóm"
+      ],
+      "prompt": "Bạn là người điều phối buổi rút kinh nghiệm. Dự án: [tên dự án], mục tiêu ban đầu: [mục tiêu], kết quả đạt được: [kết quả đã xác nhận]. Ý kiến của nhóm: [dán ý kiến đã ẩn danh]. Hãy tổng hợp theo 4 mục: điều làm tốt cần giữ, điều chưa tốt, nguyên nhân chính, bài học và hành động cụ thể cho dự án sau (kèm người đề xuất phụ trách để trống). Giọng xây dựng, không quy lỗi cá nhân. Kèm 5 câu hỏi để điều phối buổi họp rút kinh nghiệm.",
+      "required_inputs": [
+        "Mục tiêu và kết quả dự án",
+        "Ý kiến của nhóm (đã ẩn danh)"
+      ],
+      "verification": [
+        "Kết quả, số liệu được xác nhận.",
+        "Nhóm cùng đọc và bổ sung.",
+        "Lưu bài học vào nơi cả nhóm truy cập được."
+      ],
+      "tags": [
+        "rút kinh nghiệm",
+        "retrospective",
+        "bài học",
+        "tổng kết dự án",
+        "post-mortem"
+      ],
+      "example": {
+        "input": "Dự án hội thao 400 người · Mục tiêu: 80% đơn vị tham gia · 20 ý kiến của ban tổ chức",
+        "output": "4 mục tổng kết, 3–5 hành động cụ thể cho lần sau và 5 câu hỏi điều phối buổi họp."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 101
+    },
+    {
+      "id": "da05",
+      "category": "pm",
+      "title": "Chia nhỏ công việc (WBS)",
+      "target_audiences": [
+        "van-hanh",
+        "quan-ly"
+      ],
+      "goals": [
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Chia một mục tiêu lớn thành các gói việc nhỏ ước lượng được thời gian.",
+      "use_cases": [
+        "Lập kế hoạch chi tiết sau khi có mục tiêu",
+        "Giao việc cho nhóm mới"
+      ],
+      "prompt": "Bạn là quản lý dự án. Mục tiêu đầu ra: [kết quả cuối cùng cần có]. Phạm vi: [bao gồm] và không bao gồm: [ngoài phạm vi]. Hãy chia thành cấu trúc phân rã công việc 3 cấp, mỗi gói việc cấp cuối có thể hoàn thành trong 1–5 ngày công. Trình bày dạng danh sách đánh số (1, 1.1, 1.1.1) kèm ước lượng ngày công và đầu ra của mỗi gói. Đánh dấu gói việc có rủi ro hoặc phụ thuộc bên ngoài. Ước lượng chỉ để tham khảo, ghi rõ giả định.",
+      "required_inputs": [
+        "Mục tiêu đầu ra",
+        "Phạm vi bao gồm và không bao gồm"
+      ],
+      "verification": [
+        "Người làm trực tiếp xác nhận ước lượng.",
+        "Không bỏ sót việc kiểm thử, duyệt, bàn giao.",
+        "Đối chiếu với phạm vi đã thống nhất."
+      ],
+      "tags": [
+        "WBS",
+        "chia nhỏ công việc",
+        "phân rã",
+        "ước lượng",
+        "gói việc"
+      ],
+      "example": {
+        "input": "Đầu ra: bộ tài liệu hướng dẫn dùng AI cho nhân viên · Bao gồm: viết, thiết kế, duyệt · Không gồm: dịch tiếng Anh",
+        "output": "Danh sách 3 cấp với 15–20 gói việc cuối, mỗi gói có ngày công và đầu ra, gói rủi ro được đánh dấu, có ghi giả định."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 102
+    },
+    {
+      "id": "da06",
+      "category": "pm",
+      "title": "Kế hoạch truyền thông dự án cho các bên liên quan",
+      "target_audiences": [
+        "van-hanh",
+        "quan-ly",
+        "truyen-thong"
+      ],
+      "goals": [
+        "ke-hoach"
+      ],
+      "difficulty": "trung-binh",
+      "time": "Khoảng 10 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Xác định ai cần biết gì, khi nào, qua kênh nào trong suốt dự án.",
+      "use_cases": [
+        "Dự án có nhiều phòng ban, lãnh đạo theo dõi",
+        "Thay đổi ảnh hưởng nhiều người"
+      ],
+      "prompt": "Bạn là quản lý dự án giỏi giao tiếp. Dự án: [tên, mục tiêu, thời gian]. Các bên liên quan: [danh sách nhóm, mức độ ảnh hưởng và quan tâm]. Hãy lập kế hoạch truyền thông dạng bảng: Bên liên quan | Họ cần biết gì | Tần suất | Kênh | Người gửi (để trống) | Hình thức phản hồi. Phân loại các bên theo ma trận Ảnh hưởng – Quan tâm và đề xuất cách tiếp cận cho từng nhóm. Thêm mẫu cập nhật tiến độ ngắn dùng chung.",
+      "required_inputs": [
+        "Thông tin dự án",
+        "Các bên liên quan và mức độ ảnh hưởng"
+      ],
+      "verification": [
+        "Lịch truyền thông khả thi với nguồn lực.",
+        "Thông tin nhạy cảm chỉ gửi đúng người.",
+        "Điều chỉnh khi có phản hồi."
+      ],
+      "tags": [
+        "truyền thông dự án",
+        "bên liên quan",
+        "stakeholder",
+        "kế hoạch giao tiếp"
+      ],
+      "example": {
+        "input": "Dự án chuyển sang quy trình phê duyệt điện tử · 3 tháng · 6 nhóm liên quan",
+        "output": "Bảng 6 dòng, ma trận Ảnh hưởng – Quan tâm có cách tiếp cận từng nhóm, mẫu cập nhật tiến độ 5 dòng."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 103
+    },
+    {
+      "id": "da07",
+      "category": "pm",
+      "title": "Kiểm tra tiến độ và đề xuất xử lý chậm trễ",
+      "target_audiences": [
+        "van-hanh",
+        "quan-ly"
+      ],
+      "goals": [
+        "phan-tich",
+        "ke-hoach"
+      ],
+      "difficulty": "nang-cao",
+      "time": "10–15 phút",
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Copilot"
+      ],
+      "purpose": "Nhìn ra việc đang trễ, ảnh hưởng đến mốc chính và các phương án gỡ.",
+      "use_cases": [
+        "Dự án có dấu hiệu trễ hạn",
+        "Chuẩn bị báo cáo xin điều chỉnh"
+      ],
+      "prompt": "Bạn là quản lý dự án. Đây là bảng tiến độ hiện tại: [dán bảng việc, hạn, % hoàn thành, phụ thuộc]. Hôm nay là [ngày]. Mốc quan trọng: [mốc và hạn]. Hãy: (1) liệt kê việc đang trễ hoặc có nguy cơ trễ, (2) chỉ ra ảnh hưởng dây chuyền đến các mốc, (3) đề xuất 3 phương án xử lý (tăng nguồn lực, làm song song, giảm phạm vi…) kèm ưu nhược điểm, (4) nội dung cần báo lãnh đạo trong 5 dòng. Không tự thay đổi hạn của các mốc cố định.",
+      "required_inputs": [
+        "Bảng tiến độ hiện tại",
+        "Ngày hiện tại và các mốc quan trọng"
+      ],
+      "verification": [
+        "Xác nhận % hoàn thành với người thực hiện.",
+        "Phương án giảm phạm vi cần người có thẩm quyền đồng ý.",
+        "Cập nhật kế hoạch sau khi chọn phương án."
+      ],
+      "tags": [
+        "tiến độ",
+        "trễ hạn",
+        "rủi ro",
+        "điều chỉnh kế hoạch",
+        "báo cáo dự án"
+      ],
+      "example": {
+        "input": "Bảng 14 việc dự án sự kiện, 3 việc trễ, mốc tổng duyệt sau 10 ngày",
+        "output": "Danh sách việc trễ và có nguy cơ, ảnh hưởng đến mốc tổng duyệt, 3 phương án có ưu nhược điểm và 5 dòng báo lãnh đạo."
+      },
+      "added": "2026-11-11T22:40",
+      "rank": 104
     },
     {
       "id": "ux1",
