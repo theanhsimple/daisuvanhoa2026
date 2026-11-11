@@ -127,13 +127,13 @@ window.YAI_DATA = {
     },
     {
       "id": "ux",
-      "name": "UX & Product Design",
-      "vi": "Trải nghiệm và thiết kế sản phẩm",
+      "name": "Đánh giá và tối ưu giao diện",
+      "vi": "UI Design Audit",
       "petal": "p5",
-      "desc": "Đánh giá giao diện website, ứng dụng theo quy trình UI Design Audit.",
+      "desc": "Dùng AI đánh giá giao diện website, landing page, ứng dụng: 12 prompt, quy trình 6 bước, mẫu báo cáo và checklist.",
       "process": {
         "title": "Quy trình UI Design Audit 6 bước",
-        "intro": "Dùng AI để đánh giá giao diện có căn cứ, không chỉ nhận xét cảm tính. Làm lần lượt 6 bước; prompt trong danh mục này hỗ trợ bước 2 đến bước 5.",
+        "intro": "Dùng AI để đánh giá giao diện có căn cứ, không chỉ nhận xét cảm tính. Làm lần lượt 6 bước; bước 1 điền một lần trong phần Tùy chỉnh, các prompt hỗ trợ từ bước 2 đến bước 6.",
         "example_label": "Ví dụ minh họa: màn hình đăng ký sự kiện nội bộ trên điện thoại",
         "steps": [
           {
@@ -144,7 +144,9 @@ window.YAI_DATA = {
               "Mục tiêu chính của màn hình là gì?",
               "Người dùng cần thực hiện hành động nào?"
             ],
-            "example": "Sản phẩm: trang đăng ký sự kiện. Người dùng: nhân viên. Hành động chính: bấm Đăng ký."
+            "example": "Sản phẩm: trang đăng ký sự kiện. Người dùng: nhân viên. Hành động chính: bấm Đăng ký.",
+            "groups": [],
+            "tool_hint": "Điền bối cảnh một lần trong phần Tùy chỉnh của bất kỳ prompt nào; trang tự gắn vào cả 12 prompt."
           },
           {
             "title": "Đánh giá tổng thể",
@@ -157,7 +159,13 @@ window.YAI_DATA = {
               "Tính nhất quán của component.",
               "Hình ảnh, icon và yếu tố đồ họa."
             ],
-            "example": "Nút Đăng ký cùng màu, cùng cỡ với nút Chia sẻ nên không nổi bật."
+            "example": "Nút Đăng ký cùng màu, cùng cỡ với nút Chia sẻ nên không nổi bật.",
+            "groups": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
           },
           {
             "title": "Phân tích trải nghiệm",
@@ -168,7 +176,10 @@ window.YAI_DATA = {
               "Có bước nào gây nhầm lẫn hoặc tạo ma sát không?",
               "Giao diện có phù hợp với hành vi và nhu cầu người dùng không?"
             ],
-            "example": "Phải cuộn xuống mới thấy thời gian, địa điểm; người dùng dễ bỏ sót."
+            "example": "Phải cuộn xuống mới thấy thời gian, địa điểm; người dùng dễ bỏ sót.",
+            "groups": [
+              "E"
+            ]
           },
           {
             "title": "Xác định vấn đề",
@@ -179,7 +190,10 @@ window.YAI_DATA = {
               "Medium: Gây bất tiện hoặc thiếu nhất quán.",
               "Low: Vấn đề thẩm mỹ, có thể cải thiện sau."
             ],
-            "example": "Không thấy nút Đăng ký ở màn hình đầu: mức High."
+            "example": "Không thấy nút Đăng ký ở màn hình đầu: mức High.",
+            "groups": [
+              "A"
+            ]
           },
           {
             "title": "Đề xuất cải thiện",
@@ -192,7 +206,10 @@ window.YAI_DATA = {
               "Đề xuất giải pháp cụ thể.",
               "Mức độ ưu tiên."
             ],
-            "example": "Vị trí: cuối trang · Vấn đề: nút hành động chìm · Đề xuất: đưa nút lên vùng đầu, dùng một màu nhấn · Ưu tiên: High."
+            "example": "Vị trí: cuối trang · Vấn đề: nút hành động chìm · Đề xuất: đưa nút lên vùng đầu, dùng một màu nhấn · Ưu tiên: High.",
+            "groups": [
+              "F"
+            ]
           },
           {
             "title": "Kiểm tra sau cải tiến",
@@ -203,10 +220,14 @@ window.YAI_DATA = {
               "Kiểm tra tính nhất quán với Design System.",
               "Đánh giá lại khả năng hoàn thành tác vụ."
             ],
-            "example": "So ảnh trước và sau: nút Đăng ký thấy ngay; màu nút đúng Design System; không phát sinh lỗi mới."
+            "example": "So ảnh trước và sau: nút Đăng ký thấy ngay; màu nút đúng Design System; không phát sinh lỗi mới.",
+            "groups": [
+              "F"
+            ]
           }
         ]
-      }
+      },
+      "module": "audit"
     }
   ],
   "audiences": [
@@ -1560,6 +1581,14 @@ window.YAI_DATA = {
       "time": "Khoảng 10 phút",
       "added": "2026-11-11",
       "source": "UI Design Audit · Prompt 01",
+      "audit_no": 1,
+      "audit_group": "A",
+      "audit_roles": [
+        "designer",
+        "product",
+        "reviewer",
+        "marketing"
+      ],
       "rank": 5
     },
     {
@@ -1605,6 +1634,13 @@ window.YAI_DATA = {
       "time": "Khoảng 10 phút",
       "added": "2026-11-11",
       "source": "UI Design Audit · Prompt 02",
+      "audit_no": 2,
+      "audit_group": "A",
+      "audit_roles": [
+        "designer",
+        "product",
+        "reviewer"
+      ],
       "rank": 15
     },
     {
@@ -1650,6 +1686,12 @@ window.YAI_DATA = {
       "time": "5–10 phút",
       "added": "2026-11-11",
       "source": "UI Design Audit · Prompt 03",
+      "audit_no": 3,
+      "audit_group": "B",
+      "audit_roles": [
+        "designer",
+        "marketing"
+      ],
       "rank": 26
     },
     {
@@ -1695,7 +1737,446 @@ window.YAI_DATA = {
       "time": "Khoảng 10 phút",
       "added": "2026-11-11",
       "source": "UI Design Audit · Prompt 04",
+      "audit_no": 4,
+      "audit_group": "B",
+      "audit_roles": [
+        "designer",
+        "developer"
+      ],
       "rank": 31
+    },
+    {
+      "id": "ux5",
+      "title": "Kiểm tra bố cục và khoảng cách",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Rà soát lưới, căn chỉnh, khoảng cách và cách nhóm thông tin để giao diện gọn, dễ quét mắt.",
+      "use_cases": [
+        "Giao diện trông lộn xộn dù nội dung không nhiều",
+        "Chuẩn bị bàn giao thiết kế cho lập trình viên"
+      ],
+      "prompt": "Bạn là UI Designer chuyên về hệ thống lưới và bố cục.\n\nHãy kiểm tra bố cục của giao diện được cung cấp:\n- Hệ thống lưới (grid): số cột, lề, khoảng cách giữa các cột có nhất quán không?\n- Căn chỉnh (alignment): các thành phần có thẳng hàng theo một trục rõ ràng không?\n- Khoảng cách (spacing): khoảng cách giữa các nhóm và trong từng nhóm có theo một thang thống nhất không?\n- Nhóm thông tin: nội dung liên quan có được đặt gần nhau và tách biệt với nhóm khác không?\n- Khoảng trống: có vùng nào quá chật hoặc quá trống không?\n\nTrình bày kết quả theo bảng: Vị trí | Vấn đề | Ảnh hưởng đến người dùng | Đề xuất (nêu rõ cách căn chỉnh hoặc khoảng cách nên dùng).\n\nChỉ nêu con số khoảng cách khi ước lượng được từ hình ảnh; nếu không chắc chắn, ghi \"cần đo lại trên file thiết kế\".",
+      "required_inputs": [
+        "Ảnh chụp giao diện rõ nét, đã che thông tin khách hàng, số liệu nội bộ",
+        "Gửi kèm sau prompt 2–3 câu bối cảnh: sản phẩm, người dùng mục tiêu, mục tiêu của màn hình",
+        "Nếu có: thông số lưới, thang khoảng cách đang dùng"
+      ],
+      "verification": [
+        "Đo lại khoảng cách trên file thiết kế gốc, không dựa vào ước lượng từ ảnh.",
+        "Đối chiếu đề xuất với thang khoảng cách của Design System.",
+        "Xem lại trên cả màn hình lớn và điện thoại."
+      ],
+      "difficulty": "trung-binh",
+      "tags": [
+        "bố cục",
+        "layout",
+        "khoảng cách",
+        "spacing",
+        "căn chỉnh",
+        "lưới",
+        "grid"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "Khoảng 10 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 05",
+      "audit_no": 5,
+      "audit_group": "C",
+      "audit_roles": [
+        "designer",
+        "developer"
+      ],
+      "rank": 32
+    },
+    {
+      "id": "ux6",
+      "title": "Kiểm tra tính nhất quán của component",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Tìm các chỗ cùng một chức năng nhưng hiển thị khác nhau và đề xuất chuẩn hóa theo Design System.",
+      "use_cases": [
+        "Sản phẩm có nhiều người cùng thiết kế qua nhiều giai đoạn",
+        "Chuẩn bị xây dựng hoặc cập nhật Design System"
+      ],
+      "prompt": "Bạn là Design System Lead.\n\nHãy rà soát các thành phần giao diện (component) trong các màn hình được cung cấp:\n- Nút (button): kiểu, kích thước, màu, bo góc.\n- Ô nhập liệu, thẻ (card), danh sách, biểu tượng (icon).\n- Cùng một chức năng có đang dùng nhiều kiểu hiển thị khác nhau không?\n- Trạng thái tương tác: mặc định, đang chọn, vô hiệu hóa, lỗi.\n- Mức độ khớp với Design System hoặc bộ nhận diện đã có.\n\nLập bảng: Component | Các biến thể đang có | Điểm không nhất quán | Đề xuất chuẩn hóa | Mức độ ưu tiên.\n\nƯu tiên tận dụng component đã có. Không tự đặt ra quy chuẩn mới khi chưa được cung cấp thông tin Design System; nếu thiếu, ghi rõ \"cần đối chiếu Design System\".",
+      "required_inputs": [
+        "Ảnh chụp 3–5 màn hình của cùng sản phẩm, đã che thông tin khách hàng, số liệu nội bộ",
+        "Nếu có: ảnh hoặc mô tả bộ component chuẩn của Design System"
+      ],
+      "verification": [
+        "Đối chiếu từng component với thư viện Design System gốc.",
+        "Người phụ trách Design System quyết định biến thể nào là chuẩn.",
+        "Kiểm tra lại các trạng thái tương tác trên sản phẩm thật."
+      ],
+      "difficulty": "nang-cao",
+      "tags": [
+        "component",
+        "design system",
+        "nhất quán",
+        "nút",
+        "button",
+        "chuẩn hóa"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "10–15 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 06",
+      "audit_extra": {
+        "label": "Design System hoặc bộ component chuẩn",
+        "ph": "Ví dụ: nút chính màu tím, bo góc 12px; mỗi màn hình chỉ một nút chính"
+      },
+      "audit_no": 6,
+      "audit_group": "C",
+      "audit_roles": [
+        "designer",
+        "developer",
+        "product"
+      ],
+      "rank": 33
+    },
+    {
+      "id": "ux7",
+      "title": "Kiểm tra màu sắc và độ tương phản",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke",
+        "truyen-thong"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Đánh giá cách dùng màu nhấn, màu trạng thái và độ tương phản chữ trên nền.",
+      "use_cases": [
+        "Banner, landing page nhiều màu, khó đọc chữ",
+        "Màn hình có màu trạng thái dễ gây nhầm"
+      ],
+      "prompt": "Bạn là chuyên gia về màu sắc trong thiết kế giao diện.\n\nHãy phân tích cách dùng màu của giao diện được cung cấp:\n- Bảng màu có thống nhất và đúng nhận diện thương hiệu không?\n- Màu nhấn có được dành cho hành động chính không?\n- Màu trạng thái (thành công, cảnh báo, lỗi) có rõ ràng và nhất quán không?\n- Độ tương phản giữa chữ và nền có đủ để đọc dễ dàng không?\n- Có thông tin nào chỉ được truyền đạt bằng màu sắc không?\n\nTrình bày theo bảng: Vị trí | Màu đang dùng (ước lượng) | Vấn đề | Đề xuất.\n\nĐộ tương phản đánh giá từ hình ảnh chỉ là ước lượng; hãy đánh dấu các cặp màu cần đo lại bằng công cụ kiểm tra độ tương phản. Không đề xuất thay đổi màu thương hiệu chính.",
+      "required_inputs": [
+        "Ảnh chụp giao diện rõ nét, đã che thông tin khách hàng, số liệu nội bộ",
+        "Gửi kèm sau prompt 2–3 câu bối cảnh: sản phẩm, người dùng mục tiêu, mục tiêu của màn hình",
+        "Nếu có: mã màu của bộ nhận diện"
+      ],
+      "verification": [
+        "Đo lại độ tương phản các cặp màu được đánh dấu bằng công cụ kiểm tra.",
+        "Mọi thay đổi màu thương hiệu cần người phụ trách thương hiệu duyệt.",
+        "Xem lại trên màn hình điện thoại ngoài trời và màn chiếu."
+      ],
+      "difficulty": "trung-binh",
+      "tags": [
+        "màu sắc",
+        "độ tương phản",
+        "contrast",
+        "màu nhấn",
+        "bảng màu",
+        "color"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "5–10 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 07",
+      "audit_no": 7,
+      "audit_group": "D",
+      "audit_roles": [
+        "designer",
+        "marketing",
+        "developer"
+      ],
+      "rank": 34
+    },
+    {
+      "id": "ux8",
+      "title": "Audit khả năng tiếp cận (Accessibility)",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Kiểm tra giao diện có dùng được cho người lớn tuổi, người hạn chế thị lực hoặc vận động không.",
+      "use_cases": [
+        "Sản phẩm phục vụ nhiều nhóm tuổi",
+        "Rà soát trước khi ra mắt tính năng mới"
+      ],
+      "prompt": "Bạn là chuyên gia về khả năng tiếp cận (accessibility) trong sản phẩm số, am hiểu bộ tiêu chí WCAG.\n\nHãy kiểm tra giao diện được cung cấp dưới góc nhìn của người dùng lớn tuổi, người hạn chế thị lực hoặc vận động:\n- Cỡ chữ và độ tương phản có đủ để đọc không?\n- Vùng chạm của nút, liên kết có đủ lớn và đủ cách nhau không?\n- Biểu tượng có kèm nhãn chữ khi cần không?\n- Thông báo lỗi có nói rõ lỗi gì và cách sửa không?\n- Thứ tự đọc nội dung có hợp lý không?\n\nTrình bày theo bảng: Vấn đề | Vị trí | Nhóm người dùng bị ảnh hưởng | Mức độ (Critical / High / Medium / Low) | Đề xuất.\n\nChỉ đánh giá những gì quan sát được từ hình ảnh. Các tiêu chí phải kiểm tra trên sản phẩm thật (trình đọc màn hình, điều hướng bằng bàn phím) hãy liệt kê riêng thành danh sách cần kiểm tra thêm.",
+      "required_inputs": [
+        "Ảnh chụp giao diện rõ nét, đã che thông tin khách hàng, số liệu nội bộ",
+        "Gửi kèm sau prompt 2–3 câu bối cảnh: sản phẩm, người dùng mục tiêu, mục tiêu của màn hình"
+      ],
+      "verification": [
+        "Kiểm tra thật bằng trình đọc màn hình và bàn phím theo danh sách AI liệt kê.",
+        "Đo lại độ tương phản và kích thước vùng chạm trên file thiết kế.",
+        "Khi có thể, mời người dùng lớn tuổi thử thao tác."
+      ],
+      "difficulty": "nang-cao",
+      "tags": [
+        "accessibility",
+        "khả năng tiếp cận",
+        "WCAG",
+        "người lớn tuổi",
+        "vùng chạm",
+        "trợ năng"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "Khoảng 15 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 08",
+      "audit_no": 8,
+      "audit_group": "D",
+      "audit_roles": [
+        "designer",
+        "developer",
+        "product"
+      ],
+      "rank": 35
+    },
+    {
+      "id": "ux9",
+      "title": "Audit luồng thao tác nhiều màn hình",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke",
+        "quan-ly"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Tìm điểm người dùng dễ dừng lại, nhầm lẫn hoặc bỏ dở trong một luồng nhiều bước.",
+      "use_cases": [
+        "Luồng đăng ký, đặt lịch, gửi yêu cầu có nhiều người bỏ dở",
+        "Rà soát luồng trước khi phát triển"
+      ],
+      "prompt": "Bạn là UX Designer chuyên phân tích hành trình người dùng.\n\nTôi gửi kèm các màn hình theo đúng thứ tự của một luồng thao tác. Hãy phân tích:\n- Mục tiêu người dùng muốn hoàn thành trong luồng này.\n- Số bước và thao tác cần thiết; bước nào có thể gộp hoặc bỏ.\n- Điểm người dùng dễ dừng lại, nhầm lẫn hoặc bỏ dở.\n- Tính liên tục giữa các màn hình: tiêu đề, nút, thông tin có khớp nhau không?\n- Cách xử lý khi có lỗi hoặc khi người dùng muốn quay lại.\n\nTrình bày theo từng màn hình: Bước | Người dùng cần làm gì | Điểm gây ma sát | Đề xuất. Cuối cùng tóm tắt 3 điểm gây ma sát lớn nhất.\n\nKhông giả định nội dung của các màn hình không được cung cấp; nếu luồng thiếu bước, ghi rõ \"cần bổ sung màn hình\".",
+      "required_inputs": [
+        "Ảnh chụp từng màn hình theo đúng thứ tự, đã che thông tin khách hàng",
+        "Mô tả ngắn điểm bắt đầu và điểm kết thúc của luồng"
+      ],
+      "verification": [
+        "Đi lại luồng trên sản phẩm thật để xác nhận từng điểm ma sát.",
+        "Đối chiếu với dữ liệu sử dụng thực tế nếu đơn vị có.",
+        "Nhóm sản phẩm chốt bước nào được gộp hoặc bỏ."
+      ],
+      "difficulty": "nang-cao",
+      "tags": [
+        "luồng",
+        "user flow",
+        "hành trình người dùng",
+        "nhiều bước",
+        "bỏ dở",
+        "ma sát"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "15–20 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 09",
+      "audit_extra": {
+        "label": "Các bước trong luồng",
+        "ph": "Ví dụ: Trang chủ → Chọn sự kiện → Điền thông tin → Xác nhận"
+      },
+      "audit_no": 9,
+      "audit_group": "E",
+      "audit_roles": [
+        "product",
+        "designer"
+      ],
+      "rank": 36
+    },
+    {
+      "id": "ux10",
+      "title": "Kiểm tra CTA và nội dung chữ trên giao diện",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke",
+        "truyen-thong"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Rà soát tiêu đề, nút, nhãn, thông báo để người dùng hiểu ngay và biết bước tiếp theo.",
+      "use_cases": [
+        "Landing page, màn hình có tỉ lệ bấm nút thấp",
+        "Chuẩn hóa cách gọi tên chức năng trong sản phẩm"
+      ],
+      "prompt": "Bạn là chuyên gia viết nội dung cho giao diện (UX Writing).\n\nHãy rà soát toàn bộ chữ trên giao diện được cung cấp: tiêu đề, nút, nhãn, thông báo, hướng dẫn.\n- Người dùng có hiểu ngay màn hình đang nói về điều gì không?\n- Nút hành động chính (CTA) có nói rõ điều sẽ xảy ra khi bấm không?\n- Từ ngữ có nhất quán, cùng một việc dùng cùng một cách gọi không?\n- Có thuật ngữ khó hiểu, câu quá dài hoặc giọng văn không phù hợp không?\n- Thông báo lỗi, thông báo xác nhận có giúp người dùng biết bước tiếp theo không?\n\nLập bảng: Vị trí | Nội dung hiện tại | Vấn đề | Đề xuất viết lại.\n\nGiữ nguyên ý nghĩa và thông tin gốc. Không tự thêm cam kết, số liệu, điều khoản hoặc thông tin sản phẩm chưa được cung cấp.",
+      "required_inputs": [
+        "Ảnh chụp giao diện rõ nét, đã che thông tin khách hàng, số liệu nội bộ",
+        "Gửi kèm sau prompt 2–3 câu bối cảnh: sản phẩm, người dùng mục tiêu, mục tiêu của màn hình",
+        "Nếu có: giọng văn, cách xưng hô theo quy định của đơn vị"
+      ],
+      "verification": [
+        "Nội dung về sản phẩm, phí, điều khoản cần bộ phận phụ trách xác nhận trước khi thay.",
+        "Đọc to đề xuất viết lại, kiểm tra có tự nhiên không.",
+        "Giữ cách gọi tên chức năng thống nhất trên toàn sản phẩm."
+      ],
+      "difficulty": "trung-binh",
+      "tags": [
+        "CTA",
+        "nút",
+        "UX writing",
+        "nội dung",
+        "thông báo lỗi",
+        "câu chữ",
+        "landing page"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "Khoảng 10 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 10",
+      "audit_no": 10,
+      "audit_group": "E",
+      "audit_roles": [
+        "marketing",
+        "product",
+        "designer"
+      ],
+      "rank": 37
+    },
+    {
+      "id": "ux11",
+      "title": "Đề xuất redesign một màn hình",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke",
+        "quan-ly"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Biến kết quả audit đã thống nhất thành phương án thiết kế lại có căn cứ cho từng thay đổi.",
+      "use_cases": [
+        "Sau khi đã có danh sách vấn đề ưu tiên",
+        "Chuẩn bị phương án để trình bày với nhóm sản phẩm"
+      ],
+      "prompt": "Bạn là Senior Product Designer.\n\nDựa trên kết quả audit và giao diện hiện tại được đính kèm, hãy đề xuất phương án redesign cho màn hình này.\n\nYêu cầu:\n1. Nêu mục tiêu của bản redesign, bám theo các vấn đề cần ưu tiên.\n2. Đề xuất cấu trúc mới: thứ tự các khối nội dung từ trên xuống dưới.\n3. Mô tả thay đổi của từng khối: bố cục, phân cấp, component, nội dung chữ.\n4. Giải thích mỗi thay đổi giải quyết vấn đề nào trong kết quả audit.\n5. Liệt kê những gì giữ nguyên.\n\nChỉ đề xuất 1 phương án chính và tối đa 1 phương án thay thế. Tận dụng component và nhận diện hiện có; không thêm tính năng mới khi chưa được yêu cầu.",
+      "required_inputs": [
+        "Ảnh màn hình hiện tại, đã che thông tin khách hàng",
+        "Kết quả audit đã được nhóm thống nhất (bảng vấn đề và mức ưu tiên)"
+      ],
+      "verification": [
+        "Mỗi thay đổi phải gắn với một vấn đề trong kết quả audit.",
+        "Designer dựng lại phương án trên công cụ thiết kế; AI chỉ gợi ý hướng.",
+        "Nhóm sản phẩm duyệt phạm vi trước khi thiết kế chi tiết."
+      ],
+      "difficulty": "nang-cao",
+      "tags": [
+        "redesign",
+        "thiết kế lại",
+        "phương án",
+        "cải thiện giao diện",
+        "đề xuất"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "15–20 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 11",
+      "audit_extra": {
+        "label": "Kết quả audit đã thống nhất",
+        "ph": "Dán bảng vấn đề và mức ưu tiên",
+        "multiline": true
+      },
+      "audit_no": 11,
+      "audit_group": "F",
+      "audit_roles": [
+        "designer",
+        "product"
+      ],
+      "rank": 38
+    },
+    {
+      "id": "ux12",
+      "title": "So sánh trước và sau cải tiến",
+      "category": "ux",
+      "target_audiences": [
+        "thiet-ke",
+        "quan-ly"
+      ],
+      "goals": [
+        "danh-gia"
+      ],
+      "purpose": "Kiểm tra từng vấn đề đã được xử lý chưa và bản mới có phát sinh lỗi mới không.",
+      "use_cases": [
+        "Nghiệm thu bản thiết kế sau chỉnh sửa",
+        "Kiểm tra bản đã lập trình so với bản thiết kế"
+      ],
+      "prompt": "Bạn là UI/UX Reviewer.\n\nTôi gửi kèm 2 phiên bản của cùng một màn hình: bản trước và bản sau khi chỉnh sửa, cùng danh sách vấn đề đã xác định trước đó.\n\nHãy kiểm tra:\n- Từng vấn đề trong danh sách đã được xử lý chưa: Đã xử lý / Xử lý một phần / Chưa xử lý.\n- Có phát sinh vấn đề mới nào không?\n- Bản sau có nhất quán với Design System không?\n- Khả năng hoàn thành tác vụ chính có tốt hơn không, vì sao?\n\nTrình bày theo bảng: Vấn đề | Trạng thái | Căn cứ quan sát được | Việc cần làm tiếp.\n\nChỉ kết luận dựa trên những gì quan sát được trong hai hình ảnh. Không nhận xét cảm tính rằng bản sau \"đẹp hơn\" khi không chỉ ra căn cứ.",
+      "required_inputs": [
+        "Ảnh bản trước và bản sau, cùng kích thước, đã che thông tin khách hàng",
+        "Danh sách vấn đề từ lần audit trước"
+      ],
+      "verification": [
+        "Tự đối chiếu lại các vấn đề AI đánh dấu \"Đã xử lý\".",
+        "Kiểm tra trên sản phẩm thật nếu đã lập trình.",
+        "Người duyệt thiết kế ký nhận kết quả nghiệm thu."
+      ],
+      "difficulty": "trung-binh",
+      "tags": [
+        "trước sau",
+        "so sánh",
+        "nghiệm thu",
+        "kiểm tra lại",
+        "before after",
+        "review"
+      ],
+      "compatible_tools": [
+        "Claude",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "time": "Khoảng 10 phút",
+      "added": "2026-11-11",
+      "source": "UI Design Audit · Prompt 12",
+      "audit_extra": {
+        "label": "Danh sách vấn đề từ lần audit trước",
+        "ph": "Dán danh sách vấn đề cần kiểm tra",
+        "multiline": true
+      },
+      "audit_no": 12,
+      "audit_group": "F",
+      "audit_roles": [
+        "designer",
+        "reviewer",
+        "developer",
+        "product"
+      ],
+      "rank": 39
     }
   ],
   "clinic": [
@@ -1769,5 +2250,251 @@ window.YAI_DATA = {
         "Có ràng buộc chống suy diễn, dễ kiểm tra lại."
       ]
     }
-  ]
+  ],
+  "audit": {
+    "intro": [
+      "Đánh giá chất lượng giao diện website, landing page, ứng dụng và sản phẩm số.",
+      "Phát hiện vấn đề về bố cục, typography, màu sắc, hierarchy và tính nhất quán.",
+      "Đánh giá trải nghiệm người dùng và khả năng tiếp nhận thông tin.",
+      "Đưa ra đề xuất cải thiện có căn cứ, không chỉ nhận xét cảm tính.",
+      "Viết prompt để AI hỗ trợ redesign một màn hình hoặc một luồng giao diện.",
+      "Kiểm tra lại thiết kế sau khi chỉnh sửa."
+    ],
+    "groups": [
+      {
+        "id": "A",
+        "name": "Audit tổng thể giao diện",
+        "short": "Tổng thể"
+      },
+      {
+        "id": "B",
+        "name": "Audit Visual Hierarchy & Typography",
+        "short": "Phân cấp & chữ"
+      },
+      {
+        "id": "C",
+        "name": "Audit Layout & Design System",
+        "short": "Bố cục & component"
+      },
+      {
+        "id": "D",
+        "name": "Audit màu sắc và khả năng tiếp cận",
+        "short": "Màu & tiếp cận"
+      },
+      {
+        "id": "E",
+        "name": "Audit trải nghiệm và nội dung",
+        "short": "Luồng & nội dung"
+      },
+      {
+        "id": "F",
+        "name": "Redesign và kiểm tra sau cải tiến",
+        "short": "Redesign & kiểm tra"
+      }
+    ],
+    "roles": [
+      {
+        "id": "designer",
+        "name": "Designer UI/UX",
+        "short": "Designer"
+      },
+      {
+        "id": "product",
+        "name": "Product Owner, BA",
+        "short": "Product, BA"
+      },
+      {
+        "id": "developer",
+        "name": "Lập trình giao diện (Front-end)",
+        "short": "Front-end"
+      },
+      {
+        "id": "marketing",
+        "name": "Truyền thông, marketing",
+        "short": "Truyền thông"
+      },
+      {
+        "id": "reviewer",
+        "name": "Quản lý, người duyệt thiết kế",
+        "short": "Người duyệt"
+      }
+    ],
+    "severity": [
+      {
+        "id": "critical",
+        "name": "Critical",
+        "desc": "Ảnh hưởng nghiêm trọng đến khả năng sử dụng hoặc hoàn thành tác vụ."
+      },
+      {
+        "id": "high",
+        "name": "High",
+        "desc": "Làm giảm đáng kể khả năng tiếp nhận thông tin hoặc trải nghiệm."
+      },
+      {
+        "id": "medium",
+        "name": "Medium",
+        "desc": "Gây bất tiện hoặc thiếu nhất quán."
+      },
+      {
+        "id": "low",
+        "name": "Low",
+        "desc": "Vấn đề thẩm mỹ, có thể cải thiện sau."
+      }
+    ],
+    "context_fields": [
+      {
+        "k": "product",
+        "label": "Sản phẩm, giao diện",
+        "ph": "Ví dụ: trang đăng ký sự kiện nội bộ"
+      },
+      {
+        "k": "users",
+        "label": "Người dùng mục tiêu",
+        "ph": "Ví dụ: nhân viên các chi nhánh"
+      },
+      {
+        "k": "goal",
+        "label": "Mục tiêu chính của màn hình",
+        "ph": "Ví dụ: để nhân viên đăng ký tham gia"
+      },
+      {
+        "k": "action",
+        "label": "Hành động người dùng cần thực hiện",
+        "ph": "Ví dụ: bấm Đăng ký"
+      },
+      {
+        "k": "platform",
+        "label": "Nền tảng",
+        "ph": "Ví dụ: ứng dụng di động",
+        "chips": [
+          "Website",
+          "Landing page",
+          "Ứng dụng di động",
+          "Poster, banner"
+        ]
+      },
+      {
+        "k": "brand",
+        "label": "Nhận diện, Design System",
+        "ph": "Ví dụ: màu và font theo bộ nhận diện của đơn vị",
+        "optional": true,
+        "wide": true
+      }
+    ],
+    "context_title": "Thông tin bối cảnh",
+    "report": {
+      "intro": "Dùng mẫu này để tổng hợp kết quả từ nhiều prompt thành một báo cáo thống nhất. Các cột của bảng vấn đề lấy theo Bước 5 của quy trình.",
+      "sections": [
+        {
+          "title": "1. Thông tin chung",
+          "fields": [
+            "Sản phẩm, giao diện",
+            "Màn hình hoặc luồng được audit",
+            "Người dùng mục tiêu",
+            "Mục tiêu chính của màn hình",
+            "Hành động người dùng cần thực hiện",
+            "Người thực hiện, ngày audit"
+          ]
+        },
+        {
+          "title": "2. Tóm tắt",
+          "fields": [
+            "Điểm tốt cần giữ",
+            "Số vấn đề theo mức độ: Critical … · High … · Medium … · Low …",
+            "5 vấn đề cần ưu tiên xử lý nhất"
+          ]
+        },
+        {
+          "title": "3. Danh sách vấn đề",
+          "table": [
+            "STT",
+            "Vị trí phát hiện",
+            "Mô tả vấn đề",
+            "Nguyên nhân",
+            "Ảnh hưởng đến người dùng",
+            "Đề xuất giải pháp cụ thể",
+            "Mức độ ưu tiên"
+          ]
+        },
+        {
+          "title": "4. Kế hoạch xử lý",
+          "table": [
+            "Vấn đề",
+            "Người phụ trách",
+            "Thời hạn",
+            "Trạng thái"
+          ]
+        },
+        {
+          "title": "5. Kiểm tra sau cải tiến",
+          "fields": [
+            "So sánh trước và sau",
+            "Kiểm tra các vấn đề đã được xử lý",
+            "Đảm bảo không phát sinh lỗi mới",
+            "Kiểm tra tính nhất quán với Design System",
+            "Đánh giá lại khả năng hoàn thành tác vụ"
+          ]
+        }
+      ],
+      "note": "Kết quả do AI hỗ trợ cần được designer và người phụ trách sản phẩm rà soát trước khi sử dụng.",
+      "ai_lead": "Hãy trình bày toàn bộ kết quả audit theo đúng mẫu báo cáo dưới đây. Mục nào chưa có thông tin thì ghi \"cần bổ sung\", không tự điền."
+    },
+    "checklist": [
+      {
+        "phase": "Trước khi audit",
+        "items": [
+          [
+            "Đã xác định đủ bối cảnh",
+            "Sản phẩm, người dùng mục tiêu, mục tiêu của màn hình, hành động người dùng cần thực hiện."
+          ],
+          [
+            "Ảnh giao diện rõ nét và an toàn",
+            "Đã che thông tin khách hàng, họ tên, số tài khoản và số liệu nội bộ trước khi gửi cho AI."
+          ]
+        ]
+      },
+      {
+        "phase": "Trong khi audit",
+        "items": [
+          [
+            "Đã xem đủ 7 nhóm tiêu chí tổng thể",
+            "Bố cục, phân cấp thị giác, typography, màu sắc và độ tương phản, khoảng cách, component, hình ảnh và icon."
+          ],
+          [
+            "Đã phân tích trải nghiệm",
+            "Màn hình dễ hiểu, thông tin quan trọng dễ tìm, CTA rõ ràng, không có bước gây nhầm lẫn."
+          ],
+          [
+            "Mỗi vấn đề đã được xếp mức độ",
+            "Critical, High, Medium hoặc Low."
+          ],
+          [
+            "Mỗi vấn đề có đủ 6 thông tin",
+            "Vị trí, mô tả, nguyên nhân, ảnh hưởng đến người dùng, đề xuất giải pháp, mức độ ưu tiên."
+          ],
+          [
+            "Đã đối chiếu kết quả của AI với ảnh gốc",
+            "Loại bỏ nhận xét không quan sát được; đo lại độ tương phản, cỡ chữ trên file thiết kế."
+          ]
+        ]
+      },
+      {
+        "phase": "Sau cải tiến",
+        "items": [
+          [
+            "Đã so sánh trước và sau",
+            "Kiểm tra từng vấn đề trong danh sách đã được xử lý."
+          ],
+          [
+            "Không phát sinh lỗi mới",
+            "Bản sau nhất quán với Design System và nhận diện thương hiệu."
+          ],
+          [
+            "Đã đánh giá lại và được duyệt",
+            "Kiểm tra lại khả năng hoàn thành tác vụ; designer và người phụ trách sản phẩm duyệt trước khi bàn giao."
+          ]
+        ]
+      }
+    ]
+  }
 };
