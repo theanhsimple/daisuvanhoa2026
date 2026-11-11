@@ -360,7 +360,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "5–10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Đơn vị: một khối khoảng 300 người · Hoạt động: Ngày hội gia đình · Đối tượng: cán bộ nhân viên và người thân · Thông điệp: Nơi làm việc cũng là ngôi nhà thứ hai · Đã chốt: sáng thứ Bảy, khu vui chơi cho trẻ em, góc chụp ảnh gia đình · Kênh: nhóm chat toàn khối · Giọng: trẻ trung",
+        "output": "Một bài đăng khoảng 150–200 từ: tiêu đề ngắn, 2 câu mở đầu gợi hình ảnh gia đình, 3 gạch đầu dòng về khu vui chơi, góc chụp ảnh và lời mời người thân, kết bằng lời kêu gọi đăng ký. Địa điểm chưa có nên bài ghi \"cần bổ sung\" thay vì tự đặt."
+      },
       "rank": 1
     },
     {
@@ -406,7 +410,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Đơn vị: phòng Nhân sự · Đối tượng: 40 nhân viên mới trong quý · Hoạt động: buổi gặp mặt chào đón · Trang phục: thoải mái, lịch sự · Đăng ký qua: link biểu mẫu nội bộ",
+        "output": "Email có tiêu đề ngắn kiểu \"Mời bạn đến buổi chào đón thành viên mới\", một đoạn lý do mời 2–3 câu, khối thông tin 4 dòng dễ đọc lướt và lời kết thân thiện, tổng dưới 150 từ."
+      },
       "rank": 10
     },
     {
@@ -450,7 +458,11 @@ window.YAI_DATA = {
         "ChatGPT"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Nội dung gốc: đoạn đề xuất 1 trang về hoạt động \"Một tháng một giá trị\" đã được duyệt",
+        "output": "4 khối nội dung có tiêu đề riêng; tin nhắn ngắn có lời kêu gọi, bài đăng có mở đầu và 3 ý chính, poster chỉ còn tiêu đề và câu phụ, lời MC viết theo văn nói."
+      },
       "rank": 14
     },
     {
@@ -496,7 +508,11 @@ window.YAI_DATA = {
         "Canva"
       ],
       "time": "5–15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Dùng cho: poster · Chủ đề: ngày hội gia đình · Chủ thể: một gia đình nhỏ đang cùng xếp hình khối màu · Bối cảnh: sân cỏ buổi sáng · Phong cách: 3D mềm · Màu: cam, tím nhạt · Khoảng trống: phía trên · Tỉ lệ: 9:16",
+        "output": "Hình dọc 9:16, gia đình ở nửa dưới, nửa trên trống để đặt tiêu đề trong Canva. Nếu lần đầu chưa ưng, chỉ sửa một yếu tố mỗi lần (ví dụ: \"giữ nguyên, đổi ánh sáng thành buổi chiều\")."
+      },
       "rank": 4
     },
     {
@@ -543,7 +559,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "10–15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Sự kiện: Year End Party · Thông điệp: Humanize the Future · Đối tượng: toàn thể cán bộ nhân viên · Không gian: hội trường lớn · Yếu tố cần thể hiện: công nghệ phục vụ con người",
+        "output": "Bảng 3 cột cho 3 concept khác hẳn nhau, mỗi concept có bảng màu với mã HEX, gợi ý kiểu chữ, 3 ứng dụng và một câu lệnh tạo hình để thử ngay."
+      },
       "rank": 20
     },
     {
@@ -589,7 +609,11 @@ window.YAI_DATA = {
         "CapCut"
       ],
       "time": "15–30 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Video 30 giây · Hoạt động: teaser tiệc cuối năm · Thông điệp: cùng nhìn lại một năm · Phát trên: màn hình sự kiện 16:9",
+        "output": "Bảng 5 cảnh có tổng thời lượng đúng 30 giây và 5 câu lệnh tạo cảnh riêng. Chữ trên màn hình thêm sau trong CapCut để không sai dấu."
+      },
       "rank": 30
     },
     {
@@ -635,7 +659,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Loại hoạt động: chuỗi hoạt động đón Tết · 150 người · Ngân sách: vừa phải · Mục tiêu: gắn kết các phòng ít làm việc chung · Đặc điểm: trẻ, thích thử thách, làm việc nhiều ca",
+        "output": "Bảng 3 ý tưởng, mỗi ý có tên, thông điệp, 3 hoạt động; một ý tưởng gần như không tốn chi phí; cột rủi ro nêu rõ vấn đề lịch làm việc theo ca."
+      },
       "rank": 9
     },
     {
@@ -678,7 +706,11 @@ window.YAI_DATA = {
         "ChatGPT"
       ],
       "time": "10–15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Hoạt động: Lễ vinh danh cuối năm · 60 phút · Đối tượng: toàn khối · Không khí: trang trọng nhưng ấm áp · Lịch trình: 6 mục từ khai mạc đến chụp ảnh chung",
+        "output": "Bảng 6 dòng theo đúng thứ tự lịch trình. Mỗi lời dẫn 2–3 câu ngắn, có câu hỏi tương tác ở phần mở màn, cột ghi chú nêu nhạc nền và thời điểm mời người lên sân khấu. Tên khách mời để \"chờ xác nhận\"."
+      },
       "rank": 19
     },
     {
@@ -724,7 +756,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "15 phút · 60 người · Không gian: phòng họp lớn, bàn tròn · Giá trị: một giá trị cốt lõi do đơn vị chọn · Đạo cụ: giấy note, bút, màn chiếu",
+        "output": "3 phương án khác nhau (đố vui theo đội, ghép câu chuyện, thử thách hành động), mỗi phương án có luật chơi 4–5 bước, cách tính điểm rõ và một câu chốt nối trò chơi với giá trị."
+      },
       "rank": 22
     },
     {
@@ -769,7 +805,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Tài liệu: báo cáo tổng kết chương trình văn hóa năm (đã được phép chia sẻ) · Mục đích: chuẩn bị họp kế hoạch năm sau",
+        "output": "3 câu tóm tắt, 5 điểm chính có số trang, bảng mốc và con số trích từ báo cáo, 3 câu hỏi gợi mở cho cuộc họp."
+      },
       "rank": 2
     },
     {
@@ -812,7 +852,11 @@ window.YAI_DATA = {
         "ChatGPT"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Ghi chú tay 1 trang của buổi họp ban tổ chức ngày hội gia đình",
+        "output": "Bảng 8 việc bắt đầu bằng động từ, 3 việc ghi \"chưa giao\"; danh sách 4 quyết định đã chốt và 2 vấn đề còn mở để đưa vào buổi họp sau."
+      },
       "rank": 11
     },
     {
@@ -857,7 +901,11 @@ window.YAI_DATA = {
         "ChatGPT"
       ],
       "time": "5–10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Cuộc họp: chốt concept tiệc cuối năm · 45 phút · Thành phần: ban tổ chức 6 người · Kết quả: chọn 1 trong 3 concept",
+        "output": "Chương trình 5 mục cộng đúng 45 phút, danh sách 3 tài liệu gửi trước, 4 câu hỏi cần chốt và mẫu biên bản có ô quyết định, người phụ trách, hạn."
+      },
       "rank": 21
     },
     {
@@ -902,7 +950,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Vấn đề: nhân viên mới ít tham gia hoạt động văn hóa · Đối tượng: nhân viên dưới 1 năm · Giới hạn: 2 tháng, ngân sách thấp",
+        "output": "15 ý tưởng đánh số theo 3 nhóm, sau đó 3 ý tưởng được chọn kèm lý do về tác động và độ khả thi."
+      },
       "rank": 3
     },
     {
@@ -945,7 +997,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Đề xuất 2 trang cho ngày hội gia đình · Người duyệt: giám đốc khối · Quan tâm nhất: chi phí và tỉ lệ tham gia",
+        "output": "Bảng 11 dòng: 5 câu hỏi khó về chi phí, tỉ lệ tham gia, an toàn trẻ em; 3 giả định chưa có số liệu; 3 rủi ro triển khai, mỗi dòng có cách củng cố cụ thể."
+      },
       "rank": 16
     },
     {
@@ -989,7 +1045,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Vấn đề: số người đăng ký hoạt động văn hóa quý này thấp hơn quý trước · Đã biết: số đăng ký từng quý, lịch các hoạt động trùng với kỳ chốt số liệu",
+        "output": "Chuỗi 5 câu hỏi tại sao, bảng nguyên nhân 4 nhóm, 3 nguyên nhân khả dĩ (ví dụ trùng lịch cao điểm) kèm cách kiểm chứng như hỏi nhanh 10 người hoặc so lịch."
+      },
       "rank": 28
     },
     {
@@ -1036,7 +1096,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Hoạt động: chuỗi workshop kỹ năng quý III · Số liệu: số buổi, số người đăng ký và tham dự thực tế, điểm khảo sát trung bình · Người đọc: giám đốc khối · Cần quyết: có mở rộng sang quý IV không",
+        "output": "Báo cáo 1 trang: 3 kết quả có số, so với mục tiêu đã nêu, 2 điểm làm tốt, 2 điểm cần cải thiện và một đề xuất rõ ràng kèm việc cần quyết."
+      },
       "rank": 13
     },
     {
@@ -1081,7 +1145,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "10–15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "80 phản hồi mở sau buổi workshop, đã xóa họ tên và mã nhân viên",
+        "output": "Bảng 5 chủ đề (ví dụ: thời lượng, nội dung thực hành, địa điểm) có số lượt nhắc và trích dẫn nguyên văn; 3 đề xuất gắn với chủ đề được nhắc nhiều nhất."
+      },
       "rank": 23
     },
     {
@@ -1125,7 +1193,11 @@ window.YAI_DATA = {
         "Canva"
       ],
       "time": "10–20 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Chủ đề: kết quả một năm hoạt động văn hóa của đơn vị · Nội dung: bảng tổng hợp số hoạt động, số người tham gia đã được xác nhận",
+        "output": "Danh sách 5 khối theo thứ tự đọc từ trên xuống, mỗi khối có tiêu đề phụ, con số lấy đúng từ bảng, biểu tượng gợi ý; một khối dùng biểu đồ cột; dòng nguồn ở chân trang."
+      },
       "rank": 29
     },
     {
@@ -1173,7 +1245,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "15–20 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Chủ đề: dùng AI viết bài đăng nội bộ · 60 phút · 25 nhân viên văn phòng, chưa dùng AI thường xuyên · Kết quả cần đạt: viết được prompt đủ 5 phần, biết kiểm chứng kết quả · Hình thức: trực tiếp",
+        "output": "Bảng kịch bản 6–8 dòng, tổng đúng 60 phút. Mỗi phần lý thuyết không quá 10 phút và đi kèm một hoạt động thực hành; cột cuối nêu cách kiểm tra người học đã hiểu."
+      },
       "rank": 7
     },
     {
@@ -1219,7 +1295,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Tài liệu: hướng dẫn quy trình đặt phòng họp nội bộ · 10 câu · Đối tượng: nhân viên mới",
+        "output": "10 câu trắc nghiệm, mỗi câu 4 phương án và 1 đáp án đúng, có giải thích ngắn và đoạn tài liệu làm căn cứ; trộn câu hỏi nhớ, hiểu và vận dụng."
+      },
       "rank": 12
     },
     {
@@ -1263,7 +1343,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "Khoảng 15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Đơn vị: phòng Truyền thông · 2 nhân viên mới vị trí chuyên viên nội dung · Đã có: sổ tay nhân viên, buổi giới thiệu chung, 1 người hướng dẫn",
+        "output": "Bảng 3 giai đoạn 30–60–90 ngày với mục tiêu, hoạt động, người phụ trách theo vai trò và dấu hiệu hoàn thành; danh sách việc cho quản lý trong tuần đầu; phần chính sách ghi \"theo quy định hiện hành của đơn vị\"."
+      },
       "rank": 24
     },
     {
@@ -1307,7 +1391,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Phản ánh đã ẩn danh: khách chờ lâu tại quầy giao dịch · Hướng xử lý đã xác nhận: bổ sung nhân sự giờ cao điểm từ tuần sau · Kênh: email",
+        "output": "Thư dưới 180 từ: cảm ơn và ghi nhận, nhắc lại vấn đề bằng lời của khách, hướng xử lý và thời điểm áp dụng, đầu mối liên hệ. Không có lời hứa nào ngoài hướng đã xác nhận."
+      },
       "rank": 6
     },
     {
@@ -1352,7 +1440,11 @@ window.YAI_DATA = {
         "ChatGPT"
       ],
       "time": "10–15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Tài liệu: trang giới thiệu công khai của một sản phẩm thẻ · Nhóm khách hàng: sinh viên · 8 câu hỏi",
+        "output": "Bảng 8 dòng gồm câu hỏi, câu trả lời tối đa 60 chữ và vị trí trích dẫn trong tài liệu. Câu nào tài liệu không trả lời được ghi \"cần bộ phận sản phẩm xác nhận\"."
+      },
       "rank": 18
     },
     {
@@ -1396,7 +1488,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "15–20 phút luyện tập",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Khách hàng giả định: chủ cửa hàng nhỏ, ngại thủ tục phức tạp, ít dùng ứng dụng ngân hàng · Thông tin dịch vụ đã công bố · 6 lượt",
+        "output": "AI hỏi từng lượt 1–2 câu như khách thật, có phản đối tự nhiên; sau 6 lượt nhận xét theo 4 tiêu chí, mỗi tiêu chí 1 điểm tốt và 1 điểm cần cải thiện."
+      },
       "rank": 27
     },
     {
@@ -1443,7 +1539,11 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 5 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Dự án: ngày hội văn hóa · Ghi chú tuần: đã chốt địa điểm, đang chờ báo giá âm thanh, chưa có danh sách đội thi · Mốc: tổng duyệt sau 3 tuần · Người nhận: trưởng phòng",
+        "output": "Báo cáo dưới 200 từ dạng gạch đầu dòng: trạng thái chung kèm 1 câu lý do, việc đã xong, việc tuần tới, vướng mắc kèm người cần quyết định."
+      },
       "rank": 8
     },
     {
@@ -1489,7 +1589,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "10–15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:29",
+      "example": {
+        "input": "Sự kiện: Hội thao nội bộ · 6 tuần chuẩn bị · Đội ngũ: trưởng ban, 2 người hậu cần, 1 người truyền thông, 1 người tài chính",
+        "output": "Bảng khoảng 20–25 đầu việc chia 5 hạng mục với mốc D-42 đến D+3, cột phụ thuộc giúp thấy việc nào phải xong trước; cuối bảng là 5 rủi ro như thời tiết, thiếu người đăng ký, kèm phương án dự phòng."
+      },
       "rank": 17
     },
     {
@@ -1534,7 +1638,11 @@ window.YAI_DATA = {
         "Copilot"
       ],
       "time": "Khoảng 15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
+      "example": {
+        "input": "Dự án: chuỗi workshop AI cho 120 người trong 2 tháng · Nguồn lực: 4 người, ngân sách mức vừa · Các bên: ban tổ chức, giảng viên, đơn vị hậu cần",
+        "output": "Bảng 8–10 rủi ro xếp theo ưu tiên, mỗi dòng có nguyên nhân, khả năng, ảnh hưởng, dấu hiệu cảnh báo sớm, biện pháp phòng ngừa và người theo dõi; đánh giá nào là giả định được ghi rõ."
+      },
       "rank": 25
     },
     {
@@ -1579,7 +1687,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
       "source": "UI Design Audit · Prompt 01",
       "audit_no": 1,
       "audit_group": "A",
@@ -1589,6 +1697,10 @@ window.YAI_DATA = {
         "reviewer",
         "marketing"
       ],
+      "example": {
+        "input": "Ảnh landing page đăng ký sự kiện (đã che thông tin) · Bối cảnh: nhân viên toàn hệ thống, mục tiêu là đăng ký tham gia",
+        "output": "7 mục theo 7 tiêu chí, mỗi mục có hiện trạng, điểm tốt, vấn đề, tác động và hướng cải thiện; cuối cùng là 5 vấn đề cần ưu tiên."
+      },
       "rank": 5
     },
     {
@@ -1632,7 +1744,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
       "source": "UI Design Audit · Prompt 02",
       "audit_no": 2,
       "audit_group": "A",
@@ -1641,6 +1753,10 @@ window.YAI_DATA = {
         "product",
         "reviewer"
       ],
+      "example": {
+        "input": "Ảnh màn hình đặt lịch hẹn trên ứng dụng di động · Mục tiêu màn hình: chọn ngày giờ và xác nhận",
+        "output": "Bảng Vấn đề | Vị trí | Mức độ ảnh hưởng | Nguyên nhân | Đề xuất. Chưa có phương án redesign."
+      },
       "rank": 15
     },
     {
@@ -1684,7 +1800,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "5–10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
       "source": "UI Design Audit · Prompt 03",
       "audit_no": 3,
       "audit_group": "B",
@@ -1692,6 +1808,10 @@ window.YAI_DATA = {
         "designer",
         "marketing"
       ],
+      "example": {
+        "input": "Ảnh banner tuyển cộng tác viên truyền thông nội bộ có 4 khối chữ",
+        "output": "Trả lời 5 câu hỏi về phân cấp thị giác, rồi đề xuất thứ tự ưu tiên mới, ví dụ tiêu đề → lợi ích → nút đăng ký, giữ nguyên nội dung."
+      },
       "rank": 26
     },
     {
@@ -1735,7 +1855,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T15:47",
       "source": "UI Design Audit · Prompt 04",
       "audit_no": 4,
       "audit_group": "B",
@@ -1743,6 +1863,10 @@ window.YAI_DATA = {
         "designer",
         "developer"
       ],
+      "example": {
+        "input": "Ảnh 3 màn hình của cùng ứng dụng, kèm danh sách cỡ chữ đang dùng",
+        "output": "Nhận xét từng tiêu chí typography và một thang chữ đề xuất cho heading, body, caption, label, dùng font hiện có."
+      },
       "rank": 31
     },
     {
@@ -1787,7 +1911,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 05",
       "audit_no": 5,
       "audit_group": "C",
@@ -1795,6 +1919,10 @@ window.YAI_DATA = {
         "designer",
         "developer"
       ],
+      "example": {
+        "input": "Ảnh trang tin tức nội bộ trên máy tính",
+        "output": "Bảng Vị trí | Vấn đề | Ảnh hưởng | Đề xuất; khoảng cách không ước lượng được ghi \"cần đo lại trên file thiết kế\"."
+      },
       "rank": 32
     },
     {
@@ -1837,7 +1965,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "10–15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 06",
       "audit_extra": {
         "label": "Design System hoặc bộ component chuẩn",
@@ -1850,6 +1978,10 @@ window.YAI_DATA = {
         "developer",
         "product"
       ],
+      "example": {
+        "input": "Ảnh 5 màn hình của cùng sản phẩm, kèm mô tả nút chính trong Design System",
+        "output": "Bảng component với các biến thể đang có, điểm không nhất quán, đề xuất chuẩn hóa và mức ưu tiên."
+      },
       "rank": 33
     },
     {
@@ -1894,7 +2026,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "5–10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 07",
       "audit_no": 7,
       "audit_group": "D",
@@ -1903,6 +2035,10 @@ window.YAI_DATA = {
         "marketing",
         "developer"
       ],
+      "example": {
+        "input": "Ảnh poster sự kiện dùng nền gradient và chữ trắng",
+        "output": "Bảng các vị trí dùng màu, vấn đề và đề xuất; các cặp màu cần đo lại độ tương phản được đánh dấu riêng."
+      },
       "rank": 34
     },
     {
@@ -1945,7 +2081,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 15 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 08",
       "audit_no": 8,
       "audit_group": "D",
@@ -1954,6 +2090,10 @@ window.YAI_DATA = {
         "developer",
         "product"
       ],
+      "example": {
+        "input": "Ảnh màn hình đăng nhập và màn hình báo lỗi của ứng dụng",
+        "output": "Bảng vấn đề kèm nhóm người dùng bị ảnh hưởng và mức độ; danh sách riêng các mục phải kiểm tra trên sản phẩm thật."
+      },
       "rank": 35
     },
     {
@@ -1997,7 +2137,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "15–20 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 09",
       "audit_extra": {
         "label": "Các bước trong luồng",
@@ -2009,6 +2149,10 @@ window.YAI_DATA = {
         "product",
         "designer"
       ],
+      "example": {
+        "input": "4 ảnh của luồng đăng ký sự kiện: Trang chủ → Chọn sự kiện → Điền thông tin → Xác nhận",
+        "output": "Bảng theo từng bước: việc người dùng cần làm, điểm gây ma sát, đề xuất; cuối cùng là 3 điểm ma sát lớn nhất."
+      },
       "rank": 36
     },
     {
@@ -2054,7 +2198,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 10",
       "audit_no": 10,
       "audit_group": "E",
@@ -2063,6 +2207,10 @@ window.YAI_DATA = {
         "product",
         "designer"
       ],
+      "example": {
+        "input": "Ảnh landing page có nút \"Gửi\" và thông báo lỗi \"Lỗi hệ thống\"",
+        "output": "Bảng Vị trí | Nội dung hiện tại | Vấn đề | Đề xuất viết lại, ví dụ đổi tên nút thành một động từ nói rõ hành động."
+      },
       "rank": 37
     },
     {
@@ -2105,7 +2253,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "15–20 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 11",
       "audit_extra": {
         "label": "Kết quả audit đã thống nhất",
@@ -2118,6 +2266,10 @@ window.YAI_DATA = {
         "designer",
         "product"
       ],
+      "example": {
+        "input": "Ảnh màn hình hiện tại kèm bảng 5 vấn đề ưu tiên đã thống nhất",
+        "output": "Mục tiêu redesign, cấu trúc khối mới từ trên xuống, thay đổi của từng khối gắn với vấn đề tương ứng, danh sách phần giữ nguyên."
+      },
       "rank": 38
     },
     {
@@ -2161,7 +2313,7 @@ window.YAI_DATA = {
         "Gemini"
       ],
       "time": "Khoảng 10 phút",
-      "added": "2026-11-11",
+      "added": "2026-11-11T16:20",
       "source": "UI Design Audit · Prompt 12",
       "audit_extra": {
         "label": "Danh sách vấn đề từ lần audit trước",
@@ -2176,6 +2328,10 @@ window.YAI_DATA = {
         "developer",
         "product"
       ],
+      "example": {
+        "input": "Ảnh bản trước và bản sau cùng kích thước, kèm danh sách 5 vấn đề",
+        "output": "Bảng Vấn đề | Trạng thái | Căn cứ quan sát được | Việc cần làm tiếp, kèm vấn đề mới phát sinh nếu có."
+      },
       "rank": 39
     }
   ],
@@ -2438,6 +2594,114 @@ window.YAI_DATA = {
       ],
       "note": "Kết quả do AI hỗ trợ cần được designer và người phụ trách sản phẩm rà soát trước khi sử dụng.",
       "ai_lead": "Hãy trình bày toàn bộ kết quả audit theo đúng mẫu báo cáo dưới đây. Mục nào chưa có thông tin thì ghi \"cần bổ sung\", không tự điền."
+    },
+    "example": {
+      "title": "Trang đăng ký Ngày hội gia đình trên điện thoại",
+      "note": "Giao diện giả định, dựng để minh họa cách đi qua 6 bước. Không phải sản phẩm thật và không có số liệu đo thật.",
+      "context": [
+        [
+          "Sản phẩm",
+          "Trang đăng ký sự kiện nội bộ, mở từ tin nhắn trên điện thoại"
+        ],
+        [
+          "Người dùng mục tiêu",
+          "Cán bộ nhân viên và người thân"
+        ],
+        [
+          "Mục tiêu của màn hình",
+          "Để nhân viên đăng ký tham gia"
+        ],
+        [
+          "Hành động chính",
+          "Bấm Đăng ký"
+        ]
+      ],
+      "issues": [
+        {
+          "sev": "high",
+          "loc": "Cuối trang",
+          "problem": "Không thấy nút Đăng ký ở màn hình đầu",
+          "cause": "Ảnh banner chiếm gần hết màn hình đầu",
+          "impact": "Người dùng không biết bước tiếp theo, dễ bỏ qua",
+          "fix": "Thu nhỏ ảnh, ghim nút Đăng ký ở cuối màn hình"
+        },
+        {
+          "sev": "high",
+          "loc": "Khối nút",
+          "problem": "Nút Đăng ký cùng màu, cùng cỡ với nút Chia sẻ",
+          "cause": "Chưa phân cấp hành động chính và phụ",
+          "impact": "Khó nhận ra việc cần làm",
+          "fix": "Một màu nhấn cho Đăng ký; Chia sẻ thành nút phụ"
+        },
+        {
+          "sev": "medium",
+          "loc": "Đoạn mô tả",
+          "problem": "Thời gian, địa điểm nằm trong đoạn văn dài",
+          "cause": "Thông tin quan trọng không được tách riêng",
+          "impact": "Phải đọc hết mới thấy, dễ bỏ sót",
+          "fix": "Tách thành 2 dòng thông tin có biểu tượng ngay dưới tiêu đề"
+        },
+        {
+          "sev": "medium",
+          "loc": "Tiêu đề",
+          "problem": "Tiêu đề gần cùng cỡ với nội dung",
+          "cause": "Thiếu thang chữ",
+          "impact": "Khó quét nhanh nội dung chính",
+          "fix": "Tăng cỡ và độ đậm tiêu đề theo thang chữ của Design System"
+        },
+        {
+          "sev": "low",
+          "loc": "Ảnh banner",
+          "problem": "Chữ đặt trên nền ảnh nhiều chi tiết",
+          "cause": "Không có lớp nền dưới chữ",
+          "impact": "Khó đọc chữ trên ảnh",
+          "fix": "Bỏ chữ khỏi ảnh hoặc thêm lớp nền tối"
+        }
+      ],
+      "steps": [
+        [
+          "Bước 1",
+          "Điền bối cảnh trong phần Tùy chỉnh",
+          []
+        ],
+        [
+          "Bước 2",
+          "Đánh giá tổng thể và phân cấp thị giác",
+          [
+            "ux1",
+            "ux3"
+          ]
+        ],
+        [
+          "Bước 3",
+          "Phân tích CTA và nội dung chữ",
+          [
+            "ux10"
+          ]
+        ],
+        [
+          "Bước 4–5",
+          "Xếp mức độ, đề xuất redesign",
+          [
+            "ux2",
+            "ux11"
+          ]
+        ],
+        [
+          "Bước 6",
+          "So sánh trước và sau",
+          [
+            "ux12"
+          ]
+        ]
+      ],
+      "verify": [
+        "Nút Đăng ký nhìn thấy ngay ở màn hình đầu trên điện thoại thật",
+        "Mỗi màn hình chỉ có một nút chính",
+        "Thời gian, địa điểm đọc được mà không phải cuộn",
+        "Màu và cỡ chữ đúng Design System",
+        "Không phát sinh lỗi mới; người duyệt thiết kế ký nhận"
+      ]
     },
     "checklist": [
       {
