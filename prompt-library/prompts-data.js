@@ -5586,8 +5586,8 @@ window.YAI_DATA = {
       "time": "Khoảng 5 phút",
       "added": "2026-11-24T10:00",
       "example": {
-        "input": "Bình giữ nhiệt inox 500ml · mô tả shop · 15 đánh giá · ngành gia dụng",
-        "output": "Brief 1 trang: 3 lợi ích (giữ nóng 12 giờ theo thông số shop, nhẹ, không rò nước), 3 điều khách chê (nắp hơi khó vặn…), danh sách không được nói (\"giữ nhiệt vĩnh viễn\", \"tốt nhất thị trường\")."
+        "input": "Dán mô tả shop, thông số và 15 đánh giá của bình giữ nhiệt; ngành hàng: gia dụng.",
+        "output": "1. Tóm tắt: Bình nhỏ gọn bỏ túi, pha trà sáng uống tới chiều vẫn nóng.\n2. Lợi ích: giữ nóng 12 giờ theo thông số shop; nhẹ 280g, bỏ túi xách không nặng; có lưới lọc, pha trà ngay trong bình.\n4. Khách chê: nắp hơi khó vặn lần đầu; màu thực tế đậm hơn ảnh.\n6. KHÔNG ĐƯỢC NÓI: \"giữ nhiệt vĩnh viễn\", \"tốt nhất thị trường\", \"chống ung thư\", \"inox y tế\" (chưa có giấy tờ)."
       },
       "video_step": 1,
       "rank": 40
@@ -5635,7 +5635,11 @@ window.YAI_DATA = {
       "time": "Khoảng 5 phút",
       "added": "2026-11-24T10:00",
       "video_step": 2,
-      "rank": 41
+      "rank": 41,
+      "example": {
+        "input": "Brief ở bước 1; nền tảng: TikTok.",
+        "output": "Nhóm 1 · Nhân viên văn phòng 24–32 tuổi\n• Khoảnh khắc: 3 giờ chiều rót trà pha từ sáng thì đã nguội ngắt.\n• Câu hay than: \"Pha xong để đó, uống được hai ngụm là nguội.\"\n• Ngần ngại: sợ bình rò nước làm ướt laptop.\n• Bằng chứng thuyết phục: cảnh lật ngược bình không rỉ nước, quay thật.\n• Giọng điệu: gần gũi, hơi hài hước."
+      }
     },
     {
       "id": "va3",
@@ -5681,7 +5685,11 @@ window.YAI_DATA = {
       "time": "Khoảng 5 phút",
       "added": "2026-11-24T10:00",
       "video_step": 3,
-      "rank": 42
+      "rank": 42,
+      "example": {
+        "input": "Nhóm khách hàng 1 ở bước 2; danh sách KHÔNG ĐƯỢC NÓI ở bước 1.",
+        "output": "• Câu hỏi: \"Trà pha từ sáng, 3 giờ chiều còn nóng không?\"\n• Tò mò: \"Thứ duy nhất trên bàn mình không bao giờ nguội…\"\n• Kể chuyện: \"Mình từng làm đổ trà lên laptop vì cái bình cũ.\"\n→ Chọn 3 hook để A/B test: câu hỏi, kể chuyện, tò mò."
+      }
     },
     {
       "id": "va4",
@@ -5729,7 +5737,11 @@ window.YAI_DATA = {
       "time": "Khoảng 10 phút",
       "added": "2026-11-24T10:00",
       "video_step": 4,
-      "rank": 43
+      "rank": 43,
+      "example": {
+        "input": "Dạng review thật, 30 giây; hook: \"Trà pha từ sáng, 3 giờ chiều còn nóng không?\"",
+        "output": "0–3s | \"Trà pha từ sáng, 3 giờ chiều còn nóng không?\" | Cận đồng hồ 15:00 cạnh bình | QUAY THẬT | 15:00?\n3–8s | \"Bình cũ của mình hai tiếng là nguội.\" | Cốc trà nguội, mặt chán | AI\n8–20s | \"Cái này pha 8 giờ sáng, giờ rót ra vẫn bốc khói.\" | Rót trà, hơi nước bốc lên | QUAY THẬT\n20–26s | \"Shop ghi giữ nóng 12 tiếng. Nói thật là nắp hơi khó vặn lần đầu.\" | Cận nắp, lật ngược bình | QUAY THẬT\n26–30s | \"Mình để ở giỏ hàng nhé.\" | Bình trong túi xách | AI"
+      }
     },
     {
       "id": "va5",
@@ -5777,8 +5789,8 @@ window.YAI_DATA = {
       "time": "Khoảng 10 phút",
       "added": "2026-11-24T10:00",
       "example": {
-        "input": "Cảnh 3 (AI): nhân viên văn phòng rót trà từ bình giữ nhiệt · ảnh bình 4 góc · Kling",
-        "output": "A young Vietnamese office woman in a beige blazer pours hot tea from the stainless steel tumbler (keep exactly as reference image) into its lid, steam rising, cozy office desk, morning sunlight, slow push-in, 9:16, 5 seconds."
+        "input": "Cảnh 3–8s (AI) trong kịch bản; 5 ảnh bình thật; công cụ: Kling.",
+        "output": "Prompt: A young Vietnamese office worker, short black hair, white shirt, sighs at a cup of cold tea on a cluttered desk, late afternoon light, static medium shot, realistic, 9:16, 5 seconds.\nNegative: no distorted text, no extra fingers.\nẢnh tham chiếu: không cần (cảnh này chưa có sản phẩm).\nCảnh cuối (bình trong túi xách) dùng ảnh bình thật làm tham chiếu, ghi \"keep the tumbler exactly as reference image\"."
       },
       "video_step": 5,
       "rank": 44
@@ -5826,7 +5838,11 @@ window.YAI_DATA = {
       "time": "Khoảng 5 phút",
       "added": "2026-11-24T10:00",
       "video_step": 6,
-      "rank": 45
+      "rank": 45,
+      "example": {
+        "input": "Cảnh bình trong túi xách: lần tạo đầu chữ khắc trên thân bình bị méo, tay cầm có 6 ngón.",
+        "output": "Nguyên nhân: cận cảnh có chữ, hành động \"cầm bình bỏ vào túi\" quá nhiều chi tiết tay.\nPrompt sửa: The tumbler (keep exactly as reference image, logo facing away from camera) rests inside an open beige tote bag on a chair, slow push-in, soft daylight, 9:16, 5 seconds.\nCách làm: thử bằng Kling Standard 720p (rẻ), đạt rồi mới tạo 1080p. Chi phí thực tế: 3 lần thử + 1 bản đẹp."
+      }
     },
     {
       "id": "va7",
@@ -5872,7 +5888,11 @@ window.YAI_DATA = {
       "time": "Khoảng 5 phút",
       "added": "2026-11-24T10:00",
       "video_step": 7,
-      "rank": 46
+      "rank": 46,
+      "example": {
+        "input": "Lời thoại 30 giây ở bước 4; giọng miền Bắc.",
+        "output": "Trà pha từ sáng / ba giờ chiều / còn NÓNG không? // Bình cũ của mình / hai tiếng là nguội. // Cái này pha tám giờ sáng / giờ rót ra / vẫn BỐC KHÓI. // Shop ghi / giữ nóng mười hai tiếng. // Nói thật là / nắp hơi khó vặn / lần đầu. // Mình để ở giỏ hàng nhé.\nThời lượng ước tính: 26 giây."
+      }
     },
     {
       "id": "va8",
@@ -5918,7 +5938,11 @@ window.YAI_DATA = {
       "time": "Khoảng 5 phút",
       "added": "2026-11-24T10:00",
       "video_step": 8,
-      "rank": 47
+      "rank": 47,
+      "example": {
+        "input": "Video đã dựng xong, 3 phiên bản hook; đăng TikTok lúc 11:30 và 20:00.",
+        "output": "Caption: \"Trà pha 8h sáng, 3h chiều rót ra vẫn bốc khói. Bạn uống trà nóng hay lạnh? (có link tiếp thị liên kết)\"\nHashtag: #giadung #vanphong #binhgiunhiet #tratamchieu #reviewthat\nĐọc số sau 48 giờ (số minh họa): bản \"câu hỏi\" giữ 58% người xem qua 3 giây, bản \"tò mò\" 41% → giữ bản câu hỏi, viết lại hook tò mò (bước 3)."
+      }
     }
   ],
   "clinic": [
@@ -6364,7 +6388,14 @@ window.YAI_DATA = {
         "Ảnh sản phẩm thật 4–6 góc, nền trơn, đủ sáng, chữ trên bao bì rõ",
         "3–5 clip quay thật (cầm tay, mở hộp, dùng thử), mỗi clip 3–5 giây, quay dọc",
         "2–3 video đối thủ đang có nhiều lượt xem để tham khảo nhịp dựng, không sao chép"
-      ]
+      ],
+      "tools": [
+        "capcut"
+      ],
+      "example": {
+        "input": "Trang sản phẩm trên TikTok Shop, điện thoại quay dọc, một bàn làm việc có ánh sáng cửa sổ.",
+        "output": "Thư mục \"binh-giu-nhiet\" gồm:\n• brief-shop.txt: mô tả, thông số, giá 189.000đ, hoa hồng 12%\n• danh-gia.txt: 15 đánh giá (12 khen, 3 chê \"nắp hơi khó vặn\")\n• 5 ảnh: trước, sau, nắp, lưới lọc, đáy bình\n• 4 clip 4 giây: cầm bình, mở nắp, rót trà nóng, bỏ vào túi xách\n• 2 link video đối thủ trên 500 nghìn lượt xem"
+      }
     },
     "steps": [
       {
@@ -6376,6 +6407,15 @@ window.YAI_DATA = {
         "goal": "Có brief 1 trang với thông tin có thật và danh sách từ ngữ KHÔNG ĐƯỢC NÓI.",
         "tips": [
           "Mục \"điều khách chê\" rất quý: dùng để viết phần nói thật, giúp video đáng tin hơn."
+        ],
+        "example": {
+          "input": "Dán mô tả shop, thông số và 15 đánh giá của bình giữ nhiệt; ngành hàng: gia dụng.",
+          "output": "1. Tóm tắt: Bình nhỏ gọn bỏ túi, pha trà sáng uống tới chiều vẫn nóng.\n2. Lợi ích: giữ nóng 12 giờ theo thông số shop; nhẹ 280g, bỏ túi xách không nặng; có lưới lọc, pha trà ngay trong bình.\n4. Khách chê: nắp hơi khó vặn lần đầu; màu thực tế đậm hơn ảnh.\n6. KHÔNG ĐƯỢC NÓI: \"giữ nhiệt vĩnh viễn\", \"tốt nhất thị trường\", \"chống ung thư\", \"inox y tế\" (chưa có giấy tờ)."
+        },
+        "tools": [
+          "chatgpt",
+          "claude",
+          "gemini"
         ]
       },
       {
@@ -6387,6 +6427,15 @@ window.YAI_DATA = {
         "goal": "Chọn 1 trong 3 nhóm khách hàng để làm video.",
         "tips": [
           "Cột \"câu hay tự than\" là nguyên liệu viết hook; cột \"lý do ngần ngại\" dùng để viết phần bằng chứng."
+        ],
+        "example": {
+          "input": "Brief ở bước 1; nền tảng: TikTok.",
+          "output": "Nhóm 1 · Nhân viên văn phòng 24–32 tuổi\n• Khoảnh khắc: 3 giờ chiều rót trà pha từ sáng thì đã nguội ngắt.\n• Câu hay than: \"Pha xong để đó, uống được hai ngụm là nguội.\"\n• Ngần ngại: sợ bình rò nước làm ướt laptop.\n• Bằng chứng thuyết phục: cảnh lật ngược bình không rỉ nước, quay thật.\n• Giọng điệu: gần gũi, hơi hài hước."
+        },
+        "tools": [
+          "chatgpt",
+          "claude",
+          "gemini"
         ]
       },
       {
@@ -6398,6 +6447,15 @@ window.YAI_DATA = {
         "goal": "Chọn 3 hook để làm 3 phiên bản A/B test.",
         "tips": [
           "Hook tốt nghe như bạn bè kể chuyện, không như quảng cáo truyền hình."
+        ],
+        "example": {
+          "input": "Nhóm khách hàng 1 ở bước 2; danh sách KHÔNG ĐƯỢC NÓI ở bước 1.",
+          "output": "• Câu hỏi: \"Trà pha từ sáng, 3 giờ chiều còn nóng không?\"\n• Tò mò: \"Thứ duy nhất trên bàn mình không bao giờ nguội…\"\n• Kể chuyện: \"Mình từng làm đổ trà lên laptop vì cái bình cũ.\"\n→ Chọn 3 hook để A/B test: câu hỏi, kể chuyện, tò mò."
+        },
+        "tools": [
+          "chatgpt",
+          "claude",
+          "gemini"
         ]
       },
       {
@@ -6410,6 +6468,15 @@ window.YAI_DATA = {
         "tips": [
           "Sản phẩm thật xuất hiện trước giây thứ 10.",
           "Cận cảnh có chữ, logo luôn là cảnh quay thật."
+        ],
+        "example": {
+          "input": "Dạng review thật, 30 giây; hook: \"Trà pha từ sáng, 3 giờ chiều còn nóng không?\"",
+          "output": "0–3s | \"Trà pha từ sáng, 3 giờ chiều còn nóng không?\" | Cận đồng hồ 15:00 cạnh bình | QUAY THẬT | 15:00?\n3–8s | \"Bình cũ của mình hai tiếng là nguội.\" | Cốc trà nguội, mặt chán | AI\n8–20s | \"Cái này pha 8 giờ sáng, giờ rót ra vẫn bốc khói.\" | Rót trà, hơi nước bốc lên | QUAY THẬT\n20–26s | \"Shop ghi giữ nóng 12 tiếng. Nói thật là nắp hơi khó vặn lần đầu.\" | Cận nắp, lật ngược bình | QUAY THẬT\n26–30s | \"Mình để ở giỏ hàng nhé.\" | Bình trong túi xách | AI"
+        },
+        "tools": [
+          "chatgpt",
+          "claude",
+          "gemini"
         ]
       },
       {
@@ -6421,6 +6488,17 @@ window.YAI_DATA = {
         "goal": "Mỗi cảnh AI có prompt tiếng Anh, negative prompt, ảnh tham chiếu.",
         "tips": [
           "Xoay, rót, xịt, mở nắp: Kling. Người nói thoại, nhiều shot liền nhau: Seedance. Máy quay kiểu điện ảnh, mẫu có sẵn: Higgsfield."
+        ],
+        "example": {
+          "input": "Cảnh 3–8s (AI) trong kịch bản; 5 ảnh bình thật; công cụ: Kling.",
+          "output": "Prompt: A young Vietnamese office worker, short black hair, white shirt, sighs at a cup of cold tea on a cluttered desk, late afternoon light, static medium shot, realistic, 9:16, 5 seconds.\nNegative: no distorted text, no extra fingers.\nẢnh tham chiếu: không cần (cảnh này chưa có sản phẩm).\nCảnh cuối (bình trong túi xách) dùng ảnh bình thật làm tham chiếu, ghi \"keep the tumbler exactly as reference image\"."
+        },
+        "tools": [
+          "chatgpt",
+          "claude",
+          "nanobanana",
+          "gptimage",
+          "midjourney"
         ]
       },
       {
@@ -6434,6 +6512,17 @@ window.YAI_DATA = {
           "Tạo ảnh keyframe trước, ảnh rẻ hơn video rất nhiều.",
           "Thử bằng bản rẻ (Seedance Flash, Kling Standard, Veo Fast) rồi mới tạo bản 1080p.",
           "Mỗi cảnh tạo 2–3 lần; sửa prompt nhanh hơn cố cứu cảnh hỏng."
+        ],
+        "example": {
+          "input": "Cảnh bình trong túi xách: lần tạo đầu chữ khắc trên thân bình bị méo, tay cầm có 6 ngón.",
+          "output": "Nguyên nhân: cận cảnh có chữ, hành động \"cầm bình bỏ vào túi\" quá nhiều chi tiết tay.\nPrompt sửa: The tumbler (keep exactly as reference image, logo facing away from camera) rests inside an open beige tote bag on a chair, slow push-in, soft daylight, 9:16, 5 seconds.\nCách làm: thử bằng Kling Standard 720p (rẻ), đạt rồi mới tạo 1080p. Chi phí thực tế: 3 lần thử + 1 bản đẹp."
+        },
+        "tools": [
+          "kling",
+          "dreamina",
+          "flow",
+          "higgsfield",
+          "hailuo"
         ]
       },
       {
@@ -6446,6 +6535,16 @@ window.YAI_DATA = {
         "tips": [
           "Ưu tiên giọng thật của bạn. Giọng AI mặc định của CapCut nhiều người dùng, dễ bị nhận ra.",
           "Phụ đề nằm trong vùng an toàn, không bị nút thích, bình luận che."
+        ],
+        "example": {
+          "input": "Lời thoại 30 giây ở bước 4; giọng miền Bắc.",
+          "output": "Trà pha từ sáng / ba giờ chiều / còn NÓNG không? // Bình cũ của mình / hai tiếng là nguội. // Cái này pha tám giờ sáng / giờ rót ra / vẫn BỐC KHÓI. // Shop ghi / giữ nóng mười hai tiếng. // Nói thật là / nắp hơi khó vặn / lần đầu. // Mình để ở giỏ hàng nhé.\nThời lượng ước tính: 26 giây."
+        },
+        "tools": [
+          "capcut",
+          "elevenlabs",
+          "vbee",
+          "fptai"
         ]
       },
       {
@@ -6459,6 +6558,16 @@ window.YAI_DATA = {
           "Ít người xem qua 3 giây: đổi hook (bước 3).",
           "Bỏ ngang giữa video: kịch bản dài, nhịp chậm (bước 4).",
           "Xem nhiều nhưng ít bấm giỏ: thiếu bằng chứng, lời kêu gọi yếu hoặc sai người xem (bước 2)."
+        ],
+        "example": {
+          "input": "Video đã dựng xong, 3 phiên bản hook; đăng TikTok lúc 11:30 và 20:00.",
+          "output": "Caption: \"Trà pha 8h sáng, 3h chiều rót ra vẫn bốc khói. Bạn uống trà nóng hay lạnh? (có link tiếp thị liên kết)\"\nHashtag: #giadung #vanphong #binhgiunhiet #tratamchieu #reviewthat\nĐọc số sau 48 giờ (số minh họa): bản \"câu hỏi\" giữ 58% người xem qua 3 giây, bản \"tò mò\" 41% → giữ bản câu hỏi, viết lại hook tò mò (bước 3)."
+        },
+        "tools": [
+          "chatgpt",
+          "claude",
+          "gemini",
+          "tiktokstudio"
         ]
       }
     ],
@@ -6630,32 +6739,50 @@ window.YAI_DATA = {
       [
         "Google Veo 3.1 / Flow",
         "Video điện ảnh chất lượng cao, có tiếng",
-        "Flow cho 50 credit miễn phí mỗi ngày; gói Google AI Pro khoảng 19,99 USD/tháng."
+        [
+          "flow"
+        ]
       ],
       [
         "Hailuo (MiniMax)",
-        "Video giá rẻ, chuyển động mạnh",
-        "Lựa chọn thay thế khi hết credit Kling."
+        "Video giá rẻ, chuyển động mạnh; thay thế khi hết credit Kling",
+        [
+          "hailuo"
+        ]
       ],
       [
         "HeyGen",
-        "Avatar dẫn chuyện, dịch video",
-        "Bắt buộc gắn nhãn AI."
+        "Avatar dẫn chuyện, dịch video; bắt buộc gắn nhãn AI",
+        [
+          "heygen"
+        ]
       ],
       [
-        "ElevenLabs, Vbee, FPT.AI",
         "Giọng đọc tiếng Việt",
-        "Vbee, FPT.AI có giọng vùng miền tự nhiên hơn."
+        "Lồng tiếng; Vbee, FPT.AI có giọng vùng miền tự nhiên hơn",
+        [
+          "elevenlabs",
+          "vbee",
+          "fptai"
+        ]
       ],
       [
-        "Nano Banana, GPT Image, Midjourney",
-        "Ảnh keyframe, bối cảnh",
-        "Tạo ảnh đầu, ảnh cuối cho Kling, Seedance."
+        "Tạo ảnh keyframe",
+        "Ảnh đầu, ảnh cuối cho Kling, Seedance",
+        [
+          "nanobanana",
+          "gptimage",
+          "midjourney"
+        ]
       ],
       [
-        "ChatGPT, Claude, Gemini",
-        "Brief, hook, kịch bản, prompt",
-        "Bước 1–5 và 8."
+        "Chatbot",
+        "Brief, hook, kịch bản, prompt (bước 1–5 và 8)",
+        [
+          "chatgpt",
+          "claude",
+          "gemini"
+        ]
       ]
     ],
     "notice": "OpenAI đã đóng ứng dụng và API Sora (công bố 24/3/2026) nên Sora không còn trong danh sách.",
@@ -6859,6 +6986,97 @@ window.YAI_DATA = {
         "Chính sách TikTok Shop 2026 (GHN)",
         "https://ghn.vn/blogs/tip-ban-hang/chinh-sach-tiktok-shop"
       ]
-    ]
+    ],
+    "links": {
+      "chatgpt": {
+        "name": "ChatGPT",
+        "url": "https://chatgpt.com",
+        "cost": "Miễn phí; Plus khoảng 20 USD/tháng"
+      },
+      "claude": {
+        "name": "Claude",
+        "url": "https://claude.ai",
+        "cost": "Miễn phí; Pro khoảng 20 USD/tháng"
+      },
+      "gemini": {
+        "name": "Gemini",
+        "url": "https://gemini.google.com",
+        "cost": "Miễn phí; Google AI Pro khoảng 19,99 USD/tháng"
+      },
+      "nanobanana": {
+        "name": "Nano Banana (trong Gemini)",
+        "url": "https://gemini.google.com",
+        "cost": "Có lượt miễn phí mỗi ngày; nhiều lượt hơn với Google AI Pro"
+      },
+      "gptimage": {
+        "name": "GPT Image (trong ChatGPT)",
+        "url": "https://chatgpt.com",
+        "cost": "Có lượt miễn phí; nhiều lượt hơn với gói Plus"
+      },
+      "midjourney": {
+        "name": "Midjourney",
+        "url": "https://www.midjourney.com",
+        "cost": "Không có bản miễn phí; gói Basic khoảng 10 USD/tháng"
+      },
+      "kling": {
+        "name": "Kling",
+        "url": "https://klingai.com",
+        "cost": "66 credit miễn phí/ngày; trả phí từ khoảng 7–9 USD/tháng"
+      },
+      "dreamina": {
+        "name": "Seedance (Dreamina)",
+        "url": "https://dreamina.capcut.com",
+        "cost": "Credit miễn phí mỗi ngày; trả phí khoảng 15–70 USD/tháng"
+      },
+      "higgsfield": {
+        "name": "Higgsfield",
+        "url": "https://higgsfield.ai",
+        "cost": "Từ khoảng 15–19 USD/tháng; Plus khoảng 39–59 USD/tháng"
+      },
+      "flow": {
+        "name": "Google Veo (Flow)",
+        "url": "https://labs.google/flow",
+        "cost": "50 credit miễn phí/ngày; Google AI Pro khoảng 19,99 USD/tháng"
+      },
+      "hailuo": {
+        "name": "Hailuo (MiniMax)",
+        "url": "https://hailuoai.video",
+        "cost": "Có credit miễn phí; gói trả phí từ khoảng 10 USD/tháng"
+      },
+      "heygen": {
+        "name": "HeyGen",
+        "url": "https://www.heygen.com",
+        "cost": "Có bản miễn phí giới hạn; gói trả phí từ khoảng 29 USD/tháng"
+      },
+      "capcut": {
+        "name": "CapCut",
+        "url": "https://www.capcut.com",
+        "cost": "Miễn phí; Pro khoảng 19,99 USD/tháng (mua trong ứng dụng)"
+      },
+      "elevenlabs": {
+        "name": "ElevenLabs",
+        "url": "https://elevenlabs.io",
+        "cost": "Miễn phí 10.000 ký tự/tháng; Starter khoảng 5 USD/tháng"
+      },
+      "vbee": {
+        "name": "Vbee",
+        "url": "https://vbee.vn",
+        "cost": "Có dùng thử; trả phí theo gói ký tự (giá VNĐ)"
+      },
+      "fptai": {
+        "name": "FPT.AI",
+        "url": "https://fpt.ai",
+        "cost": "Có dùng thử; trả phí theo số ký tự (giá VNĐ)"
+      },
+      "tiktokstudio": {
+        "name": "TikTok Studio",
+        "url": "https://www.tiktok.com/tiktokstudio",
+        "cost": "Miễn phí, xem số liệu video"
+      }
+    },
+    "example_product": {
+      "title": "Ví dụ xuyên suốt: bình giữ nhiệt inox 500ml",
+      "text": "Sản phẩm minh họa, không phải sản phẩm thật: bình giữ nhiệt inox 304, 500ml, giá 189.000đ, hoa hồng affiliate 12%. Thông số shop công bố: giữ nóng 12 giờ, giữ lạnh 24 giờ, nặng 280g, nắp có lưới lọc trà. Các ô ví dụ ở từng bước cho thấy đầu vào và kết quả mẫu khi làm video cho sản phẩm này."
+    }
   }
 };

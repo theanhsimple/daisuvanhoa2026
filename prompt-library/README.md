@@ -11,7 +11,7 @@ Thư viện prompt thực hành dùng chung cho nhiều vị trí công việc, 
 - 112 prompt theo 10 danh mục (UI Design Audit 12, các danh mục khác 10–11): Content & Communication, Design & Creative, Event & Culture, Office Productivity, Research & Analysis, Data & Reporting, Learning & HR, Sales & Customer Service, Project Management, UI Design Audit.
 - Tìm kiếm và lọc kết hợp theo danh mục, đối tượng, mục tiêu công việc, công cụ AI, mức độ.
 - Module UI Design Audit: 12 prompt theo 6 nhóm (A–F), lọc theo nhóm audit và vai trò, tùy chỉnh prompt theo bối cảnh, quy trình 6 bước, mẫu báo cáo, checklist. Mở thẳng bằng `#ui-design-audit`.
-- Module Video bán hàng bằng AI cho người làm affiliate: quy trình 8 bước (prompt `va1`–`va8`), so sánh Kling, Seedance, Higgsfield, CapCut và công cụ bổ sung, 6 dạng video, combo theo ngân sách, lưu ý pháp lý (Luật Trí tuệ nhân tạo, TikTok Shop), checklist trước khi đăng. Nội dung nằm trong khóa `video_affiliate` của `prompts-data.js`, sửa trực tiếp ở đó khi giá hoặc phiên bản công cụ thay đổi.
+- Module Video bán hàng bằng AI cho người làm affiliate: quy trình 8 bước (prompt `va1`–`va8`), so sánh Kling, Seedance, Higgsfield, CapCut và công cụ bổ sung, 6 dạng video, combo theo ngân sách, lưu ý pháp lý (Luật Trí tuệ nhân tạo, TikTok Shop), checklist trước khi đăng. Mỗi bước có ví dụ minh họa xuyên suốt (bình giữ nhiệt 500ml) và link công cụ kèm chi phí (khóa `links`). Nội dung nằm trong khóa `video_affiliate` của `prompts-data.js`, sửa trực tiếp ở đó khi giá hoặc phiên bản công cụ thay đổi.
 - Prompt Builder, Phòng khám prompt, AI Checklist.
 
 ## Bổ sung prompt
