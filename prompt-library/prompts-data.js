@@ -6372,7 +6372,7 @@ window.YAI_DATA = {
     ]
   },
   "video_affiliate": {
-    "updated": "11/2026",
+    "updated": "24/11/2026",
     "lead": "Từ link sản phẩm đến video đăng TikTok, Reels, Shorts trong khoảng 90 phút: 8 bước, mỗi bước một prompt, kết quả bước trước là đầu vào cho bước sau.",
     "principle": {
       "title": "Sản phẩm thật, bối cảnh AI",
@@ -6510,7 +6510,7 @@ window.YAI_DATA = {
         "goal": "Có đủ các cảnh AI đạt yêu cầu, sản phẩm đúng hàng thật.",
         "tips": [
           "Tạo ảnh keyframe trước, ảnh rẻ hơn video rất nhiều.",
-          "Thử bằng bản rẻ (Seedance Flash, Kling Standard, Veo Fast) rồi mới tạo bản 1080p.",
+          "Thử bằng bản rẻ (Seedance Flash, Kling Standard, Veo Lite) rồi mới tạo bản 1080p.",
           "Mỗi cảnh tạo 2–3 lần; sửa prompt nhanh hơn cố cứu cảnh hỏng."
         ],
         "example": {
@@ -6610,13 +6610,13 @@ window.YAI_DATA = {
           "Giá rẻ, được nhiều bài đánh giá xếp đáng tiền nhất; có credit miễn phí mỗi ngày."
         ],
         "cons": [
-          "Credit miễn phí hết hạn sau 24 giờ, không cộng dồn.",
+          "Credit miễn phí hết hạn sau 24 giờ, không cộng dồn; một số tài khoản miễn phí từng bị giảm hoặc mất credit.",
           "4K, HDR 10-bit đang triển khai dần; qua API chủ yếu 720p, 1080p.",
           "Giờ cao điểm xếp hàng lâu, bản miễn phí chậm hơn.",
           "Chữ, logo tiếng Việt trên bao bì dễ bị méo.",
           "Lời thoại tiếng Việt cần thử kỹ, vẫn nên lồng tiếng riêng."
         ],
-        "price": "Miễn phí 66 credit/ngày; gói trả phí từ khoảng 7–9 USD/tháng."
+        "price": "66 credit miễn phí mỗi ngày (tùy tài khoản, khu vực); Standard 8,80 USD/tháng (660 credit); Pro 32,56 USD/tháng (3.000 credit)."
       },
       {
         "id": "seedance",
@@ -6640,7 +6640,7 @@ window.YAI_DATA = {
           "Giọng và nhấn nhá của lời thoại AI khó kiểm soát; tiếng Việt cần nghe lại kỹ.",
           "Dùng video, giọng của người khác làm tham chiếu có rủi ro bản quyền, mạo danh."
         ],
-        "price": "Dreamina có credit miễn phí mỗi ngày; gói trả phí khoảng 15–70 USD/tháng."
+        "price": "Dreamina có credit miễn phí mỗi ngày; Basic 15 USD/tháng (1.575 credit), Standard 36 USD (3.885 credit), Advanced 79 USD (8.645 credit)."
       },
       {
         "id": "higgsfield",
@@ -6658,13 +6658,13 @@ window.YAI_DATA = {
           "Có sẵn nâng độ phân giải, tách nền, hiệu ứng theo trend."
         ],
         "cons": [
-          "Credit hết nhanh: mô hình thường 15–25 credit/clip, mô hình cao cấp 40–70 credit.",
+          "Credit hết nhanh: Starter 270 credit chỉ đủ khoảng 10–18 clip mô hình thường (15–25 credit/clip); mô hình cao cấp 40–70 credit/clip.",
           "Credit tháng không cộng dồn, gói mua thêm hết hạn sau khoảng 90 ngày.",
           "Gói Unlimited không áp dụng cho Marketing Studio; video UGC 15 giây khoảng 4–5 USD.",
           "Gói cước đổi nhiều lần trong 2026, có phàn nàn về thanh toán, hủy gói.",
           "Đắt hơn dùng trực tiếp nếu chỉ cần một mô hình; avatar đóng vai người dùng thật dễ vi phạm luật."
         ],
-        "price": "Từ khoảng 15–19 USD/tháng; gói Plus khoảng 39–59 USD/tháng."
+        "price": "Starter 19 USD/tháng (270 credit); Plus 59 USD/tháng (1.200 credit, 47 USD nếu trả năm); Ultra 129 USD/tháng (3.000 credit)."
       },
       {
         "id": "capcut",
@@ -6681,12 +6681,12 @@ window.YAI_DATA = {
           "Dùng được trên điện thoại, máy tính, trình duyệt; bản miễn phí đủ cho nhu cầu cơ bản."
         ],
         "cons": [
-          "Pro khoảng 19,99 USD/tháng (giá Mỹ); gói Standard rẻ hơn nhưng thiếu công cụ AI nâng cao.",
+          "Pro khoảng 199.000–290.000đ/tháng tùy kênh mua; giá trên web thường cao hơn mua trong ứng dụng.",
           "Tạo video bằng AI vẫn tính credit riêng (Pro khoảng 1.200 credit/tháng).",
           "Tài khoản Pro giá rẻ bán trên mạng là hàng không chính thức, dễ bị khóa, lộ dữ liệu.",
           "Giọng AI có sẵn bị nhiều người dùng, nghe nhàm, dễ bị nhận ra."
         ],
-        "price": "Bản miễn phí dùng được; Pro khoảng 19,99 USD/tháng. Nên mua trong ứng dụng."
+        "price": "Bản miễn phí dùng được; Pro khoảng 199.000–290.000đ/tháng tùy kênh mua. Nên mua chính thức trong ứng dụng."
       }
     ],
     "compare": {
@@ -6721,10 +6721,10 @@ window.YAI_DATA = {
         ],
         [
           "Giá tham khảo",
-          "Từ ~7–9 USD/tháng",
-          "~15–70 USD/tháng",
-          "Từ ~15–19 USD/tháng",
-          "Miễn phí; Pro ~19,99 USD"
+          "Miễn phí 66 credit/ngày; từ 8,80 USD/tháng",
+          "Credit miễn phí/ngày; từ 15 USD/tháng",
+          "Từ 19 USD/tháng",
+          "Miễn phí; Pro ~199.000–290.000đ/tháng"
         ],
         [
           "Dùng ở bước",
@@ -6738,7 +6738,7 @@ window.YAI_DATA = {
     "extras": [
       [
         "Google Veo 3.1 / Flow",
-        "Video điện ảnh chất lượng cao, có tiếng",
+        "Video điện ảnh chất lượng cao, có tiếng. Google ngừng Veo 3.1 Fast và Quality ngày 5/12/2026, chuyển sang mô hình mới trong Flow",
         [
           "flow"
         ]
@@ -6786,7 +6786,7 @@ window.YAI_DATA = {
       ]
     ],
     "notice": "OpenAI đã đóng ứng dụng và API Sora (công bố 24/3/2026) nên Sora không còn trong danh sách.",
-    "price_note": "Giá thay đổi liên tục và các nguồn đánh giá ghi khác nhau. Kiểm tra lại trên trang chính thức trước khi mua.",
+    "price_note": "Giá kiểm tra ngày 24/11/2026 từ trang giá và các bài tổng hợp gần nhất; giá USD quy đổi theo khoảng 26.000đ/USD, chưa gồm thuế và phí ngân hàng. Giá và khuyến mãi đổi liên tục, nên xem lại trên trang chính thức trước khi mua.",
     "formats": [
       {
         "name": "Review thật",
@@ -6837,28 +6837,29 @@ window.YAI_DATA = {
         "cost": "0 đồng",
         "items": [
           "Quay sản phẩm thật bằng điện thoại",
-          "Kling bản miễn phí làm B-roll",
-          "Flow 50 credit mỗi ngày",
+          "Kling: 66 credit miễn phí mỗi ngày cho B-roll",
+          "Flow: 50 credit miễn phí mỗi ngày",
           "CapCut bản miễn phí",
-          "ChatGPT hoặc Gemini bản miễn phí"
+          "ChatGPT hoặc Gemini bản miễn phí",
+          "FPT.AI: 100.000 ký tự giọng đọc miễn phí mỗi tháng"
         ]
       },
       {
-        "name": "Khoảng 500 nghìn · Làm đều đặn",
-        "cost": "Khoảng 30 USD/tháng",
+        "name": "Khoảng 450–550 nghìn · Làm đều đặn",
+        "cost": "Khoảng 450.000–550.000đ/tháng",
         "items": [
-          "Kling Standard",
-          "CapCut Pro",
+          "Kling Standard 8,80 USD (khoảng 230.000đ)",
+          "CapCut Pro khoảng 199.000–290.000đ",
           "Chatbot bản miễn phí"
         ]
       },
       {
-        "name": "1,5–2 triệu · Làm nhiều sản phẩm",
-        "cost": "Khoảng 60–80 USD/tháng",
+        "name": "Khoảng 2,3 triệu · Làm nhiều sản phẩm",
+        "cost": "Khoảng 2.300.000đ/tháng",
         "items": [
-          "Higgsfield Plus (Kling, Seedance, Veo trong một tài khoản)",
-          "CapCut Pro",
-          "ChatGPT hoặc Claude bản trả phí"
+          "Higgsfield Plus 59 USD (khoảng 1,55 triệu): Kling, Seedance, Veo trong một tài khoản",
+          "CapCut Pro khoảng 199.000–290.000đ",
+          "ChatGPT Plus khoảng 522.500đ hoặc Claude Pro 20 USD"
         ]
       }
     ],
@@ -6991,82 +6992,82 @@ window.YAI_DATA = {
       "chatgpt": {
         "name": "ChatGPT",
         "url": "https://chatgpt.com",
-        "cost": "Miễn phí; Plus khoảng 20 USD/tháng"
+        "cost": "Miễn phí (có quảng cáo); Go 8 USD/tháng (khoảng 132.000đ); Plus 20 USD/tháng (khoảng 522.500đ gồm VAT)"
       },
       "claude": {
         "name": "Claude",
         "url": "https://claude.ai",
-        "cost": "Miễn phí; Pro khoảng 20 USD/tháng"
+        "cost": "Miễn phí; Pro 20 USD/tháng (17 USD/tháng nếu trả theo năm); Max từ 100 USD/tháng"
       },
       "gemini": {
         "name": "Gemini",
         "url": "https://gemini.google.com",
-        "cost": "Miễn phí; Google AI Pro khoảng 19,99 USD/tháng"
+        "cost": "Miễn phí; Google AI Plus 132.000đ/tháng; Google AI Pro 489.000đ/tháng"
       },
       "nanobanana": {
         "name": "Nano Banana (trong Gemini)",
         "url": "https://gemini.google.com",
-        "cost": "Có lượt miễn phí mỗi ngày; nhiều lượt hơn với Google AI Pro"
+        "cost": "Miễn phí trong giới hạn mỗi ngày; nhiều lượt hơn với Google AI Plus (132.000đ) hoặc Pro (489.000đ)"
       },
       "gptimage": {
         "name": "GPT Image (trong ChatGPT)",
         "url": "https://chatgpt.com",
-        "cost": "Có lượt miễn phí; nhiều lượt hơn với gói Plus"
+        "cost": "Miễn phí có giới hạn; nhiều lượt hơn với Go (8 USD) hoặc Plus (20 USD/tháng)"
       },
       "midjourney": {
         "name": "Midjourney",
         "url": "https://www.midjourney.com",
-        "cost": "Không có bản miễn phí; gói Basic khoảng 10 USD/tháng"
+        "cost": "Không có bản miễn phí; Basic 10 USD/tháng (8 USD nếu trả năm); Standard 30 USD/tháng"
       },
       "kling": {
         "name": "Kling",
         "url": "https://klingai.com",
-        "cost": "66 credit miễn phí/ngày; trả phí từ khoảng 7–9 USD/tháng"
+        "cost": "66 credit miễn phí/ngày (tùy tài khoản, khu vực); Standard 8,80 USD/tháng (660 credit); Pro 32,56 USD/tháng (3.000 credit)"
       },
       "dreamina": {
         "name": "Seedance (Dreamina)",
         "url": "https://dreamina.capcut.com",
-        "cost": "Credit miễn phí mỗi ngày; trả phí khoảng 15–70 USD/tháng"
+        "cost": "Có credit miễn phí mỗi ngày; Basic 15 USD/tháng (1.575 credit); Standard 36 USD (3.885 credit); Advanced 79 USD (8.645 credit)"
       },
       "higgsfield": {
         "name": "Higgsfield",
         "url": "https://higgsfield.ai",
-        "cost": "Từ khoảng 15–19 USD/tháng; Plus khoảng 39–59 USD/tháng"
+        "cost": "Không có gói miễn phí lâu dài; Starter 19 USD/tháng (270 credit); Plus 59 USD (1.200 credit, 47 USD nếu trả năm); Ultra 129 USD (3.000 credit)"
       },
       "flow": {
         "name": "Google Veo (Flow)",
         "url": "https://labs.google/flow",
-        "cost": "50 credit miễn phí/ngày; Google AI Pro khoảng 19,99 USD/tháng"
+        "cost": "50 credit miễn phí/ngày (khoảng 2 clip Veo 3.1 Fast 8 giây hoặc 5 clip Lite); Google AI Pro 489.000đ/tháng thêm 1.000 credit"
       },
       "hailuo": {
         "name": "Hailuo (MiniMax)",
         "url": "https://hailuoai.video",
-        "cost": "Có credit miễn phí; gói trả phí từ khoảng 10 USD/tháng"
+        "cost": "Có lượt dùng thử miễn phí; Standard khoảng 10,50–14,99 USD/tháng (1.000 credit, không cộng dồn)"
       },
       "heygen": {
         "name": "HeyGen",
         "url": "https://www.heygen.com",
-        "cost": "Có bản miễn phí giới hạn; gói trả phí từ khoảng 29 USD/tháng"
+        "cost": "Miễn phí 3 video/tháng (tối đa 1 phút, có logo HeyGen); Creator 29 USD/tháng (24 USD nếu trả năm)"
       },
       "capcut": {
         "name": "CapCut",
         "url": "https://www.capcut.com",
-        "cost": "Miễn phí; Pro khoảng 19,99 USD/tháng (mua trong ứng dụng)"
+        "cost": "Miễn phí; Pro khoảng 199.000–290.000đ/tháng tùy kênh mua (trong ứng dụng thường rẻ hơn trên web)"
       },
       "elevenlabs": {
         "name": "ElevenLabs",
         "url": "https://elevenlabs.io",
-        "cost": "Miễn phí 10.000 ký tự/tháng; Starter khoảng 5 USD/tháng"
+        "cost": "Miễn phí 10.000 credit/tháng (không dùng thương mại); Starter 6 USD/tháng (30.000 credit); Creator 22 USD/tháng"
       },
       "vbee": {
         "name": "Vbee",
         "url": "https://vbee.vn",
-        "cost": "Có dùng thử; trả phí theo gói ký tự (giá VNĐ)"
+        "cost": "Có dùng thử; gói Tiêu chuẩn khoảng 149.000–169.000đ/tháng"
       },
       "fptai": {
         "name": "FPT.AI",
         "url": "https://fpt.ai",
-        "cost": "Có dùng thử; trả phí theo số ký tự (giá VNĐ)"
+        "cost": "Miễn phí 100.000 ký tự/tháng; gói trả phí từ 500.000đ (thêm 1,5 triệu ký tự)"
       },
       "tiktokstudio": {
         "name": "TikTok Studio",
@@ -7077,6 +7078,72 @@ window.YAI_DATA = {
     "example_product": {
       "title": "Ví dụ xuyên suốt: bình giữ nhiệt inox 500ml",
       "text": "Sản phẩm minh họa, không phải sản phẩm thật: bình giữ nhiệt inox 304, 500ml, giá 189.000đ, hoa hồng affiliate 12%. Thông số shop công bố: giữ nóng 12 giờ, giữ lạnh 24 giờ, nặng 280g, nắp có lưới lọc trà. Các ô ví dụ ở từng bước cho thấy đầu vào và kết quả mẫu khi làm video cho sản phẩm này."
-    }
+    },
+    "price_sources": [
+      [
+        "ChatGPT: các gói Free, Go, Plus, Pro (Gradually)",
+        "https://www.gradually.ai/en/chatgpt-pricing/"
+      ],
+      [
+        "ChatGPT tại Việt Nam, giá VND (FPT Shop)",
+        "https://fptshop.com.vn/tin-tuc/for-gamers/bang-gia-chatgpt-197750"
+      ],
+      [
+        "Claude: Pro, Max (Lindy)",
+        "https://www.lindy.ai/blog/claude-pricing"
+      ],
+      [
+        "Google AI Plus, Pro tại Việt Nam (FPT Shop)",
+        "https://fptshop.com.vn/tin-tuc/danh-gia/bang-gia-gemini-187678"
+      ],
+      [
+        "Google Flow: credit và gói (CostGoat)",
+        "https://costgoat.com/pricing/google-flow"
+      ],
+      [
+        "Midjourney (Lilach Bullock)",
+        "https://www.lilachbullock.com/midjourney-pricing/"
+      ],
+      [
+        "Kling AI (Whizi)",
+        "https://whizi.io/resources/kling-ai-pricing/"
+      ],
+      [
+        "Kling AI gói miễn phí (AIReiter)",
+        "https://aireiter.com/blog/kling-ai-free-tier-2026"
+      ],
+      [
+        "Dreamina, trang giá chính thức",
+        "https://dreamina.capcut.com/pricing/dreamina-price"
+      ],
+      [
+        "Higgsfield (Krea)",
+        "https://www.krea.ai/blog/higgsfield-pricing-explained-2026-unlimited-credits-and-real-monthly-costs"
+      ],
+      [
+        "Hailuo AI (FaceLoom)",
+        "https://faceloom.com/blog/hailuo-ai-pricing-explained"
+      ],
+      [
+        "HeyGen (Arcade)",
+        "https://www.arcade.software/post/heygen-pricing"
+      ],
+      [
+        "CapCut Pro tại Việt Nam (AdsPlus)",
+        "https://adsplus.vn/kien-thuc-marketing/tinh-nang-capcut-pro-co-dang-nang-cap-khong/"
+      ],
+      [
+        "ElevenLabs (Cartesia)",
+        "https://www.cartesia.ai/learn/elevenlabs-pricing"
+      ],
+      [
+        "Vbee (Giọng Mây)",
+        "https://giongmay.com/thay-the-vbee"
+      ],
+      [
+        "FPT.AI, báo giá TTS chính thức",
+        "https://docs.fpt.ai/docs/vi/speech/documentation/tts-pricing/"
+      ]
+    ]
   }
 };
