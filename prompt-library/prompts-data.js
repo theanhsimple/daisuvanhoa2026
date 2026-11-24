@@ -266,6 +266,10 @@ window.YAI_DATA = {
     {
       "id": "thiet-ke",
       "name": "Thiết kế, sản phẩm số"
+    },
+    {
+      "id": "affiliate",
+      "name": "Bán hàng online, affiliate"
     }
   ],
   "goals": [
@@ -5534,6 +5538,387 @@ window.YAI_DATA = {
         "output": "Bảng Vấn đề | Trạng thái | Căn cứ quan sát được | Việc cần làm tiếp, kèm vấn đề mới phát sinh nếu có."
       },
       "rank": 39
+    },
+    {
+      "id": "va1",
+      "title": "Phân tích sản phẩm thành brief bán hàng",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "phan-tich",
+        "viet"
+      ],
+      "purpose": "Biến trang sản phẩm thành một brief gọn, chỉ giữ thông tin có thật, kèm danh sách từ ngữ không được nói khi quảng cáo.",
+      "use_cases": [
+        "Bắt đầu làm video affiliate cho một sản phẩm mới",
+        "Lọc thông tin quảng cáo phóng đại trên trang của shop",
+        "Chuẩn bị đầu vào cho các bước viết hook, kịch bản"
+      ],
+      "prompt": "Bạn là chuyên gia marketing affiliate trên [TikTok Shop / Shopee / Lazada] tại Việt Nam. Dưới đây là toàn bộ thông tin sản phẩm: [dán mô tả của shop, thông số, 10–20 đánh giá thật của khách]. Hãy lập \"brief sản phẩm\" gồm 6 phần: 1) Tóm tắt sản phẩm trong 1 câu như đang nói với bạn bè. 2) 3 lợi ích chính, viết theo góc người dùng (\"giúp bạn…\"), không liệt kê tính năng. 3) 3 điểm khác biệt so với sản phẩm cùng loại phổ biến. 4) 5 điều khách khen nhiều nhất và 3 điều khách chê nhiều nhất, lấy từ đánh giá. 5) Các thông số, cam kết được phép nói, chỉ lấy từ tài liệu tôi đưa. 6) Danh sách \"KHÔNG ĐƯỢC NÓI\": từ ngữ, cam kết dễ vi phạm quảng cáo với ngành [ngành hàng], ví dụ chữa bệnh, trị dứt điểm, cam kết 100%, số 1, tốt nhất. Thông tin nào không có trong tài liệu thì ghi \"cần kiểm chứng\". Tuyệt đối không tự thêm công dụng.",
+      "required_inputs": [
+        "Link sản phẩm, giá, mức hoa hồng, mã giảm giá",
+        "Mô tả của shop, thông số, giấy chứng nhận (mỹ phẩm, thực phẩm)",
+        "10–20 đánh giá thật của khách, cả khen và chê"
+      ],
+      "verification": [
+        "Đối chiếu từng lợi ích, thông số với trang bán hàng.",
+        "Thực phẩm chức năng, mỹ phẩm không được nói như thuốc chữa bệnh.",
+        "Giữ lại mục \"điều khách chê\" để viết phần nói thật ở kịch bản."
+      ],
+      "difficulty": "de",
+      "tags": [
+        "affiliate",
+        "tiktok shop",
+        "brief sản phẩm",
+        "video bán hàng",
+        "review",
+        "koc"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 5 phút",
+      "added": "2026-11-24T10:00",
+      "example": {
+        "input": "Bình giữ nhiệt inox 500ml · mô tả shop · 15 đánh giá · ngành gia dụng",
+        "output": "Brief 1 trang: 3 lợi ích (giữ nóng 12 giờ theo thông số shop, nhẹ, không rò nước), 3 điều khách chê (nắp hơi khó vặn…), danh sách không được nói (\"giữ nhiệt vĩnh viễn\", \"tốt nhất thị trường\")."
+      },
+      "video_step": 1,
+      "rank": 40
+    },
+    {
+      "id": "va2",
+      "title": "Chân dung khách hàng và nỗi đau",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "phan-tich",
+        "y-tuong"
+      ],
+      "purpose": "Xác định 3 nhóm khách hàng dễ mua nhất, khoảnh khắc họ gặp vấn đề và câu họ hay tự than để làm nguyên liệu viết hook.",
+      "use_cases": [
+        "Chọn đúng người xem cho video affiliate",
+        "Tìm góc kể chuyện khác với video đối thủ"
+      ],
+      "prompt": "Dựa trên brief sản phẩm sau: [dán kết quả bước 1]. Hãy mô tả 3 nhóm khách hàng có khả năng mua cao nhất trên [TikTok / Reels / Shorts]. Trình bày dạng bảng, mỗi nhóm gồm: họ là ai (tuổi, công việc, hoàn cảnh); khoảnh khắc đời thường họ gặp vấn đề, mô tả cụ thể như một cảnh phim; câu họ hay tự than, đúng giọng nói thật của họ; lý do họ còn ngần ngại chưa mua (giá, sợ hàng giả, sợ không hợp…); bằng chứng nào sẽ thuyết phục họ; giọng điệu video phù hợp. Không dựa vào định kiến giới tính, tuổi tác, vùng miền.",
+      "required_inputs": [
+        "Brief sản phẩm ở bước 1",
+        "Nền tảng sẽ đăng video"
+      ],
+      "verification": [
+        "Đọc lại bình luận, đánh giá thật: câu \"hay tự than\" có giống cách khách nói không?",
+        "Loại bỏ mô tả mang định kiến."
+      ],
+      "difficulty": "de",
+      "tags": [
+        "affiliate",
+        "chân dung khách hàng",
+        "insight",
+        "nỗi đau khách hàng",
+        "persona"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 5 phút",
+      "added": "2026-11-24T10:00",
+      "video_step": 2,
+      "rank": 41
+    },
+    {
+      "id": "va3",
+      "title": "15 hook cho 3 giây đầu video",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "viet",
+        "y-tuong"
+      ],
+      "purpose": "Viết nhiều câu mở đầu theo 5 kiểu khác nhau để giữ người xem ở 3 giây đầu, không dùng từ ngữ phóng đại.",
+      "use_cases": [
+        "Viết câu mở đầu cho video TikTok, Reels, Shorts",
+        "Chuẩn bị 3 phiên bản hook để A/B test"
+      ],
+      "prompt": "Viết 15 câu mở đầu (hook) cho video ngắn bán [sản phẩm], nhắm tới [nhóm khách hàng ở bước 2]. Mỗi câu tối đa 12 từ, chia đều 5 kiểu: 1) câu hỏi đánh trúng nỗi đau; 2) gây tò mò, bỏ lửng; 3) trước và sau, chỉ nói kết quả có thật; 4) phản bác một quan niệm sai phổ biến; 5) kể chuyện cá nhân ở ngôi thứ nhất. Với mỗi hook, đề xuất kèm hình ảnh xuất hiện trong 3 giây đầu và chữ trên màn hình (tối đa 6 từ). Không dùng các từ \"thần kỳ\", \"100%\", \"số 1\", \"rẻ nhất\" và các từ trong danh sách KHÔNG ĐƯỢC NÓI: [dán danh sách ở bước 1]. Cuối cùng chọn ra 3 hook mạnh nhất và giải thích lý do.",
+      "required_inputs": [
+        "Tên sản phẩm và nhóm khách hàng mục tiêu",
+        "Danh sách KHÔNG ĐƯỢC NÓI ở bước 1"
+      ],
+      "verification": [
+        "Đọc to từng câu: nghe như quảng cáo truyền hình thì bỏ, nghe như bạn bè kể chuyện thì giữ.",
+        "Hook \"trước và sau\" phải là kết quả bạn kiểm chứng được."
+      ],
+      "difficulty": "de",
+      "tags": [
+        "hook",
+        "affiliate",
+        "tiktok",
+        "câu mở đầu",
+        "video ngắn",
+        "a/b test"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 5 phút",
+      "added": "2026-11-24T10:00",
+      "video_step": 3,
+      "rank": 42
+    },
+    {
+      "id": "va4",
+      "title": "Kịch bản video affiliate 30 giây",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "purpose": "Viết kịch bản dạng bảng theo giây, đánh dấu rõ cảnh quay thật và cảnh dùng AI, có phần nói thật để tăng độ tin cậy.",
+      "use_cases": [
+        "Viết kịch bản review, unbox, trước và sau, kể chuyện, so sánh",
+        "Tạo nhiều phiên bản kịch bản cho nhiều nhóm khách hàng"
+      ],
+      "prompt": "Viết kịch bản video [30] giây dạng [review thật / unbox / trước và sau / kể chuyện / so sánh] cho [sản phẩm]. Đầu vào: brief [dán kết quả bước 1], khách hàng mục tiêu [dán nhóm khách hàng ở bước 2], hook đã chọn: [hook]. Cấu trúc: 0–3 giây hook, lời và hình khớp nhau; 3–8 giây vấn đề, đúng khoảnh khắc đời thường của khách; 8–20 giây giải pháp và demo, sản phẩm thật xuất hiện trước giây thứ 10; 20–26 giây bằng chứng (thông số thật, đánh giá thật) và 1 điểm nói thật về hạn chế; 26–30 giây lời kêu gọi nhẹ nhàng, ví dụ \"mình để ở giỏ hàng nhé\". Trình bày dạng bảng: Giây | Lời thoại | Hình ảnh | Nguồn hình (QUAY THẬT hoặc AI) | Chữ trên màn hình | Âm thanh. Giọng văn [thân thiện Gen Z / chân thành / chuyên gia ngắn gọn], mỗi câu thoại không quá 15 từ. Cuối kịch bản thêm 2 hook khác để A/B test. Không dùng từ nào trong danh sách KHÔNG ĐƯỢC NÓI và thêm dòng \"Video có sử dụng link tiếp thị liên kết\".",
+      "required_inputs": [
+        "Brief sản phẩm (bước 1) và nhóm khách hàng (bước 2)",
+        "Hook đã chọn (bước 3)",
+        "Dạng video và thời lượng mong muốn"
+      ],
+      "verification": [
+        "Mọi thông số trong lời thoại khớp với trang bán hàng.",
+        "Cột Nguồn hình: cận cảnh sản phẩm, chữ trên bao bì phải là QUAY THẬT.",
+        "Đọc thử lời thoại có bấm giờ, không vượt thời lượng."
+      ],
+      "difficulty": "trung-binh",
+      "tags": [
+        "kịch bản",
+        "video bán hàng",
+        "affiliate",
+        "tiktok",
+        "review",
+        "unbox",
+        "storytelling"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 10 phút",
+      "added": "2026-11-24T10:00",
+      "video_step": 4,
+      "rank": 43
+    },
+    {
+      "id": "va5",
+      "title": "Storyboard và prompt tạo video cho Kling, Seedance",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "hinh-anh"
+      ],
+      "purpose": "Chuyển các cảnh AI trong kịch bản thành prompt tiếng Anh chuẩn cấu trúc, giữ đúng sản phẩm thật và nhân vật nhất quán.",
+      "use_cases": [
+        "Viết prompt cho Kling, Seedance, Veo, Higgsfield",
+        "Tạo ảnh keyframe đầu và cuối cho từng cảnh"
+      ],
+      "prompt": "Từ kịch bản sau: [dán kịch bản bước 4]. Với các cảnh được đánh dấu AI, hãy viết prompt tiếng Anh cho [Kling / Seedance / Veo]. Mỗi cảnh theo cấu trúc: chủ thể + hành động + bối cảnh + góc máy và chuyển động máy + ánh sáng + phong cách + tỉ lệ 9:16 + thời lượng [5] giây. Yêu cầu: sản phẩm dùng ảnh tham chiếu tôi tải lên, ghi rõ \"keep the product exactly as the reference image, do not change the label or shape\"; nhân vật mô tả giống hệt nhau ở mọi cảnh (tuổi, tóc, trang phục); mỗi cảnh chỉ một hành động chính; thêm negative prompt \"no distorted text, no extra fingers, no logo changes\"; đề xuất ảnh keyframe đầu và cuối nếu cảnh có chuyển động phức tạp. Trình bày dạng bảng: Cảnh | Prompt | Negative prompt | Ảnh tham chiếu cần dùng | Công cụ đề xuất.",
+      "required_inputs": [
+        "Kịch bản bước 4, đã đánh dấu cảnh AI",
+        "Ảnh sản phẩm thật 4–6 góc, nền trơn, chữ trên bao bì rõ",
+        "Công cụ tạo video sẽ dùng"
+      ],
+      "verification": [
+        "Sản phẩm trong video AI giống hàng thật: màu, hình dáng, nhãn.",
+        "Không dùng gương mặt, giọng nói của người thật khi chưa được đồng ý."
+      ],
+      "difficulty": "nang-cao",
+      "tags": [
+        "prompt video",
+        "kling",
+        "seedance",
+        "veo",
+        "higgsfield",
+        "storyboard",
+        "text to video",
+        "image to video"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 10 phút",
+      "added": "2026-11-24T10:00",
+      "example": {
+        "input": "Cảnh 3 (AI): nhân viên văn phòng rót trà từ bình giữ nhiệt · ảnh bình 4 góc · Kling",
+        "output": "A young Vietnamese office woman in a beige blazer pours hot tea from the stainless steel tumbler (keep exactly as reference image) into its lid, steam rising, cozy office desk, morning sunlight, slow push-in, 9:16, 5 seconds."
+      },
+      "video_step": 5,
+      "rank": 44
+    },
+    {
+      "id": "va6",
+      "title": "Sửa cảnh video AI bị lỗi",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "danh-gia",
+        "hinh-anh"
+      ],
+      "purpose": "Chẩn đoán vì sao cảnh video AI bị méo chữ, sai tay, đổi mặt nhân vật và viết lại prompt để tạo lại ít tốn credit.",
+      "use_cases": [
+        "Cảnh tạo ra bị sai sản phẩm, sai tay, chuyển động phi vật lý",
+        "Muốn tiết kiệm credit khi tạo lại"
+      ],
+      "prompt": "Tôi dùng [Kling / Seedance / Veo / Higgsfield] với prompt sau: [dán prompt]. Kết quả bị lỗi: [mô tả lỗi, ví dụ chữ trên bao bì bị méo, bàn tay 6 ngón, nhân vật đổi mặt, màu sản phẩm lệch, chuyển động bị trôi]. Hãy: 1) nêu nguyên nhân có thể của từng lỗi; 2) viết lại prompt đã sửa, đơn giản hóa hành động nếu cần; 3) gợi ý cách tránh lỗi bằng góc máy, bố cục hoặc thay bằng cảnh quay thật; 4) gợi ý thiết lập thử rẻ trước (bản Flash, Fast, 480p hoặc 720p) rồi mới tạo bản 1080p.",
+      "required_inputs": [
+        "Prompt đã dùng và tên công cụ",
+        "Mô tả lỗi hoặc ảnh chụp khung hình lỗi"
+      ],
+      "verification": [
+        "So sánh lại khung hình mới với ảnh sản phẩm thật.",
+        "Nếu tạo lại 3 lần vẫn lỗi chữ, logo: dùng cảnh quay thật cho cảnh đó."
+      ],
+      "difficulty": "trung-binh",
+      "tags": [
+        "sửa lỗi video ai",
+        "kling",
+        "seedance",
+        "tiết kiệm credit",
+        "prompt video"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 5 phút",
+      "added": "2026-11-24T10:00",
+      "video_step": 6,
+      "rank": 45
+    },
+    {
+      "id": "va7",
+      "title": "Chuẩn hóa lời đọc cho giọng AI tiếng Việt",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "viet"
+      ],
+      "purpose": "Chuyển lời thoại thành bản đọc tự nhiên cho công cụ giọng nói: số viết thành chữ, có chỗ ngắt hơi, có từ cần nhấn.",
+      "use_cases": [
+        "Lồng tiếng bằng ElevenLabs, Vbee, FPT.AI hoặc chữ thành giọng nói của CapCut",
+        "Rút gọn lời thoại cho vừa thời lượng video"
+      ],
+      "prompt": "Chuyển lời thoại sau thành bản đọc cho giọng AI tiếng Việt: [dán lời thoại]. Yêu cầu: viết số, đơn vị, ký hiệu thành chữ (ví dụ \"500ml\" thành \"năm trăm mi-li-lít\"); thêm dấu \"/\" ở chỗ ngắt hơi ngắn và \"//\" ở chỗ ngắt dài; đánh dấu từ cần nhấn bằng chữ in hoa; ước tính thời lượng đọc với tốc độ [vừa phải]. Nếu quá [30] giây thì rút gọn mà không mất ý. Giữ giọng [miền Bắc / miền Nam], không thêm thông tin mới.",
+      "required_inputs": [
+        "Lời thoại từ kịch bản bước 4",
+        "Thời lượng video và giọng vùng miền mong muốn"
+      ],
+      "verification": [
+        "Nghe lại toàn bộ: tên sản phẩm, con số đọc đúng.",
+        "Giọng AI giống người thật phải gắn nhãn nội dung AI."
+      ],
+      "difficulty": "de",
+      "tags": [
+        "lồng tiếng",
+        "giọng ai",
+        "text to speech",
+        "capcut",
+        "elevenlabs",
+        "vbee",
+        "phụ đề"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 5 phút",
+      "added": "2026-11-24T10:00",
+      "video_step": 7,
+      "rank": 46
+    },
+    {
+      "id": "va8",
+      "title": "Caption, hashtag và kế hoạch A/B test",
+      "category": "sales",
+      "target_audiences": [
+        "affiliate",
+        "truyen-thong",
+        "kinh-doanh"
+      ],
+      "goals": [
+        "viet",
+        "phan-tich"
+      ],
+      "purpose": "Viết caption kéo bình luận, chọn hashtag và lập bảng theo dõi chỉ số để biết nên giữ hay bỏ phiên bản video nào.",
+      "use_cases": [
+        "Đăng video lên TikTok, Reels, Shorts",
+        "Đọc số liệu sau 48–72 giờ và quyết định làm gì tiếp"
+      ],
+      "prompt": "Cho video về [sản phẩm] trên [TikTok / Reels / Shorts], nhắm tới [nhóm khách hàng]: 1) viết 3 caption dưới 150 ký tự, mỗi caption kết thúc bằng một câu hỏi để kéo bình luận và có dòng \"có link tiếp thị liên kết\"; 2) gợi ý 5 hashtag: 2 rộng, 3 ngách; 3) viết 3 câu trả lời mẫu cho bình luận \"giá bao nhiêu\", \"có hàng thật không\", \"dùng có tốt không\", chỉ dùng thông tin trong brief: [dán brief bước 1]; 4) lập bảng A/B test cho 3 phiên bản hook gồm chỉ số theo dõi (tỉ lệ xem qua 3 giây, thời gian xem trung bình, tỉ lệ xem hết, tỉ lệ bấm giỏ hàng, số đơn), thời điểm đánh giá, ngưỡng giữ hoặc bỏ, việc cần làm tiếp theo.",
+      "required_inputs": [
+        "Tên sản phẩm, nhóm khách hàng, nền tảng đăng",
+        "Brief sản phẩm ở bước 1"
+      ],
+      "verification": [
+        "Bật nhãn \"Nội dung do AI tạo\" trên nền tảng nếu video có cảnh AI.",
+        "Câu trả lời mẫu không hứa điều shop không cam kết."
+      ],
+      "difficulty": "de",
+      "tags": [
+        "caption",
+        "hashtag",
+        "a/b test",
+        "tiktok",
+        "affiliate",
+        "chỉ số video"
+      ],
+      "compatible_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "time": "Khoảng 5 phút",
+      "added": "2026-11-24T10:00",
+      "video_step": 8,
+      "rank": 47
     }
   ],
   "clinic": [
@@ -5960,6 +6345,520 @@ window.YAI_DATA = {
           ]
         ]
       }
+    ]
+  },
+  "video_affiliate": {
+    "updated": "11/2026",
+    "lead": "Từ link sản phẩm đến video đăng TikTok, Reels, Shorts trong khoảng 90 phút: 8 bước, mỗi bước một prompt, kết quả bước trước là đầu vào cho bước sau.",
+    "principle": {
+      "title": "Sản phẩm thật, bối cảnh AI",
+      "text": "Sản phẩm trong video phải là ảnh hoặc cảnh quay đồ thật. AI chỉ dựng bối cảnh, chuyển cảnh, B-roll và lời thoại. Nếu để AI tự vẽ lại sản phẩm, video dễ sai so với hàng thật, thành quảng cáo sai sự thật và dễ bị nền tảng chặn gắn giỏ."
+    },
+    "prep": {
+      "title": "Bước 0 · Chuẩn bị tư liệu",
+      "time": "15 phút",
+      "items": [
+        "Link sản phẩm, mức hoa hồng, giá, mã giảm giá",
+        "Mô tả của shop, thông số, giấy chứng nhận (mỹ phẩm, thực phẩm)",
+        "10–20 đánh giá thật của khách, chụp màn hình hoặc sao chép",
+        "Ảnh sản phẩm thật 4–6 góc, nền trơn, đủ sáng, chữ trên bao bì rõ",
+        "3–5 clip quay thật (cầm tay, mở hộp, dùng thử), mỗi clip 3–5 giây, quay dọc",
+        "2–3 video đối thủ đang có nhiều lượt xem để tham khảo nhịp dựng, không sao chép"
+      ]
+    },
+    "steps": [
+      {
+        "n": 1,
+        "name": "Phân tích sản phẩm",
+        "time": "5 phút",
+        "tool": "ChatGPT, Claude, Gemini",
+        "prompt": "va1",
+        "goal": "Có brief 1 trang với thông tin có thật và danh sách từ ngữ KHÔNG ĐƯỢC NÓI.",
+        "tips": [
+          "Mục \"điều khách chê\" rất quý: dùng để viết phần nói thật, giúp video đáng tin hơn."
+        ]
+      },
+      {
+        "n": 2,
+        "name": "Khách hàng và nỗi đau",
+        "time": "5 phút",
+        "tool": "ChatGPT, Claude, Gemini",
+        "prompt": "va2",
+        "goal": "Chọn 1 trong 3 nhóm khách hàng để làm video.",
+        "tips": [
+          "Cột \"câu hay tự than\" là nguyên liệu viết hook; cột \"lý do ngần ngại\" dùng để viết phần bằng chứng."
+        ]
+      },
+      {
+        "n": 3,
+        "name": "Viết hook 3 giây đầu",
+        "time": "5 phút",
+        "tool": "ChatGPT, Claude, Gemini",
+        "prompt": "va3",
+        "goal": "Chọn 3 hook để làm 3 phiên bản A/B test.",
+        "tips": [
+          "Hook tốt nghe như bạn bè kể chuyện, không như quảng cáo truyền hình."
+        ]
+      },
+      {
+        "n": 4,
+        "name": "Kịch bản theo giây",
+        "time": "10 phút",
+        "tool": "ChatGPT, Claude, Gemini",
+        "prompt": "va4",
+        "goal": "Kịch bản dạng bảng, mỗi cảnh ghi rõ QUAY THẬT hay AI.",
+        "tips": [
+          "Sản phẩm thật xuất hiện trước giây thứ 10.",
+          "Cận cảnh có chữ, logo luôn là cảnh quay thật."
+        ]
+      },
+      {
+        "n": 5,
+        "name": "Storyboard và prompt video",
+        "time": "10 phút",
+        "tool": "Chatbot + Nano Banana / GPT Image cho ảnh keyframe",
+        "prompt": "va5",
+        "goal": "Mỗi cảnh AI có prompt tiếng Anh, negative prompt, ảnh tham chiếu.",
+        "tips": [
+          "Xoay, rót, xịt, mở nắp: Kling. Người nói thoại, nhiều shot liền nhau: Seedance. Máy quay kiểu điện ảnh, mẫu có sẵn: Higgsfield."
+        ]
+      },
+      {
+        "n": 6,
+        "name": "Tạo video AI",
+        "time": "20–30 phút",
+        "tool": "Kling, Seedance, Veo, Higgsfield",
+        "prompt": "va6",
+        "goal": "Có đủ các cảnh AI đạt yêu cầu, sản phẩm đúng hàng thật.",
+        "tips": [
+          "Tạo ảnh keyframe trước, ảnh rẻ hơn video rất nhiều.",
+          "Thử bằng bản rẻ (Seedance Flash, Kling Standard, Veo Fast) rồi mới tạo bản 1080p.",
+          "Mỗi cảnh tạo 2–3 lần; sửa prompt nhanh hơn cố cứu cảnh hỏng."
+        ]
+      },
+      {
+        "n": 7,
+        "name": "Lồng tiếng, phụ đề, dựng",
+        "time": "15–20 phút",
+        "tool": "CapCut + ElevenLabs / Vbee / FPT.AI",
+        "prompt": "va7",
+        "goal": "Video hoàn chỉnh 1080×1920, có nhãn AI ở cảnh AI.",
+        "tips": [
+          "Ưu tiên giọng thật của bạn. Giọng AI mặc định của CapCut nhiều người dùng, dễ bị nhận ra.",
+          "Phụ đề nằm trong vùng an toàn, không bị nút thích, bình luận che."
+        ]
+      },
+      {
+        "n": 8,
+        "name": "Đăng và tối ưu",
+        "time": "10 phút, theo dõi 48–72 giờ",
+        "tool": "ChatGPT, Claude, Gemini + số liệu nền tảng",
+        "prompt": "va8",
+        "goal": "Biết phiên bản nào giữ, phiên bản nào bỏ, bước nào cần làm lại.",
+        "tips": [
+          "Ít người xem qua 3 giây: đổi hook (bước 3).",
+          "Bỏ ngang giữa video: kịch bản dài, nhịp chậm (bước 4).",
+          "Xem nhiều nhưng ít bấm giỏ: thiếu bằng chứng, lời kêu gọi yếu hoặc sai người xem (bước 2)."
+        ]
+      }
+    ],
+    "errors": [
+      [
+        "Chữ, logo trên bao bì bị méo",
+        "Dùng cảnh quay thật cho cận cảnh có chữ, hoặc để mặt chữ quay ra sau."
+      ],
+      [
+        "Bàn tay 6 ngón, cầm đồ sai",
+        "Giảm độ phức tạp của hành động, chọn góc máy không thấy rõ ngón tay."
+      ],
+      [
+        "Nhân vật đổi mặt giữa các cảnh",
+        "Dùng nhân vật lưu sẵn (Kling, Higgsfield Soul ID) hoặc nhiều ảnh tham chiếu (Seedance)."
+      ],
+      [
+        "Màu sản phẩm bị lệch",
+        "Thêm \"exact color as reference\", chỉnh màu lại trong CapCut."
+      ],
+      [
+        "Chuyển động trôi, phi vật lý",
+        "Rút còn 5 giây, mỗi cảnh chỉ mô tả một hành động."
+      ]
+    ],
+    "tools": [
+      {
+        "id": "kling",
+        "name": "Kling",
+        "version": "4.0 (10/2026)",
+        "maker": "Kuaishou",
+        "kind": "Mô hình tạo video",
+        "url": "https://klingai.com",
+        "best": "Cảnh sản phẩm chuyển động (xoay, rót, xịt, mở hộp), B-roll lifestyle, ngân sách thấp nhưng cần nhiều video.",
+        "pros": [
+          "Chuyển động vật lý thuyết phục: tay cầm sản phẩm, nước rót, vải, tóc rất tự nhiên.",
+          "Một lần tạo tới 30 giây, điều khiển tới 10 keyframe để nối cảnh theo ý.",
+          "Omni Reference nhận tới 15 tham chiếu (ảnh, video, nhân vật, giọng), giữ nhân vật nhất quán.",
+          "Tạo âm thanh stereo, khớp khẩu hình, nhiều ngôn ngữ.",
+          "Giá rẻ, được nhiều bài đánh giá xếp đáng tiền nhất; có credit miễn phí mỗi ngày."
+        ],
+        "cons": [
+          "Credit miễn phí hết hạn sau 24 giờ, không cộng dồn.",
+          "4K, HDR 10-bit đang triển khai dần; qua API chủ yếu 720p, 1080p.",
+          "Giờ cao điểm xếp hàng lâu, bản miễn phí chậm hơn.",
+          "Chữ, logo tiếng Việt trên bao bì dễ bị méo.",
+          "Lời thoại tiếng Việt cần thử kỹ, vẫn nên lồng tiếng riêng."
+        ],
+        "price": "Miễn phí 66 credit/ngày; gói trả phí từ khoảng 7–9 USD/tháng."
+      },
+      {
+        "id": "seedance",
+        "name": "Seedance",
+        "version": "2.5 (7/2026)",
+        "maker": "ByteDance · dùng qua Dreamina, CapCut",
+        "kind": "Mô hình tạo video",
+        "url": "https://dreamina.capcut.com",
+        "best": "Video UGC có lời thoại, video 15–30 giây nhiều cảnh, bắt chước nhịp dựng của video mẫu.",
+        "pros": [
+          "Tạo hình, tiếng và khẩu hình cùng lúc, hợp dạng người cầm sản phẩm nói chuyện.",
+          "Nhận tới 50 tham chiếu cho một clip: ảnh sản phẩm nhiều góc, video mẫu, âm thanh.",
+          "Nhiều shot trong một video vẫn liền mạch, ít trôi nhân vật, bớt ghép clip.",
+          "Sửa riêng một đoạn hoặc một chi tiết mà không phải tạo lại cả video.",
+          "Bản Flash cho bản xem trước 480p, 720p nhanh gấp đôi; liên thông với CapCut."
+        ],
+        "cons": [
+          "Giá khác nhau giữa Dreamina, CapCut, Higgsfield, API; clip 5 giây 720p từ khoảng 0,9 đến 1,5 USD.",
+          "Dùng video làm tham chiếu tốn gấp 3–5 lần clip chỉ dùng chữ.",
+          "Nhiều tính năng, người mới dễ rối khi viết prompt có tham chiếu.",
+          "Giọng và nhấn nhá của lời thoại AI khó kiểm soát; tiếng Việt cần nghe lại kỹ.",
+          "Dùng video, giọng của người khác làm tham chiếu có rủi ro bản quyền, mạo danh."
+        ],
+        "price": "Dreamina có credit miễn phí mỗi ngày; gói trả phí khoảng 15–70 USD/tháng."
+      },
+      {
+        "id": "higgsfield",
+        "name": "Higgsfield",
+        "version": "Nền tảng tổng hợp",
+        "maker": "Higgsfield AI",
+        "kind": "Nhiều mô hình + công cụ marketing",
+        "url": "https://higgsfield.ai",
+        "best": "Người làm affiliate nhiều ngành hàng, cần nhiều mẫu quảng cáo nhanh hoặc muốn so sánh mô hình.",
+        "pros": [
+          "Một tài khoản, một ví credit cho Kling, Seedance, Veo, Nano Banana…; dễ so sánh cùng một prompt.",
+          "Marketing Studio: dán link hoặc ảnh sản phẩm, chọn avatar và phong cách, ra video có tiếng, khớp khẩu hình; hơn 1.500 mẫu (UGC, unbox, review, thử đồ).",
+          "Avatar nhất quán (Soul ID) để có một gương mặt kênh dùng lại nhiều video.",
+          "Preset máy quay kiểu điện ảnh (dolly, crane, orbit, FPV), không cần biết thuật ngữ quay phim.",
+          "Có sẵn nâng độ phân giải, tách nền, hiệu ứng theo trend."
+        ],
+        "cons": [
+          "Credit hết nhanh: mô hình thường 15–25 credit/clip, mô hình cao cấp 40–70 credit.",
+          "Credit tháng không cộng dồn, gói mua thêm hết hạn sau khoảng 90 ngày.",
+          "Gói Unlimited không áp dụng cho Marketing Studio; video UGC 15 giây khoảng 4–5 USD.",
+          "Gói cước đổi nhiều lần trong 2026, có phàn nàn về thanh toán, hủy gói.",
+          "Đắt hơn dùng trực tiếp nếu chỉ cần một mô hình; avatar đóng vai người dùng thật dễ vi phạm luật."
+        ],
+        "price": "Từ khoảng 15–19 USD/tháng; gói Plus khoảng 39–59 USD/tháng."
+      },
+      {
+        "id": "capcut",
+        "name": "CapCut",
+        "version": "Pro 2026",
+        "maker": "ByteDance",
+        "kind": "Phần mềm dựng video có AI",
+        "url": "https://www.capcut.com",
+        "best": "Mọi người làm affiliate: bước dựng, phụ đề, nhạc, xuất video cuối cùng.",
+        "pros": [
+          "Phụ đề tiếng Việt tự động khá chính xác, nhiều kiểu chữ theo trend.",
+          "Mẫu chuẩn TikTok, xuất thẳng lên TikTok; nhạc trong thư viện an toàn bản quyền hơn.",
+          "AI tích hợp: chữ thành giọng nói tiếng Việt, xóa nền, cắt khoảng lặng, cắt clip dài thành clip ngắn, tạo video bằng Seedance.",
+          "Dùng được trên điện thoại, máy tính, trình duyệt; bản miễn phí đủ cho nhu cầu cơ bản."
+        ],
+        "cons": [
+          "Pro khoảng 19,99 USD/tháng (giá Mỹ); gói Standard rẻ hơn nhưng thiếu công cụ AI nâng cao.",
+          "Tạo video bằng AI vẫn tính credit riêng (Pro khoảng 1.200 credit/tháng).",
+          "Tài khoản Pro giá rẻ bán trên mạng là hàng không chính thức, dễ bị khóa, lộ dữ liệu.",
+          "Giọng AI có sẵn bị nhiều người dùng, nghe nhàm, dễ bị nhận ra."
+        ],
+        "price": "Bản miễn phí dùng được; Pro khoảng 19,99 USD/tháng. Nên mua trong ứng dụng."
+      }
+    ],
+    "compare": {
+      "rows": [
+        [
+          "Bản chất",
+          "Mô hình tạo video",
+          "Mô hình tạo video",
+          "Nền tảng nhiều mô hình",
+          "Phần mềm dựng video"
+        ],
+        [
+          "Thế mạnh chính",
+          "Chuyển động tự nhiên, keyframe, giá rẻ",
+          "Hình, tiếng, khẩu hình cùng lúc; nhiều tham chiếu",
+          "Nhiều mô hình, mẫu UGC, điều khiển máy quay",
+          "Phụ đề tiếng Việt, nhạc, mẫu TikTok"
+        ],
+        [
+          "Độ dài 1 lần tạo",
+          "Tới 30 giây",
+          "Tới 30 giây",
+          "Tùy mô hình",
+          "Không giới hạn (dựng)"
+        ],
+        [
+          "Tham chiếu",
+          "Tới 15",
+          "Tới 50",
+          "Tùy mô hình, có Soul ID",
+          "Tạo video bằng Seedance"
+        ],
+        [
+          "Giá tham khảo",
+          "Từ ~7–9 USD/tháng",
+          "~15–70 USD/tháng",
+          "Từ ~15–19 USD/tháng",
+          "Miễn phí; Pro ~19,99 USD"
+        ],
+        [
+          "Dùng ở bước",
+          "6",
+          "6",
+          "6",
+          "7"
+        ]
+      ]
+    },
+    "extras": [
+      [
+        "Google Veo 3.1 / Flow",
+        "Video điện ảnh chất lượng cao, có tiếng",
+        "Flow cho 50 credit miễn phí mỗi ngày; gói Google AI Pro khoảng 19,99 USD/tháng."
+      ],
+      [
+        "Hailuo (MiniMax)",
+        "Video giá rẻ, chuyển động mạnh",
+        "Lựa chọn thay thế khi hết credit Kling."
+      ],
+      [
+        "HeyGen",
+        "Avatar dẫn chuyện, dịch video",
+        "Bắt buộc gắn nhãn AI."
+      ],
+      [
+        "ElevenLabs, Vbee, FPT.AI",
+        "Giọng đọc tiếng Việt",
+        "Vbee, FPT.AI có giọng vùng miền tự nhiên hơn."
+      ],
+      [
+        "Nano Banana, GPT Image, Midjourney",
+        "Ảnh keyframe, bối cảnh",
+        "Tạo ảnh đầu, ảnh cuối cho Kling, Seedance."
+      ],
+      [
+        "ChatGPT, Claude, Gemini",
+        "Brief, hook, kịch bản, prompt",
+        "Bước 1–5 và 8."
+      ]
+    ],
+    "notice": "OpenAI đã đóng ứng dụng và API Sora (công bố 24/3/2026) nên Sora không còn trong danh sách.",
+    "price_note": "Giá thay đổi liên tục và các nguồn đánh giá ghi khác nhau. Kiểm tra lại trên trang chính thức trước khi mua.",
+    "formats": [
+      {
+        "name": "Review thật",
+        "len": "30–45 giây",
+        "fit": "Mọi ngành hàng",
+        "ai": "Thấp",
+        "how": "Mặt người thật, AI làm B-roll và phụ đề."
+      },
+      {
+        "name": "Unbox, cận cảnh",
+        "len": "15–25 giây",
+        "fit": "Đồ công nghệ, gia dụng, mỹ phẩm",
+        "ai": "Trung bình",
+        "how": "Kling làm cảnh sản phẩm chuyển động."
+      },
+      {
+        "name": "Trước và sau",
+        "len": "15–30 giây",
+        "fit": "Dọn dẹp, sắp xếp, làm đẹp (cẩn trọng)",
+        "ai": "Trung bình",
+        "how": "Cảnh \"sau\" bắt buộc là thật."
+      },
+      {
+        "name": "Kể chuyện, tình huống",
+        "len": "30–60 giây",
+        "fit": "Quà tặng, đồ dùng gia đình",
+        "ai": "Cao",
+        "how": "Seedance làm cảnh nhiều shot liền mạch."
+      },
+      {
+        "name": "So sánh, top 3",
+        "len": "30–45 giây",
+        "fit": "Ngành hàng nhiều lựa chọn",
+        "ai": "Thấp",
+        "how": "Ảnh thật kết hợp chuyển cảnh AI."
+      },
+      {
+        "name": "Người dẫn AI (avatar)",
+        "len": "15–30 giây",
+        "fit": "Thông tin, hướng dẫn sử dụng",
+        "ai": "Cao",
+        "how": "Bắt buộc gắn nhãn, không đóng vai người đã dùng."
+      }
+    ],
+    "combos": [
+      {
+        "name": "0 đồng · Mới bắt đầu",
+        "cost": "0 đồng",
+        "items": [
+          "Quay sản phẩm thật bằng điện thoại",
+          "Kling bản miễn phí làm B-roll",
+          "Flow 50 credit mỗi ngày",
+          "CapCut bản miễn phí",
+          "ChatGPT hoặc Gemini bản miễn phí"
+        ]
+      },
+      {
+        "name": "Khoảng 500 nghìn · Làm đều đặn",
+        "cost": "Khoảng 30 USD/tháng",
+        "items": [
+          "Kling Standard",
+          "CapCut Pro",
+          "Chatbot bản miễn phí"
+        ]
+      },
+      {
+        "name": "1,5–2 triệu · Làm nhiều sản phẩm",
+        "cost": "Khoảng 60–80 USD/tháng",
+        "items": [
+          "Higgsfield Plus (Kling, Seedance, Veo trong một tài khoản)",
+          "CapCut Pro",
+          "ChatGPT hoặc Claude bản trả phí"
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "name": "Luật Trí tuệ nhân tạo",
+        "when": "Hiệu lực từ 1/3/2026",
+        "rule": "Âm thanh, hình ảnh, video do AI tạo hoặc chỉnh sửa để mô phỏng người thật, sự kiện thật phải có nhãn dễ nhận biết, kể cả quảng cáo và mạng xã hội.",
+        "do": "Có người mẫu AI hoặc giọng AI giống người thật: bắt buộc gắn nhãn."
+      },
+      {
+        "name": "Nghị định hướng dẫn gắn nhãn",
+        "when": "Năm 2026",
+        "rule": "Hướng dẫn cách thông báo, hiển thị nhãn: trên video, trong chú thích hoặc bằng âm thanh.",
+        "do": "Gắn chữ trên video và bật nhãn AI của nền tảng."
+      },
+      {
+        "name": "TikTok Shop",
+        "when": "Chính sách 2026",
+        "rule": "Video, livestream có hình hoặc tiếng do AI tạo phải gắn nhãn AIGC; cấm dùng AI mạo danh người khác gây hiểu lầm; siết tài khoản đăng video AI hàng loạt kém chất lượng.",
+        "do": "Bật \"Nội dung do AI tạo\" khi đăng; ưu tiên chất lượng hơn số lượng."
+      },
+      {
+        "name": "Luật Quảng cáo",
+        "when": "Đang áp dụng",
+        "rule": "Cấm quảng cáo sai sự thật, cam kết tuyệt đối, so sánh hạ thấp đối thủ; thực phẩm chức năng không được quảng cáo như thuốc.",
+        "do": "Dùng danh sách KHÔNG ĐƯỢC NÓI ở bước 1."
+      }
+    ],
+    "dos": [
+      "Gắn nhãn AI và ghi rõ có link tiếp thị liên kết",
+      "Sản phẩm trong video là hàng thật, thông số khớp trang bán",
+      "Chỉ dùng nhạc, hình có bản quyền hoặc trong thư viện của nền tảng"
+    ],
+    "donts": [
+      "Dùng avatar AI đóng vai \"khách đã mua\" để review giả",
+      "Deepfake, nhái giọng hoặc gương mặt người nổi tiếng, KOL",
+      "Dùng video của người khác làm tham chiếu để sao chép nguyên bản",
+      "Dùng AI làm đẹp kết quả trước và sau (da, cân nặng, vết bẩn)"
+    ],
+    "checklist": [
+      [
+        "Hook nằm trong 3 giây đầu",
+        "Lời và hình khớp nhau."
+      ],
+      [
+        "Sản phẩm thật xuất hiện trước giây thứ 10",
+        "Không phải sản phẩm do AI vẽ lại."
+      ],
+      [
+        "Không có chữ, logo bị méo",
+        "Soát từng khung hình cận cảnh."
+      ],
+      [
+        "Thông số khớp trang bán",
+        "Giá, dung tích, công dụng đúng như shop công bố."
+      ],
+      [
+        "Không có từ ngữ cấm",
+        "Đối chiếu danh sách KHÔNG ĐƯỢC NÓI."
+      ],
+      [
+        "Phụ đề đúng chính tả, không bị che",
+        "Nằm trong vùng an toàn của giao diện ứng dụng."
+      ],
+      [
+        "Có nhãn AI trên video và trên nền tảng",
+        "Ở mọi cảnh có người, giọng do AI tạo."
+      ],
+      [
+        "Có ghi chú link tiếp thị liên kết",
+        "Trong video hoặc caption."
+      ],
+      [
+        "Nhạc có bản quyền",
+        "Ưu tiên thư viện của CapCut, TikTok."
+      ],
+      [
+        "Lời kêu gọi rõ ràng",
+        "Ví dụ: \"mình để ở giỏ hàng nhé\"."
+      ]
+    ],
+    "sources": [
+      [
+        "Kling 4.0 ra mắt toàn cầu (GlobeNewswire)",
+        "https://www.globenewswire.com/news-release/2026/10/16/3382484/0/en/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control.html"
+      ],
+      [
+        "Seedance 2.5 ra mắt (PR Newswire)",
+        "https://www.prnewswire.com/news-releases/dreamina-launches-seedance-2-5--the-tool-of-ai-video-generation-that-reduces-clip-stitching-visual-drift-and-rework-302841204.html"
+      ],
+      [
+        "So sánh giá Seedance trên 8 nền tảng (Wireflow)",
+        "https://www.wireflow.ai/blog/seedance-pricing-compared-2026"
+      ],
+      [
+        "Đánh giá Higgsfield 2026 (Atria)",
+        "https://www.tryatria.com/blog/higgsfield-review"
+      ],
+      [
+        "Hướng dẫn Marketing Studio (Higgsfield)",
+        "https://higgsfield.ai/creator-hub/help-center/tools-and-workflows/how-do-i-use-marketing-studio-to-create-video-ads"
+      ],
+      [
+        "Giá CapCut Pro 2026 (Fluxnote)",
+        "https://fluxnote.io/guides/capcut-pro-pricing-2026"
+      ],
+      [
+        "Giá Google Flow 2026 (WaveSpeed)",
+        "https://wavespeed.ai/blog/cost-and-billing/google-flow-pricing-2026/"
+      ],
+      [
+        "OpenAI ngừng ứng dụng Sora (Axios)",
+        "https://www.axios.com/2026/03/24/openai-discontinue-sora-video-app"
+      ],
+      [
+        "Yêu cầu gắn nhãn nội dung AI từ 1/3/2026 (Luật Minh Khuê)",
+        "https://luatminhkhue.vn/yeu-cau-bat-buoc-doi-voi-noi-dung-tao-boi-ai-tu-1-3-2026.aspx"
+      ],
+      [
+        "Hướng dẫn gắn nhãn nội dung AI (PLO)",
+        "https://plo.vn/huong-dan-moi-ve-viec-gan-nhan-nhan-biet-noi-dung-do-ai-tao-ra-post907577.html"
+      ],
+      [
+        "Chính sách TikTok Shop 2026 (GHN)",
+        "https://ghn.vn/blogs/tip-ban-hang/chinh-sach-tiktok-shop"
+      ]
     ]
   }
 };
